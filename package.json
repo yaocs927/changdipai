@@ -1,7 +1,7 @@
 {
   "name": "changdipai",
   "version": "1.0.0",
-  "description": "changdipai object",
+  "description": "changdipai-wap object",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,6 @@
     "changdipai"
   ],
   "author": "yaocs",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
