@@ -1,13 +1,14 @@
+// gulp 依赖
 var gulp = require('gulp');
-
+// 浏览器自动刷新 依赖
 var browserSync = require('browser-sync');
-
+// 自动编译 sass 依赖
 var gPlumber = require('gulp-plumber');
 var gSourcemaps = require('gulp-sourcemaps');
 var gScss = require('gulp-sass');
 var gAutoprefixer = require('gulp-autoprefixer');
-
-var gFilter = require('gulp-fliter');
+// 打包相关 依赖
+var gFilter = require('gulp-filter');
 var gUglify = require('gulp-uglify');
 var gMinifyCss = require('gulp-minify-css');
 var gUseref = require('gulp-useref');
@@ -26,7 +27,7 @@ var filesPath = {
 };
 
 // 设置 browserSync 根目录
-gulp.task('browserSync', function () {
+gulp.task('browserSync', function() {
   browserSync({
     server: {
       baseDir: 'src'
@@ -35,10 +36,9 @@ gulp.task('browserSync', function () {
 });
 
 // 编译 sass
-gulp.task('startScss', function () {
+gulp.task('startScss', function() {
   return gulp.src(filesPath.scss + '*.scss')
     .pipe(gPlumber())
-    .pipe(gSourcemaps().init())
     .pipe(gScss({
       outputStyle: 'expanded'
     }).on('error', gScss.logError))
@@ -50,7 +50,6 @@ gulp.task('startScss', function () {
         'Android >= 4.0'
       ]
     }))
-    .pipe(gSourcemaps.write())
     .pipe(gulp.dest(filesPath.css))
     .pipe(browserSync.reload({
       stream: true
@@ -58,7 +57,7 @@ gulp.task('startScss', function () {
 });
 
 // 监听文件
-gulp.task('watch', ['browserSync', 'startScss'], function () {
+gulp.task('watch', ['browserSync', 'startScss'], function() {
   gulp.watch(filesPath.scss + '*.scss', ['startScss']);
   gulp.watch(filesPath.html + '*.html', browserSync.reload);
   gulp.watch(filesPath.html + '**/*.js', browserSync.reload);
