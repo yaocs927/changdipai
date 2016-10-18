@@ -1,4 +1,3 @@
-'use strict';
 var gulp = require('gulp');
 
 var browserSync = require('browser-sync');
@@ -32,8 +31,8 @@ gulp.task('browserSync', function () {
     server: {
       baseDir: 'src'
     }
-  })
-})
+  });
+});
 
 // 编译 sass
 gulp.task('startScss', function () {
@@ -55,11 +54,12 @@ gulp.task('startScss', function () {
     .pipe(gulp.dest(filesPath.css))
     .pipe(browserSync.reload({
       stream: true
-    }))
-})
+    }));
+});
 
+// 监听文件
 gulp.task('watch', ['browserSync', 'startScss'], function () {
   gulp.watch(filesPath.scss + '*.scss', ['startScss']);
   gulp.watch(filesPath.html + '*.html', browserSync.reload);
   gulp.watch(filesPath.html + '**/*.js', browserSync.reload);
-})
+});
