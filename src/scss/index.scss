@@ -1,4 +1,149 @@
-@charset "utf-8";
-body {
-  background-color: red;
+@charset "UTF-8";
+@font-face {
+  font-family: "cdp-iconfont";
+  src        : url("font/iconfont.eot");
+  // IE9
+  src        :url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+  // IE6-IE8
+  url('font/iconfont.woff') format('woff'),
+  // chrome、firefox
+  url('font/iconfont.ttf') format('truetype'),
+  // chrome、firefox、opera、Safari, Android, iOS 4.2+
+  url(  'font/iconfont.svg#iconfont') format('svg');
+  // iOS 4.1-
 }
+
+// 常用 minixs 和 fun
+@import "common";
+// 转换 rem 基数
+$base-font-size: 72px;
+
+// 定义图标字体
+.cdp-iconfont {
+  font-family              : "cdp-iconfont" !important;
+  font-size                : 20px;
+  font-style               : normal;
+  -webkit-font-smoothing   : antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing  : grayscale;
+}
+
+// 通用间距设置
+.mb20 {
+  margin-bottom: px2rem(20px, $base-font-size);
+}
+
+.main {
+  width: 100%;
+  height: auto;
+}
+
+// 首页头部
+.index-header {
+  width: 100%;
+  height: px2rem(500px, $base-font-size);
+  background: $cdpColor url(../img/index-big-banner.jpg) no-repeat center center;
+  background-size: 100%;
+}
+
+// 小分类
+.classify {
+  position: relative;
+
+  .clearfix {
+    @include clearfix;
+  }
+
+  &:before {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: px2rem(2px, $base-font-size);
+    height: 100%;
+    background-color: $bgColor;
+  }
+
+  &:after {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    width: 100%;
+    height: px2rem(2px, $base-font-size);
+    background-color: $bgColor;
+  }
+
+  .classify-item {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: px2rem(172px, $base-font-size);
+    padding: 2px 3px 3px 2px;
+    background: $whiteColor url(../img/classify-bg-1.png) no-repeat 90% center;
+    background-size: px2rem(112px, $base-font-size);
+
+    .classify-item-title {
+      position: absolute;
+      top: px2rem(52px, $base-font-size);
+      left: px2rem(20px, $base-font-size);
+
+      h3,p {
+        width: px2rem(220px, $base-font-size);
+        @include ellipsis;
+      }
+
+      h3 {
+        font-size: 32px;
+        color: $subColor;
+      }
+
+      p {
+        margin-top: px2rem(10px, $base-font-size);
+        font-size: 24px;
+        color: $fontColor3;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

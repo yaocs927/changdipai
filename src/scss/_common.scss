@@ -1,0 +1,78 @@
+// 常用颜色
+// 主色
+$cdpColor: #ff627a;
+//
+$subColor: #bf1cbd;
+// 背景色
+$bgColor: #efefef;
+// 白色
+$whiteColor: #fff;
+// 黑
+$fontColor1: #222;
+// 浅黑
+$fontColor2: #464646;
+$fontColor3: #878787;
+$fontColor4: #a2a2a2;
+
+// 根据设计稿基数 ()淘宝 flexible) 单位转换 px >>> rem
+@function px2rem($px, $base-font-size: 16px) {
+   @if (unitless($px)){
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return px2em($px + 0px); // That may fail.
+  }
+  @else if (unit($px) == rem) {
+     @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+// 单行文字不换行
+@mixin ellipsis {
+  overflow         : hidden;
+  text-overflow    : ellipsis;
+  white-space      : nowrap;
+}
+
+// 清除浮动
+@mixin clearfix {
+  &:after {
+    clear      : both;
+    content    : ' ';
+    display    : table;
+    height     : 0;
+    line-height: 0;
+    overflow   : hidden;
+  }
+  *height: 1%;
+}
+
+// 三角形
+@mixin arrow($direction, $size, $color) {
+  width       : 0;
+  height      : 0;
+  line-height : 0;
+  font-size   : 0;
+  overflow    : hidden;
+  border-width: $size;
+  cursor      : pointer;
+  @if $direction == top {
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent $color transparent;
+    border-top  : none;
+  }
+  @else if $direction == bottom {
+    border-style : solid dashed dashed dashed;
+    border-color : $color transparent transparent transparent;
+    border-bottom: none;
+  }
+  @else if $direction == right {
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent $color;
+    border-right: none;
+  }
+  @else if $direction == left {
+    border-style: dashed solid dashed dashed;
+    border-color: transparent $color transparent transparent;
+    border-left : none;
+  }
+}
