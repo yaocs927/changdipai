@@ -117,31 +117,31 @@ $base-font-size: 72px;
   position: relative;
   background-color: $whiteColor;
 
-  &:before {
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    content: "";
-    width: px2rem(2px, $base-font-size);
-    height: 100%;
-    background-color: $bgColor;
-  }
-
+  &:before,
   &:after {
     position: absolute;
     z-index: 99;
+    background-color: $bgColor;
+    content: "";
+  }
+
+  &:before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: px2rem(2px, $base-font-size);
+    height: 100%;
+  }
+
+  &:after {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    content: "";
     width: 100%;
     height: px2rem(2px, $base-font-size);
-    background-color: $bgColor;
   }
 
-  .classify-item {
+  &-item {
     position: relative;
     float: left;
     box-sizing: border-box;
@@ -151,7 +151,7 @@ $base-font-size: 72px;
     background: $whiteColor url("../img/classify-bg-1@3x.png") no-repeat 90% center;
     background-size: px2rem(112px, $base-font-size);
 
-    .classify-item-title {
+    &-title {
       position: absolute;
       top: px2rem(52px, $base-font-size);
       left: px2rem(20px, $base-font-size);
@@ -191,7 +191,7 @@ $base-font-size: 72px;
       width: 600%;
       margin-left: px2rem(20px, $base-font-size);
 
-      li.recommend-item {
+      .recommend-item {
         float: left;
         margin-right: px2rem(20px, $base-font-size);
 
@@ -202,7 +202,7 @@ $base-font-size: 72px;
           background-color: $cdpColor;
         }
 
-        .recommend-item-title {
+        &-title {
           height: px2rem(90px, $base-font-size);
           color: $fontColor2;
           font-size: 32px;

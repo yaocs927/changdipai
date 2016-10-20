@@ -107,33 +107,32 @@
   background-color: #fff;
 }
 
-.classify:before {
+.classify:before, .classify:after {
   position: absolute;
   z-index: 99;
+  background-color: #efefef;
+  content: "";
+}
+
+.classify:before {
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  content: "";
   width: 0.02778rem;
   height: 100%;
-  background-color: #efefef;
 }
 
 .classify:after {
-  position: absolute;
-  z-index: 99;
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  content: "";
   width: 100%;
   height: 0.02778rem;
-  background-color: #efefef;
 }
 
-.classify .classify-item {
+.classify-item {
   position: relative;
   float: left;
   box-sizing: border-box;
@@ -144,26 +143,26 @@
   background-size: 1.55556rem;
 }
 
-.classify .classify-item .classify-item-title {
+.classify-item-title {
   position: absolute;
   top: 0.72222rem;
   left: 0.27778rem;
 }
 
-.classify .classify-item .classify-item-title h3,
-.classify .classify-item .classify-item-title p {
+.classify-item-title h3,
+.classify-item-title p {
   width: 3.19444rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.classify .classify-item .classify-item-title h3 {
+.classify-item-title h3 {
   font-size: 32px;
   color: #bf1cbd;
 }
 
-.classify .classify-item .classify-item-title p {
+.classify-item-title p {
   margin-top: 0.13889rem;
   font-size: 24px;
   color: #878787;
@@ -185,19 +184,19 @@
   margin-left: 0.27778rem;
 }
 
-.part .recommend ul li.recommend-item {
+.part .recommend ul .recommend-item {
   float: left;
   margin-right: 0.27778rem;
 }
 
-.part .recommend ul li.recommend-item a {
+.part .recommend ul .recommend-item a {
   display: block;
   width: 8.33333rem;
   height: 5.25rem;
   background-color: #ff627a;
 }
 
-.part .recommend ul li.recommend-item .recommend-item-title {
+.part .recommend ul .recommend-item-title {
   height: 1.25rem;
   color: #464646;
   font-size: 32px;
@@ -221,7 +220,7 @@
   width: 100%;
 }
 
-.part .part-title {
+.part-title {
   height: 1.27778rem;
   padding-left: 0.27778rem;
   color: #333;
@@ -229,43 +228,43 @@
   line-height: 1.27778rem;
 }
 
-.part .place-item {
+.place-item {
   display: block;
   width: 100%;
   padding-bottom: 0.27778rem;
   background-color: #efefef;
 }
 
-.part .place-item .place-item-img {
+.place-item-img {
   position: relative;
   height: 6.52778rem;
   background: #ff627a url(../img/place-img-1@3x.jpg) no-repeat center center;
 }
 
-.part .place-item .place-item-img .corner-info,
-.part .place-item .place-item-img .placeType-info,
-.part .place-item .place-item-img .collection {
+.place-item-img .corner-info,
+.place-item-img .placeType-info,
+.place-item-img .collection {
   position: absolute;
   display: block;
 }
 
-.part .place-item .place-item-img .corner-info {
+.place-item-img .corner-info {
   top: 0;
   left: 0;
   width: 1.30556rem;
   height: 1.30556rem;
 }
 
-.part .place-item .place-item-img .corner-info img {
+.place-item-img .corner-info img {
   width: 100%;
 }
 
-.part .place-item .place-item-img .placeType-info {
+.place-item-img .placeType-info {
   bottom: 0.27778rem;
   left: 0.27778rem;
 }
 
-.part .place-item .place-item-img .placeType-info i {
+.place-item-img .placeType-info i {
   display: inline-block;
   margin-right: 0.16667rem;
   padding: 0.13889rem 0.16667rem;
@@ -274,7 +273,7 @@
   color: #fff;
 }
 
-.part .place-item .place-item-img .collection {
+.place-item-img .collection {
   right: 0.27778rem;
   bottom: 0.27778rem;
   width: 1.11111rem;
@@ -285,18 +284,18 @@
   color: #fff;
 }
 
-.part .place-item .place-item-info {
+.place-item-info {
   padding: 0.16667rem 0.27778rem;
   background-color: #fff;
 }
 
-.part .place-item .place-item-info h3 {
+.place-item-info h3 {
   line-height: 0.80556rem;
   font-size: 32px;
   color: #464646;
 }
 
-.part .place-item .place-item-info h3 .place-item-info-title {
+.place-item-info h3 .place-item-info-title {
   float: left;
   width: 6.38889rem;
   overflow: hidden;
@@ -304,23 +303,23 @@
   white-space: nowrap;
 }
 
-.part .place-item .place-item-info h3 .place-item-info-price {
+.place-item-info h3 .place-item-info-price {
   float: right;
   font-size: 34px;
   color: #ff627a;
 }
 
-.part .place-item .place-item-info h3 .place-item-info-price i {
+.place-item-info h3 .place-item-info-price i {
   font-size: 24px;
 }
 
-.part .place-item .place-item-info p {
+.place-item-info p {
   line-height: 0.5rem;
   font-size: 26px;
   color: #878787;
 }
 
-.part .place-item .place-item-info p i {
+.place-item-info p i {
   margin-right: 0.19444rem;
 }
 
@@ -354,7 +353,7 @@
   bottom: 0.27778rem;
 }
 
-.float-box a.float-item {
+.float-box-item {
   display: block;
   width: 0.94444rem;
   height: 0.94444rem;
