@@ -1,0 +1,190 @@
+// 通用组件样式
+
+// 场地列表
+.part {
+  background-color: $whiteColor;
+  width: 100%;
+
+  // 样式块标题
+  .part-title {
+    height: px2rem(92px, $base-font-size);
+    padding-left: px2rem(20px, $base-font-size);
+    color: $fontColor1;
+    font-size: 36px;
+    line-height: px2rem(92px, $base-font-size);
+  }
+
+  // 热门场地
+  .place-item {
+    display: block;
+    width: 100%;
+    padding-bottom: px2rem(20px, $base-font-size);
+    background-color: $bgColor;
+
+    // 热门场地大图部分
+    .place-item-img {
+      position: relative;
+      height: px2rem(470px, $base-font-size);
+      background: $cdpColor url(../img/place-img-1@3x.jpg) no-repeat center center;
+
+      .corner-info,
+      .placeType-info,
+      .collection {
+        position: absolute;
+        display: block;
+      }
+
+      .corner-info {
+        top: 0;
+        left: 0;
+        width: px2rem(94px, $base-font-size);
+        height: px2rem(94px, $base-font-size);
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .placeType-info {
+        bottom: px2rem(20px, $base-font-size);
+        left: px2rem(20px, $base-font-size);
+
+        i {
+          display: inline-block;
+          margin-right: px2rem(12px, $base-font-size);
+          padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
+          background-color: rgba(0, 0, 0, .5);
+          font-size: 24px;
+          color: $whiteColor;
+        }
+      }
+
+      .collection {
+        right: px2rem(20px, $base-font-size);
+        bottom: px2rem(20px, $base-font-size);
+        width: px2rem(80px, $base-font-size);
+        height: px2rem(60px, $base-font-size);
+        padding-top: px2rem(20px, $base-font-size);
+        text-align: right;
+        font-size: 50px;
+        color: $whiteColor;
+      }
+    }
+
+    // 热门场地信息部分
+    .place-item-info {
+      padding: px2rem(12px, $base-font-size) px2rem(20px, $base-font-size);
+      background-color: $whiteColor;
+
+      h3 {
+        line-height: px2rem(58px, $base-font-size);
+        font-size: 32px;
+        color: $fontColor2;
+
+        .place-item-info-title {
+          float: left;
+          width: px2rem(460px, $base-font-size);
+          @include ellipsis;
+        }
+
+        .place-item-info-price {
+          float: right;
+          font-size: 34px;
+          color: $cdpColor;
+
+          i {
+            font-size: 24px;
+          }
+        }
+      }
+
+      p {
+        line-height: px2rem(36px, $base-font-size);
+        font-size: 26px;
+        color: $fontColor3;
+
+        i {
+          margin-right: px2rem(14px, $base-font-size);
+        }
+      }
+    }
+  }
+}
+
+// [data-dpr="2"] .part .part-title {
+//   font-size: 36px;
+// }
+// [data-dpr="3"] .part .part-title {
+//   font-size: 54px;
+// }
+
+// 页尾
+.footer {
+  background-color: $whiteColor;
+  width: 100%;
+  height: px2rem(76px, $base-font-size);
+  line-height: px2rem(76px, $base-font-size);
+
+  span {
+    float: left;
+    margin-left: px2rem(20px, $base-font-size);
+  }
+
+  a {
+    width: 30%;
+    float: right;
+    margin-right: px2rem(20px, $base-font-size);
+    text-align: right;
+  }
+
+  span,a {
+    font-size: 24px;
+    color: $fontColor3;
+  }
+}
+
+// 浮动导航
+.float-box {
+  position: fixed;
+  left: px2rem(20px, $base-font-size);
+  bottom: px2rem(20px, $base-font-size);
+
+  a.float-item {
+    display: block;
+    width: px2rem(68px, $base-font-size);
+    height: px2rem(68px, $base-font-size);
+    margin-bottom: px2rem(10px, $base-font-size);
+    border-radius: px2rem(6px, $base-font-size);
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    line-height: px2rem(66px, $base-font-size);
+    color: $whiteColor;
+    font-size: 50px;
+    font-weight: 200;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

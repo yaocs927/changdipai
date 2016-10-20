@@ -1,15 +1,13 @@
 @charset "UTF-8";
 @font-face {
   font-family: "cdp-iconfont";
-  src        : url("font/iconfont.eot");
+  src: url('//at.alicdn.com/t/font_1476950934_0212882.eot');
   // IE9
-  src        :url('font/iconfont.eot?#iefix') format('embedded-opentype'),
-  // IE6-IE8
-  url('font/iconfont.woff') format('woff'),
+  src:url('//at.alicdn.com/t/font_1476950934_0212882.woff') format('woff'),
   // chrome、firefox
-  url('font/iconfont.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1476950934_0212882.ttf') format('truetype'),
   // chrome、firefox、opera、Safari, Android, iOS 4.2+
-  url(  'font/iconfont.svg#iconfont') format('svg');
+  url('//at.alicdn.com/t/font_1476950934_0212882.svg#iconfont') format('svg');
   // iOS 4.1-
 }
 
@@ -20,12 +18,17 @@ $base-font-size: 72px;
 
 // 定义图标字体
 .cdp-iconfont {
-  font-family              : "cdp-iconfont" !important;
-  font-size                : 20px;
-  font-style               : normal;
-  -webkit-font-smoothing   : antialiased;
+  font-family: "cdp-iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: .2px;
-  -moz-osx-font-smoothing  : grayscale;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 清楚浮动
+.clearfix {
+  @include clearfix;
 }
 
 // 通用间距设置
@@ -34,25 +37,85 @@ $base-font-size: 72px;
 }
 
 .main {
+  position: relative;
   width: 100%;
   height: auto;
+  overflow-x: hidden;
 }
 
 // 首页头部
 .index-header {
   width: 100%;
   height: px2rem(500px, $base-font-size);
-  background: $cdpColor url(../img/index-big-banner.jpg) no-repeat center center;
+  background: $cdpColor url("../img/index-big-banner.jpg") no-repeat center center;
   background-size: 100%;
+
+  .header-top {
+    box-sizing: border-box;
+    padding: 0 px2rem(20px, $base-font-size);
+    height: px2rem(100px, $base-font-size);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+
+    .logo {
+      float: left;
+      width: px2rem(136px, $base-font-size);
+      height: px2rem(40px, $base-font-size);
+      margin-top: px2rem(20px, $base-font-size);
+      background: url(../img/index-logo.png) no-repeat center center;
+      background-size: 100%;
+    }
+
+    .area {
+      position: relative;
+      float: right;
+      font-size: 32px;
+      line-height: px2rem(84px, $base-font-size);
+      color: $whiteColor;
+
+      i {
+        margin-left: px2rem(10px, $base-font-size);
+        font-size: 24px;
+      }
+    }
+  }
+
+  .header-slogan {
+    width: 100%;
+    margin-top: px2rem(86px, $base-font-size);
+    text-align: center;
+    font-size: 60px;
+    color: $whiteColor;
+    letter-spacing: 5px;
+    text-shadow: 0 0 30px rgba(68, 75, 12, .5);
+  }
+
+  .header-search {
+    display: block;
+    box-sizing: border-box;
+    margin: px2rem(112px, $base-font-size) auto 0;
+    width: px2rem(680px, $base-font-size);
+    height: px2rem(70px, $base-font-size);
+    border: 2px solid $cdpColor;
+    background-color: $whiteColor;
+    border-radius: px2rem(34px, $base-font-size);
+    text-align: center;
+    line-height: px2rem(66px, $base-font-size);
+    font-size: 24px;
+    color: $fontColor3;
+    letter-spacing: 3px;
+
+    i {
+      font-size: 30px;
+      color: $fontColor4;
+      margin-right: 6px;
+    }
+  }
 }
 
-// 小分类
+// 小分类推荐
 .classify {
   position: relative;
-
-  .clearfix {
-    @include clearfix;
-  }
+  background-color: $whiteColor;
 
   &:before {
     position: absolute;
@@ -85,7 +148,7 @@ $base-font-size: 72px;
     width: 50%;
     height: px2rem(172px, $base-font-size);
     padding: 2px 3px 3px 2px;
-    background: $whiteColor url(../img/classify-bg-1.png) no-repeat 90% center;
+    background: $whiteColor url("../img/classify-bg-1@3x.png") no-repeat 90% center;
     background-size: px2rem(112px, $base-font-size);
 
     .classify-item-title {
@@ -93,8 +156,9 @@ $base-font-size: 72px;
       top: px2rem(52px, $base-font-size);
       left: px2rem(20px, $base-font-size);
 
-      h3,p {
-        width: px2rem(220px, $base-font-size);
+      h3,
+      p {
+        width: px2rem(230px, $base-font-size);
         @include ellipsis;
       }
 
@@ -112,38 +176,57 @@ $base-font-size: 72px;
   }
 }
 
+// 样式块
+.part {
+  background-color: $whiteColor;
+  width: 100%;
 
+  // 场地派推荐
+  .recommend {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 
+    ul {
+      width: 600%;
+      margin-left: px2rem(20px, $base-font-size);
 
+      li.recommend-item {
+        float: left;
+        margin-right: px2rem(20px, $base-font-size);
 
+        a {
+          display: block;
+          width: px2rem(600px, $base-font-size);
+          height: px2rem(378px, $base-font-size);
+          background-color: $cdpColor;
+        }
 
+        .recommend-item-title {
+          height: px2rem(90px, $base-font-size);
+          color: $fontColor2;
+          font-size: 32px;
+          line-height: px2rem(80px, $base-font-size);
+          margin-bottom: px2rem(10px, $base-font-size);
+        }
+      }
+    }
+  }
+}
 
+// 额外块
+.extra-part {
+  height: px2rem(140px, $base-font-size);
+  line-height: px2rem(140px, $base-font-size);
+  text-align: center;
 
+  a {
+    font-size: 36px;
+    color: $cdpColor;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 通用组件
+@import "component";
 
 

@@ -1,18 +1,23 @@
 // 常用颜色
 // 主色
 $cdpColor: #ff627a;
-//
+// sub
 $subColor: #bf1cbd;
 // 背景色
 $bgColor: #efefef;
 // 白色
 $whiteColor: #fff;
 // 黑
-$fontColor1: #222;
+$fontColor1: #333;
 // 浅黑
 $fontColor2: #464646;
 $fontColor3: #878787;
 $fontColor4: #a2a2a2;
+
+// 圆角
+@mixin bd-rds( $radius: 5px ) {
+  border-radius: $radius
+}
 
 // 根据设计稿基数 ()淘宝 flexible) 单位转换 px >>> rem
 @function px2rem($px, $base-font-size: 16px) {
@@ -37,13 +42,12 @@ $fontColor4: #a2a2a2;
 @mixin clearfix {
   &:after {
     clear      : both;
-    content    : ' ';
+    content    : " ";
     display    : table;
     height     : 0;
     line-height: 0;
     overflow   : hidden;
   }
-  *height: 1%;
 }
 
 // 三角形
