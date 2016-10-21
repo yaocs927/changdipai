@@ -1,0 +1,63 @@
+@import "common";
+@import "global";
+
+body {
+  padding-top: px2rem(160px, $base-font-size);
+}
+
+.search-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+@import "component/topSearch";
+.filter-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: px2rem(72px, $base-font-size);
+  background-color: $whiteColor;
+  border-top: 1px solid $bgColor;
+  border-bottom: 1px solid $fontColor4;
+
+  &-area,
+  &-price,
+  &-type,
+  &-sort {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    line-height: px2rem(72px, $base-font-size);
+    color: $fontColor2;
+    font-size: 24px;
+
+    i {
+      margin-left: px2rem(6px, $base-font-size);
+      color: $fontColor3;
+      font-size: 26px;
+    }
+  }
+
+  &-area,
+  &-price,
+  &-type {
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      display: block;
+      width: 1px;
+      height: px2rem(40px, $base-font-size);
+      background-color: $bgColor;
+    }
+  }
+}
+
+@import "component/placeItem";
+@import "component/noMore"

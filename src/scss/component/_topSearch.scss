@@ -1,0 +1,59 @@
+// 搜索条
+.top-search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: px2rem(82px, $base-font-size);
+  background-color: $whiteColor;
+
+  &-area {
+    flex: 1;
+    color: $fontColor2;
+
+    i {
+      margin-left: px2rem(6px, $base-font-size);
+      font-size: 26px;
+      color: $fontColor3;
+    }
+  }
+
+  &-box {
+    flex: 4;
+
+    &-btn {
+      width: px2rem(450px, $base-font-size);
+      height: px2rem(58px, $base-font-size);
+      border-radius: px2rem(28px, $base-font-size);
+      border: none;
+      background-color: $bgColor;
+      font-size: 24px;
+      color: $fontColor3;
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &-btn {
+    flex: 1;
+
+    &-style {
+      margin-top: px2rem(12px, $base-font-size);
+      height: px2rem(58px, $base-font-size);
+      border-radius: px2rem(28px, $base-font-size) 0 0 px2rem(28px, $base-font-size);
+      background-color: $cdpColor;
+      line-height: px2rem(58px, $base-font-size);
+      color: $whiteColor;
+    }
+  }
+
+  &-area,
+  &-box,
+  &-btn {
+    font-size: 24px;
+    text-align: center;
+    line-height: px2rem(82px, $base-font-size);
+  }
+}

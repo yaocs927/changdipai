@@ -446,7 +446,8 @@ i {
 }
 
 .more-btn-box .moreBtn {
-  width: 3.47222rem;
+  min-width: 3.47222rem;
+  padding: 0 0.27778rem;
   height: 0.83333rem;
   background-color: #fff;
   border: 2px solid #ff627a;

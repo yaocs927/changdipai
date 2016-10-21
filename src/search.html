@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>场地派-遇见您的专属场地</title>
+	<script type="text/javascript">
+		!function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+	</script>
+	<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<meta name="apple-mobile-web-app-title" content="场地派" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="imagemode" content="force" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="img/touch-icon.png" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/search.css" />
+</head>
+
+<body>
+	<div id="cdp-search" class="main">
+    <div class="search-frame">
+      <!-- 搜索条 -->
+      <div class="top-search">
+        <a href="javascript:;" class="top-search-area">上海 <i class="cdp-iconfont">&#xe613;</i></a>
+        <a href="javascript:;" class="top-search-box">
+          <button type="button" name="button" class="top-search-box-btn"><i class="cdp-iconfont">&#xe628;</i> 搜索场地</button>
+        </a>
+        <a href="javascript:;" class="top-search-btn">
+          <div class="top-search-btn-style">为我定制</div>
+        </a>
+      </div>
+      <!-- 过滤条 -->
+      <div class="filter-bar">
+        <div class="filter-bar-area">区域<i class="cdp-iconfont">&#xe613;</i></div>
+        <div class="filter-bar-price">价格<i class="cdp-iconfont">&#xe613;</i></div>
+        <div class="filter-bar-type">功能<i class="cdp-iconfont">&#xe613;</i></div>
+        <div class="filter-bar-sort">排序<i class="cdp-iconfont">&#xe613;</i></div>
+      </div>
+    </div>
+		<!-- 热门场地 -->
+		<div class="part">
+			<a href="javascript:;" class="place-item">
+				<div class="place-item-img">
+					<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
+					<span class="placeType-info"><i>团建活动</i><i>同学聚会</i><i>Party</i></span>
+					<span class="collection cdp-iconfont">&#xe625;</span>
+				</div>
+				<div class="place-item-info">
+					<h3 class="clearfix"><span class="place-item-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</span><span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span></h3>
+					<p class="place-item-info-detail"><i>700平米</i><i>60人</i><i>浦东新区</i><i>祝村</i><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
+				</div>
+			</a>
+			<a href="javascript:;" class="place-item">
+				<div class="place-item-img">
+					<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
+					<span class="placeType-info"><i>团建活动</i><i>同学聚会</i><i>Party</i></span>
+					<span class="collection cdp-iconfont">&#xe625;</span>
+				</div>
+				<div class="place-item-info">
+					<h3 class="clearfix"><span class="place-item-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</span><span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span></h3>
+					<p class="place-item-info-detail"><i>700平米</i><i>60人</i><i>浦东新区</i><i>祝村</i><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
+				</div>
+			</a>
+			<a href="javascript:;" class="place-item">
+				<div class="place-item-img">
+					<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
+					<span class="placeType-info"><i>团建活动</i><i>同学聚会</i><i>Party</i></span>
+					<span class="collection cdp-iconfont">&#xe625;</span>
+				</div>
+				<div class="place-item-info">
+					<h3 class="clearfix"><span class="place-item-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</span><span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span></h3>
+					<p class="place-item-info-detail"><i>700平米</i><i>60人</i><i>浦东新区</i><i>祝村</i><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
+				</div>
+			</a>
+		</div>
+    <!-- 无 -->
+    <div class="no-more">
+      <div class="no-more-info">没有更多了<br />你已经看完所有场馆了</div>
+      <button type="button" name="button" class="no-more-btn">联系我们，为你定制</button>
+    </div>
+		<!-- 浮动导航-->
+		<div class="float-box">
+			<a href="javascript:;" class="float-box-item cdp-iconfont">&#xe628;</a>
+			<a href="javascript:;" class="float-box-item cdp-iconfont">&#xe600;</a>
+			<a href="javascript:;" class="float-box-item cdp-iconfont">&#xe629;</a>
+		</div>
+	</div>
+
+	<script src="js/lib/vue.js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
