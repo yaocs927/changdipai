@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+// 转换 rem 基数
+$base-font-size: 72px;
+
+@font-face {
+  font-family: "cdp-iconfont";
+  src: url('//at.alicdn.com/t/font_1476950934_0212882.eot');
+  // IE9
+  src:url('//at.alicdn.com/t/font_1476950934_0212882.woff') format('woff'),
+  // chrome、firefox
+  url('//at.alicdn.com/t/font_1476950934_0212882.ttf') format('truetype'),
+  // chrome、firefox、opera、Safari, Android, iOS 4.2+
+  url('//at.alicdn.com/t/font_1476950934_0212882.svg#iconfont') format('svg');
+  // iOS 4.1-
+}
+
+// 定义图标字体
+.cdp-iconfont {
+  font-family: "cdp-iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 清楚浮动
+.clearfix {
+  @include clearfix;
+}
+
+// 通用间距设置
+.mb20 {
+  margin-bottom: px2rem(20px, $base-font-size);
+}
+
+// 浮动导航
+.float-box {
+  position: fixed;
+  left: px2rem(20px, $base-font-size);
+  bottom: px2rem(100px, $base-font-size);
+
+  &-item {
+    display: block;
+    width: px2rem(68px, $base-font-size);
+    height: px2rem(68px, $base-font-size);
+    margin-bottom: px2rem(10px, $base-font-size);
+    border-radius: px2rem(6px, $base-font-size);
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    line-height: px2rem(66px, $base-font-size);
+    color: $whiteColor;
+    font-size: 50px;
+    font-weight: 200;
+  }
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}

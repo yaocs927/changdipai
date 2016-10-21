@@ -90,6 +90,6 @@ ins, a {
   text-decoration: none;
 }
 
-i {
+i,em {
   font-style: normal;
 }

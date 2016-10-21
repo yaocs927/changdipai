@@ -1,0 +1,95 @@
+.place-item {
+  display: block;
+  width: 100%;
+  padding-bottom: px2rem(20px, $base-font-size);
+  background-color: $bgColor;
+
+  // 热门场地大图部分
+  &-img {
+    position: relative;
+    height: px2rem(470px, $base-font-size);
+    background: $cdpColor url(../img/place-img-1@3x.jpg) no-repeat center center;
+
+    .corner-info,
+    .placeType-info,
+    .collection {
+      position: absolute;
+      display: block;
+    }
+
+    .corner-info {
+      top: 0;
+      left: 0;
+      width: px2rem(94px, $base-font-size);
+      height: px2rem(94px, $base-font-size);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .placeType-info {
+      bottom: px2rem(20px, $base-font-size);
+      left: px2rem(20px, $base-font-size);
+
+      i {
+        display: inline-block;
+        margin-right: px2rem(12px, $base-font-size);
+        padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
+        background-color: rgba(0, 0, 0, .5);
+        font-size: 24px;
+        color: $whiteColor;
+      }
+    }
+
+    .collection {
+      right: px2rem(20px, $base-font-size);
+      bottom: px2rem(20px, $base-font-size);
+      width: px2rem(80px, $base-font-size);
+      height: px2rem(60px, $base-font-size);
+      padding-top: px2rem(20px, $base-font-size);
+      text-align: right;
+      font-size: 50px;
+      color: $whiteColor;
+    }
+  }
+
+  // 场地信息部分--样式二，场地详细页头部
+  &-info-style2 {
+    padding: px2rem(12px, $base-font-size) px2rem(20px, $base-font-size);
+    background-color: $whiteColor;
+
+    h3 {
+      line-height: px2rem(58px, $base-font-size);
+      font-size: 32px;
+      color: $fontColor2;
+
+      .place-item-info-title {
+        float: left;
+        width: px2rem(460px, $base-font-size);
+        @include ellipsis;
+      }
+
+      .place-item-info-price {
+        float: right;
+        font-size: 34px;
+        color: $cdpColor;
+
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+
+    p {
+      line-height: px2rem(36px, $base-font-size);
+      font-size: 26px;
+      color: $fontColor3;
+      @include ellipsis;
+
+      i {
+        margin-right: px2rem(14px, $base-font-size);
+      }
+    }
+  }
+}

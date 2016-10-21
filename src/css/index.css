@@ -26,6 +26,26 @@
   margin-bottom: 0.27778rem;
 }
 
+.float-box {
+  position: fixed;
+  left: 0.27778rem;
+  bottom: 1.38889rem;
+}
+
+.float-box-item {
+  display: block;
+  width: 0.94444rem;
+  height: 0.94444rem;
+  margin-bottom: 0.13889rem;
+  border-radius: 0.08333rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 0.91667rem;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 200;
+}
+
 .main {
   position: relative;
   width: 100%;
@@ -169,34 +189,43 @@
 }
 
 .part {
-  background-color: #fff;
   width: 100%;
 }
 
-.part .recommend {
+.part-title {
+  background-color: #fff;
+  height: 1.27778rem;
+  padding-left: 0.27778rem;
+  color: #333;
+  font-size: 36px;
+  line-height: 1.27778rem;
+}
+
+.part .recommend-wrapper {
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 
-.part .recommend ul {
+.part .recommend-wrapper .recommend {
   width: 600%;
   margin-left: 0.27778rem;
 }
 
-.part .recommend ul .recommend-item {
+.part .recommend-wrapper .recommend-item {
   float: left;
   margin-right: 0.27778rem;
 }
 
-.part .recommend ul .recommend-item a {
+.part .recommend-wrapper .recommend-item a {
   display: block;
   width: 8.33333rem;
   height: 5.25rem;
   background-color: #ff627a;
 }
 
-.part .recommend ul .recommend-item-title {
+.part .recommend-wrapper .recommend-item-title {
   height: 1.25rem;
   color: #464646;
   font-size: 32px;
@@ -205,6 +234,7 @@
 }
 
 .extra-part {
+  background-color: #fff;
   height: 1.94444rem;
   line-height: 1.94444rem;
   text-align: center;
@@ -213,19 +243,6 @@
 .extra-part a {
   font-size: 36px;
   color: #ff627a;
-}
-
-.part {
-  background-color: #fff;
-  width: 100%;
-}
-
-.part-title {
-  height: 1.27778rem;
-  padding-left: 0.27778rem;
-  color: #333;
-  font-size: 36px;
-  line-height: 1.27778rem;
 }
 
 .place-item {
@@ -313,13 +330,16 @@
   font-size: 24px;
 }
 
-.place-item-info p {
+.place-item-info .place-item-info-detail {
   line-height: 0.5rem;
   font-size: 26px;
   color: #878787;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.place-item-info p i {
+.place-item-info .place-item-info-detail i {
   margin-right: 0.19444rem;
 }
 
@@ -345,24 +365,4 @@
 .footer span, .footer a {
   font-size: 24px;
   color: #878787;
-}
-
-.float-box {
-  position: fixed;
-  left: 0.27778rem;
-  bottom: 0.27778rem;
-}
-
-.float-box-item {
-  display: block;
-  width: 0.94444rem;
-  height: 0.94444rem;
-  margin-bottom: 0.13889rem;
-  border-radius: 0.08333rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  line-height: 0.91667rem;
-  color: #fff;
-  font-size: 50px;
-  font-weight: 200;
 }

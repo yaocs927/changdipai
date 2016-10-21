@@ -1,0 +1,22 @@
+// 查看更多按钮
+.more-btn-box {
+  width: 100%;
+  padding: px2rem(50px, $base-font-size) 0 px2rem(40px, $base-font-size);
+  background-color: $whiteColor;
+  text-align: center;
+
+  .moreBtn {
+    width: px2rem(250px, $base-font-size);
+    height: px2rem(60px, $base-font-size);
+    background-color: $whiteColor;
+    border: 2px solid $cdpColor;
+    border-radius: px2rem(5px, $base-font-size);
+    font-size: 26px;
+    color: $cdpColor;
+    line-height: px2rem(58px, $base-font-size);
+  }
+
+  i {
+    font-size: 30px;
+  }
+}

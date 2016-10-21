@@ -1,0 +1,24 @@
+// 页尾
+.footer {
+  background-color: $whiteColor;
+  width: 100%;
+  height: px2rem(76px, $base-font-size);
+  line-height: px2rem(76px, $base-font-size);
+
+  span {
+    float: left;
+    margin-left: px2rem(20px, $base-font-size);
+  }
+
+  a {
+    width: 30%;
+    float: right;
+    margin-right: px2rem(20px, $base-font-size);
+    text-align: right;
+  }
+
+  span,a {
+    font-size: 24px;
+    color: $fontColor3;
+  }
+}

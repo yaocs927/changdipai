@@ -1,0 +1,393 @@
+@import "common";
+@import "global";
+
+
+body {
+  padding-bottom: px2rem(80px, $base-font-size);
+}
+// 详情头部
+.detail-header {
+  display: block;
+  width: 100%;
+  background-color: $bgColor;
+
+  // 详情头部--场地图片
+  &-img {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: px2rem(600px, $base-font-size);
+
+    &-box {
+      position: absolute;
+      width: 600%;
+      height: px2rem(600px, $base-font-size);
+
+      li {
+        float: left;
+        width: px2rem(720px, $base-font-size);
+        height: px2rem(600px, $base-font-size);
+        background: $cdpColor url(../img/detail-img-1@3x.jpg) no-repeat center center;
+      }
+    }
+
+    .corner-info,
+    .placeType-info,
+    .collection {
+      position: absolute;
+      display: block;
+    }
+
+    .corner-info {
+      top: 0;
+      left: 0;
+      width: px2rem(94px, $base-font-size);
+      height: px2rem(94px, $base-font-size);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .placeType-info {
+      bottom: px2rem(20px, $base-font-size);
+      left: px2rem(20px, $base-font-size);
+
+      i {
+        display: inline-block;
+        margin-right: px2rem(12px, $base-font-size);
+        padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: px2rem(4px, $base-font-size);
+        font-size: 24px;
+        color: $whiteColor;
+      }
+    }
+
+    .collection {
+      right: px2rem(20px, $base-font-size);
+      bottom: px2rem(20px, $base-font-size);
+      width: px2rem(80px, $base-font-size);
+      height: px2rem(60px, $base-font-size);
+      padding-top: px2rem(20px, $base-font-size);
+      text-align: right;
+      font-size: 50px;
+      color: $whiteColor;
+    }
+  }
+
+  // 详情头部--场地信息
+  &-info {
+    padding: px2rem(40px, $base-font-size) px2rem(56px, $base-font-size);
+    background-color: $whiteColor;
+    text-align: center;
+
+    .detail-header-info-title {
+      margin: 0 auto px2rem(20px, $base-font-size);
+      font-size: 42px;
+      font-weight: 600;
+      line-height: px2rem(56px, $base-font-size);
+      color: $fontColor1;
+    }
+
+    .detail-header-info-detail {
+      font-size: 32px;
+      color: $fontColor3;
+      @include ellipsis;facilities
+
+      i {
+        display: inline-block;
+        margin: 0 px2rem(8px, $base-font-size) px2rem(20px, $base-font-size);
+        color: $cdpColor;
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+// 详情地图
+.detail-map {
+  &-box {
+    height: px2rem(442px, $base-font-size);
+    background-color: $cdpColor;
+  }
+}
+
+// 详情样式块
+.detail-part {
+  background-color: $whiteColor;
+  border-bottom: 2px solid $bgColor;
+
+  // 样式块标题
+  &-title {
+    text-align: center;
+    line-height: px2rem(110px, $base-font-size);
+    font-size: 32px;
+    font-weight: 600;
+    color: $fontColor1;
+  }
+
+  // 场地介绍
+  &-introduce {
+    padding: px2rem(10px, $base-font-size) px2rem(20px, $base-font-size);
+
+    &-list {
+      margin-bottom: px2rem(10px, $base-font-size);
+      li {
+        border-bottom: 1px solid $bgColor;
+        @include clearfix;
+
+        span {
+          float: left;
+        }
+
+        i {
+          float: right;
+        }
+
+        span,i {
+          font-size: 24px;
+          color: $fontColor2;
+          line-height: px2rem(56px, $base-font-size);
+        }
+      }
+    }
+
+    p {
+      font-size: 24px;
+      color: $fontColor2;
+      text-align: justify;
+    }
+  }
+
+  // 设施服务
+  &-service {
+    padding: px2rem(10px, $base-font-size) px2rem(20px, $base-font-size);
+
+    &-list {
+      li {
+        float: left;
+        width: 25%;
+        height: px2rem(160px, $base-font-size);
+        color: $fontColor3;
+
+        i,span {
+          display: block;
+          text-align: center;
+        }
+
+        i {
+          font-size: 60px;
+          line-height: px2rem(120px, $base-font-size);
+        }
+
+        span {
+          font-size: 24px;
+          line-height: px2rem(40px, $base-font-size);
+        }
+      }
+    }
+  }
+
+  // 历史活动
+  &-history {
+    position: relative;
+    overflow: hidden;
+
+    &-img {
+      width: 500%;
+      height: px2rem(388px, $base-font-size);
+
+      li {
+        float: left;
+        width: 10rem;
+        height: px2rem(388px, $base-font-size);
+        background-color: $cdpColor;
+      }
+    }
+
+    .placeType-info {
+      position: absolute;
+      display: block;
+      left: px2rem(20px, $base-font-size);
+      top: px2rem(318px, $base-font-size);
+
+      i {
+        display: inline-block;
+        margin-right: px2rem(12px, $base-font-size);
+        padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: px2rem(4px, $base-font-size);
+        font-size: 24px;
+        color: $whiteColor;
+      }
+    }
+
+    &-info {
+      margin-top: px2rem(16px, $base-font-size);
+      padding: 0 px2rem(20px, $base-font-size);
+      line-height: px2rem(60px, $base-font-size);
+      font-size: 24px;
+      color: $fontColor2;
+
+      span {
+        float: right;
+        color: $fontColor4;
+      }
+    }
+  }
+
+  // 客服
+  &-service {
+    text-align: center;
+
+    &-avatar {
+      margin: 0 auto px2rem(30px, $base-font-size);
+      width: px2rem(120px, $base-font-size);
+      height: px2rem(120px, $base-font-size);
+      border-radius: 50%;
+      background-color: $cdpColor;
+    }
+
+    p {
+      font-size: 26px;
+      color: $fontColor2;
+    }
+
+    p:nth-of-type(2) {
+      font-size: 20px;
+      color: $fontColor3;
+    }
+  }
+
+  // 详情主价格
+  .detail-price {
+    height: px2rem(158px, $base-font-size);
+    padding: px2rem(26px, $base-font-size) px2rem(20px, $base-font-size) px2rem(40px, $base-font-size);
+    background-color: $whiteColor;
+
+    &-left {
+      float: left;
+
+      &-left {
+        float: left;
+        width: px2rem(158px, $base-font-size);
+        height: px2rem(158px, $base-font-size);
+        background-color: $cdpColor;
+      }
+
+      &-right {
+        float: left;
+        width: px2rem(210px, $base-font-size);
+        margin-left: px2rem(20px, $base-font-size);
+
+        h4 {
+          line-height: px2rem(68px, $base-font-size);
+          font-size: 32px;
+          color: $fontColor2;
+          @include ellipsis;
+        }
+
+        p {
+          line-height: px2rem(46px, $base-font-size);
+          font-size: 24px;
+          color: $fontColor3;
+
+          i {
+            margin-right: px2rem(10px, $base-font-size);
+          }
+        }
+      }
+    }
+
+    &-right {
+      float: right;
+      line-height: px2rem(158px, $base-font-size);
+      font-size: 40px;
+      color: $cdpColor;
+
+      i {
+        font-size: 24px;
+      }
+
+      span {
+        margin: 0 px2rem(6px, $base-font-size);
+        font-size: 22px;
+        color: $fontColor3;
+      }
+
+      em {
+        margin-left: px2rem(24px, $base-font-size);
+        font-size: 32px;
+        color: $fontColor4;
+      }
+    }
+  }
+
+  // 详情价格列表
+  .detail-price-sub {
+    padding: 0 px2rem(20px, $base-font-size);
+    background-color: $whiteColor;
+
+    &-list {
+      margin: 0 (-(px2rem(20px, $base-font-size)));
+      padding: 0 px2rem(20px, $base-font-size);
+      background-color: $bgColor;
+
+      &-item {
+        min-height: px2rem(90px, $base-font-size);
+        padding: px2rem(26px, $base-font-size) 0;
+        border-bottom: 1px solid $fontColor4;
+
+        &-left {
+          float: left;
+          width: px2rem(274px, $base-font-size);
+          line-height: px2rem(42px, $base-font-size);
+          font-size: 26px;
+          color: $fontColor2;
+        }
+
+        &-right {
+          float: right;
+          line-height: px2rem(90px, $base-font-size);
+          font-size: 40px;
+          color: $cdpColor;
+
+          i {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &-tip {
+      padding: px2rem(16px, $base-font-size) 0 px2rem(32px, $base-font-size);
+      color: $fontColor4;
+      font-weight: 200;
+      font-size: 20px;
+    }
+  }
+}
+
+.float-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0;
+
+  a {
+    display: inline-block;
+    width: 50%;
+    height: px2rem(80px, $base-font-size);
+    line-height: px2rem(80px, $base-font-size);
+    background-color: $cdpColor;
+    text-align: center;
+    color: $whiteColor;
+    font-size: 28px;
+  }
+}
+
+
+
+@import "component/moreBtn";

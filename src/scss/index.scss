@@ -1,47 +1,5 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "cdp-iconfont";
-  src: url('//at.alicdn.com/t/font_1476950934_0212882.eot');
-  // IE9
-  src:url('//at.alicdn.com/t/font_1476950934_0212882.woff') format('woff'),
-  // chrome、firefox
-  url('//at.alicdn.com/t/font_1476950934_0212882.ttf') format('truetype'),
-  // chrome、firefox、opera、Safari, Android, iOS 4.2+
-  url('//at.alicdn.com/t/font_1476950934_0212882.svg#iconfont') format('svg');
-  // iOS 4.1-
-}
-
-// 常用 minixs 和 fun
 @import "common";
-// 转换 rem 基数
-$base-font-size: 72px;
-
-// 定义图标字体
-.cdp-iconfont {
-  font-family: "cdp-iconfont" !important;
-  font-size: 20px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: .2px;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-// 清楚浮动
-.clearfix {
-  @include clearfix;
-}
-
-// 通用间距设置
-.mb20 {
-  margin-bottom: px2rem(20px, $base-font-size);
-}
-
-.main {
-  position: relative;
-  width: 100%;
-  height: auto;
-  overflow-x: hidden;
-}
+@import "global";
 
 // 首页头部
 .index-header {
@@ -178,20 +136,29 @@ $base-font-size: 72px;
 
 // 样式块
 .part {
-  background-color: $whiteColor;
   width: 100%;
 
+  &-title {
+    background-color: $whiteColor;
+    height: px2rem(92px, $base-font-size);
+    padding-left: px2rem(20px, $base-font-size);
+    color: $fontColor1;
+    font-size: 36px;
+    line-height: px2rem(92px, $base-font-size);
+  }
+
   // 场地派推荐
-  .recommend {
+  .recommend-wrapper {
     width: 100%;
     position: relative;
     overflow: hidden;
+    background-color: $whiteColor;
 
-    ul {
+    .recommend {
       width: 600%;
       margin-left: px2rem(20px, $base-font-size);
 
-      .recommend-item {
+      &-item {
         float: left;
         margin-right: px2rem(20px, $base-font-size);
 
@@ -216,6 +183,7 @@ $base-font-size: 72px;
 
 // 额外块
 .extra-part {
+  background-color: $whiteColor;
   height: px2rem(140px, $base-font-size);
   line-height: px2rem(140px, $base-font-size);
   text-align: center;
@@ -227,6 +195,8 @@ $base-font-size: 72px;
 }
 
 // 通用组件
-@import "component";
+@import "component/placeItem";
+@import "component/footer";
+
 
 
