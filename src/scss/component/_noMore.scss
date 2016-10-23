@@ -4,7 +4,7 @@
 
   &-info {
     margin: px2rem(40px, $base-font-size) 0;
-    font-size: 26px;
+    font-size: 13px;
     line-height: 2;
     color: $fontColor3;
   }
@@ -13,13 +13,35 @@
     padding: px2rem(20px, $base-font-size) px2rem(30px, $base-font-size);
     margin-bottom: px2rem(120px, $base-font-size);
     background-color: $bgColor;
-    border: 2px solid $cdpColor;
+    border: 1px solid $cdpColor;
     border-radius: px2rem(40px, $base-font-size);
-    font-size: 26px;
+    font-size: 13px;
     color: $cdpColor;
   }
 
   i {
+    font-size: 15px;
+  }
+}
+
+[data-dpr="2"] .no-more {
+  &-info,
+  &-btn {
+    font-size: 26px;
+  }
+
+  i {
     font-size: 30px;
+  }
+}
+
+[data-dpr="3"] .no-more {
+  &-info,
+  &-btn {
+    font-size: 39px;
+  }
+
+  i {
+    font-size: 45px;
   }
 }

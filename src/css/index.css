@@ -6,7 +6,6 @@
 
 .cdp-iconfont {
   font-family: "cdp-iconfont" !important;
-  font-size: 20px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: .2px;
@@ -42,8 +41,16 @@
   text-align: center;
   line-height: 0.91667rem;
   color: #fff;
-  font-size: 50px;
+  font-size: 24px;
   font-weight: 200;
+}
+
+[data-dpr="2"] .float-box-item {
+  font-size: 48px;
+}
+
+[data-dpr="3"] .float-box-item {
+  font-size: 72px;
 }
 
 .main {
@@ -73,28 +80,28 @@
   width: 1.88889rem;
   height: 0.55556rem;
   margin-top: 0.27778rem;
-  background: url(../img/index-logo.png) no-repeat center center;
+  background: url("../img/index-logo.png") no-repeat center center;
   background-size: 100%;
 }
 
 .index-header .header-top .area {
   position: relative;
   float: right;
-  font-size: 32px;
+  font-size: 16px;
   line-height: 1.16667rem;
   color: #fff;
 }
 
 .index-header .header-top .area i {
   margin-left: 0.13889rem;
-  font-size: 24px;
+  font-size: 12px;
 }
 
 .index-header .header-slogan {
   width: 100%;
   margin-top: 1.19444rem;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   color: #fff;
   letter-spacing: 5px;
   text-shadow: 0 0 30px rgba(68, 75, 12, 0.5);
@@ -111,15 +118,55 @@
   border-radius: 0.47222rem;
   text-align: center;
   line-height: 0.91667rem;
-  font-size: 24px;
+  font-size: 12px;
   color: #878787;
   letter-spacing: 3px;
 }
 
 .index-header .header-search i {
-  font-size: 30px;
+  font-size: 14px;
   color: #a2a2a2;
   margin-right: 6px;
+}
+
+[data-dpr="2"] .index-header .header-top .area {
+  font-size: 32px;
+}
+
+[data-dpr="2"] .index-header .header-top .area i {
+  font-size: 24px;
+}
+
+[data-dpr="2"] .index-header .header-slogan {
+  font-size: 60px;
+}
+
+[data-dpr="2"] .index-header .header-search {
+  font-size: 24px;
+}
+
+[data-dpr="2"] .index-header .header-search i {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .index-header .header-top .area {
+  font-size: 48px;
+}
+
+[data-dpr="3"] .index-header .header-top .area i {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .index-header .header-slogan {
+  font-size: 90px;
+}
+
+[data-dpr="3"] .index-header .header-search {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .index-header .header-search i {
+  font-size: 42px;
 }
 
 .classify {
@@ -127,7 +174,7 @@
   background-color: #fff;
 }
 
-.classify:before, .classify:after {
+.classify:after, .classify:before {
   position: absolute;
   z-index: 99;
   background-color: #efefef;
@@ -178,14 +225,30 @@
 }
 
 .classify-item-title h3 {
-  font-size: 32px;
+  font-size: 16px;
   color: #bf1cbd;
 }
 
 .classify-item-title p {
   margin-top: 0.13889rem;
-  font-size: 24px;
+  font-size: 12px;
   color: #878787;
+}
+
+[data-dpr="2"] .classify-item-title h3 {
+  font-size: 32px;
+}
+
+[data-dpr="2"] .classify-item-title p {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .classify-item-title h3 {
+  font-size: 48px;
+}
+
+[data-dpr="3"] .classify-item-title p {
+  font-size: 36px;
 }
 
 .part {
@@ -197,7 +260,7 @@
   height: 1.27778rem;
   padding-left: 0.27778rem;
   color: #333;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.27778rem;
 }
 
@@ -228,9 +291,25 @@
 .part .recommend-wrapper .recommend-item-title {
   height: 1.25rem;
   color: #464646;
-  font-size: 32px;
+  font-size: 16px;
   line-height: 1.11111rem;
   margin-bottom: 0.13889rem;
+}
+
+[data-dpr="2"] .part-title {
+  font-size: 36px;
+}
+
+[data-dpr="2"] .part .recommend-wrapper .recommend-item-title {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .part-title {
+  font-size: 54px;
+}
+
+[data-dpr="3"] .part .recommend-wrapper .recommend-item-title {
+  font-size: 48px;
 }
 
 .extra-part {
@@ -241,8 +320,16 @@
 }
 
 .extra-part a {
-  font-size: 36px;
+  font-size: 18px;
   color: #ff627a;
+}
+
+[data-dpr="2"] .extra-part a {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .extra-part a {
+  font-size: 54px;
 }
 
 .place-item {
@@ -284,9 +371,11 @@
 .place-item-img .placeType-info i {
   display: inline-block;
   margin-right: 0.16667rem;
+  min-height: 0.44444rem;
   padding: 0.13889rem 0.16667rem;
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: 24px;
+  border-radius: 0.06944rem;
+  font-size: 12px;
   color: #fff;
 }
 
@@ -297,7 +386,7 @@
   height: 0.83333rem;
   padding-top: 0.27778rem;
   text-align: right;
-  font-size: 50px;
+  font-size: 25px;
   color: #fff;
 }
 
@@ -308,7 +397,7 @@
 
 .place-item-info h3 {
   line-height: 0.80556rem;
-  font-size: 32px;
+  font-size: 16px;
   color: #464646;
 }
 
@@ -322,17 +411,17 @@
 
 .place-item-info h3 .place-item-info-price {
   float: right;
-  font-size: 34px;
+  font-size: 17px;
   color: #ff627a;
 }
 
 .place-item-info h3 .place-item-info-price i {
-  font-size: 24px;
+  font-size: 12px;
 }
 
 .place-item-info .place-item-info-detail {
   line-height: 0.5rem;
-  font-size: 26px;
+  font-size: 13px;
   color: #878787;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -341,6 +430,54 @@
 
 .place-item-info .place-item-info-detail i {
   margin-right: 0.19444rem;
+}
+
+[data-dpr="2"] .place-item-img .placeType-info i {
+  font-size: 24px;
+}
+
+[data-dpr="2"] .place-item-img .collection {
+  font-size: 50px;
+}
+
+[data-dpr="2"] .place-item-info h3 {
+  font-size: 32px;
+}
+
+[data-dpr="2"] .place-item-info h3 .place-item-info-price {
+  font-size: 34px;
+}
+
+[data-dpr="2"] .place-item-info h3 .place-item-info-price i {
+  font-size: 24px;
+}
+
+[data-dpr="2"] .place-item-info .place-item-info-detail {
+  font-size: 26px;
+}
+
+[data-dpr="3"] .place-item-img .placeType-info i {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .place-item-img .collection {
+  font-size: 75px;
+}
+
+[data-dpr="3"] .place-item-info h3 {
+  font-size: 48px;
+}
+
+[data-dpr="3"] .place-item-info h3 .place-item-info-price {
+  font-size: 51px;
+}
+
+[data-dpr="3"] .place-item-info h3 .place-item-info-price i {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .place-item-info .place-item-info-detail {
+  font-size: 39px;
 }
 
 .footer {
@@ -362,7 +499,18 @@
   text-align: right;
 }
 
-.footer span, .footer a {
-  font-size: 24px;
+.footer a,
+.footer span {
+  font-size: 12px;
   color: #878787;
+}
+
+[data-dpr="2"] .footer a,
+[data-dpr="2"] .footer span {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .footer a,
+[data-dpr="3"] .footer span {
+  font-size: 36px;
 }

@@ -36,9 +36,11 @@
       i {
         display: inline-block;
         margin-right: px2rem(12px, $base-font-size);
+        min-height: px2rem(32px, $base-font-size);
         padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
         background-color: rgba(0, 0, 0, .5);
-        font-size: 24px;
+        border-radius: px2rem(5px, $base-font-size);
+        font-size: 12px;
         color: $whiteColor;
       }
     }
@@ -50,7 +52,7 @@
       height: px2rem(60px, $base-font-size);
       padding-top: px2rem(20px, $base-font-size);
       text-align: right;
-      font-size: 50px;
+      font-size: 25px;
       color: $whiteColor;
     }
   }
@@ -62,7 +64,7 @@
 
     h3 {
       line-height: px2rem(58px, $base-font-size);
-      font-size: 32px;
+      font-size: 16px;
       color: $fontColor2;
 
       .place-item-info-title {
@@ -73,8 +75,47 @@
 
       .place-item-info-price {
         float: right;
-        font-size: 34px;
+        font-size: 17px;
         color: $cdpColor;
+
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .place-item-info-detail {
+      line-height: px2rem(36px, $base-font-size);
+      font-size: 13px;
+      color: $fontColor3;
+      @include ellipsis;
+
+      i {
+        margin-right: px2rem(14px, $base-font-size);
+      }
+    }
+  }
+}
+
+[data-dpr="2"] .place-item {
+  &-img {
+    .placeType-info {
+      i {
+        font-size: 24px;
+      }
+    }
+
+    .collection {
+      font-size: 50px;
+    }
+  }
+
+  &-info {
+    h3 {
+      font-size: 32px;
+
+      .place-item-info-price {
+        font-size: 34px;
 
         i {
           font-size: 24px;
@@ -83,14 +124,39 @@
     }
 
     .place-item-info-detail {
-      line-height: px2rem(36px, $base-font-size);
       font-size: 26px;
-      color: $fontColor3;
-      @include ellipsis;
+    }
+  }
+}
 
+[data-dpr="3"] .place-item {
+  &-img {
+    .placeType-info {
       i {
-        margin-right: px2rem(14px, $base-font-size);
+        font-size: 36px;
       }
+    }
+
+    .collection {
+      font-size: 75px;
+    }
+  }
+
+  &-info {
+    h3 {
+      font-size: 48px;
+
+      .place-item-info-price {
+        font-size: 51px;
+
+        i {
+          font-size: 36px;
+        }
+      }
+    }
+
+    .place-item-info-detail {
+      font-size: 39px;
     }
   }
 }

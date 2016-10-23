@@ -59,7 +59,7 @@ body {
         padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
         background-color: rgba(0, 0, 0, .5);
         border-radius: px2rem(4px, $base-font-size);
-        font-size: 24px;
+        font-size: 12px;
         color: $whiteColor;
       }
     }
@@ -71,7 +71,7 @@ body {
       height: px2rem(60px, $base-font-size);
       padding-top: px2rem(20px, $base-font-size);
       text-align: right;
-      font-size: 50px;
+      font-size: 25px;
       color: $whiteColor;
     }
   }
@@ -84,22 +84,78 @@ body {
 
     .detail-header-info-title {
       margin: 0 auto px2rem(20px, $base-font-size);
-      font-size: 42px;
+      font-size: 21px;
       font-weight: 600;
       line-height: px2rem(56px, $base-font-size);
       color: $fontColor1;
     }
 
     .detail-header-info-detail {
-      font-size: 32px;
+      font-size: 16px;
       color: $fontColor3;
-      @include ellipsis;facilities
+      @include ellipsis;
 
       i {
         display: inline-block;
         margin: 0 px2rem(8px, $base-font-size) px2rem(20px, $base-font-size);
         color: $cdpColor;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+[data-dpr="2"] .detail-header {
+  &-img {
+    .placeType-info {
+      i {
+        font-size: 24px;
+      }
+    }
+
+    .collection {
+      font-size: 50px;
+    }
+  }
+
+  &-info {
+    .detail-header-info-title {
+      font-size: 21px;
+    }
+
+    .detail-header-info-detail {
+      font-size: 32px;
+
+      i {
         font-size: 34px;
+      }
+    }
+  }
+}
+
+[data-dpr="3"] .detail-header {
+  &-img {
+    .placeType-info {
+      i {
+        font-size: 36px;
+      }
+    }
+
+    .collection {
+      font-size: 75px;
+    }
+  }
+
+  &-info {
+    .detail-header-info-title {
+      font-size: 63px;
+    }
+
+    .detail-header-info-detail {
+      font-size: 48px;
+
+      i {
+        font-size: 51px;
       }
     }
   }
@@ -116,13 +172,13 @@ body {
 // 详情样式块
 .detail-part {
   background-color: $whiteColor;
-  border-bottom: 2px solid $bgColor;
+  border-bottom: 1px solid $bgColor;
 
   // 样式块标题
   &-title {
     text-align: center;
     line-height: px2rem(110px, $base-font-size);
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 600;
     color: $fontColor1;
   }
@@ -146,7 +202,7 @@ body {
         }
 
         span,i {
-          font-size: 24px;
+          font-size: 12px;
           color: $fontColor2;
           line-height: px2rem(56px, $base-font-size);
         }
@@ -154,7 +210,7 @@ body {
     }
 
     p {
-      font-size: 24px;
+      font-size: 12px;
       color: $fontColor2;
       text-align: justify;
     }
@@ -177,12 +233,12 @@ body {
         }
 
         i {
-          font-size: 60px;
+          font-size: 30px;
           line-height: px2rem(120px, $base-font-size);
         }
 
         span {
-          font-size: 24px;
+          font-size: 12px;
           line-height: px2rem(40px, $base-font-size);
         }
       }
@@ -218,7 +274,7 @@ body {
         padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
         background-color: rgba(0, 0, 0, .5);
         border-radius: px2rem(4px, $base-font-size);
-        font-size: 24px;
+        font-size: 12px;
         color: $whiteColor;
       }
     }
@@ -227,7 +283,7 @@ body {
       margin-top: px2rem(16px, $base-font-size);
       padding: 0 px2rem(20px, $base-font-size);
       line-height: px2rem(60px, $base-font-size);
-      font-size: 24px;
+      font-size: 12px;
       color: $fontColor2;
 
       span {
@@ -250,12 +306,12 @@ body {
     }
 
     p {
-      font-size: 26px;
+      font-size: 13px;
       color: $fontColor2;
     }
 
     p:nth-of-type(2) {
-      font-size: 20px;
+      font-size: 10px;
       color: $fontColor3;
     }
   }
@@ -283,14 +339,14 @@ body {
 
         h4 {
           line-height: px2rem(68px, $base-font-size);
-          font-size: 32px;
+          font-size: 16px;
           color: $fontColor2;
           @include ellipsis;
         }
 
         p {
           line-height: px2rem(46px, $base-font-size);
-          font-size: 24px;
+          font-size: 12px;
           color: $fontColor3;
 
           i {
@@ -303,22 +359,22 @@ body {
     &-right {
       float: right;
       line-height: px2rem(158px, $base-font-size);
-      font-size: 40px;
+      font-size: 20px;
       color: $cdpColor;
 
       i {
-        font-size: 24px;
+        font-size: 12px;
       }
 
       span {
         margin: 0 px2rem(6px, $base-font-size);
-        font-size: 22px;
+        font-size: 11px;
         color: $fontColor3;
       }
 
       em {
         margin-left: px2rem(24px, $base-font-size);
-        font-size: 32px;
+        font-size: 16px;
         color: $fontColor4;
       }
     }
@@ -343,18 +399,18 @@ body {
           float: left;
           width: px2rem(274px, $base-font-size);
           line-height: px2rem(42px, $base-font-size);
-          font-size: 26px;
+          font-size: 13px;
           color: $fontColor2;
         }
 
         &-right {
           float: right;
           line-height: px2rem(90px, $base-font-size);
-          font-size: 40px;
+          font-size: 20px;
           color: $cdpColor;
 
           i {
-            font-size: 24px;
+            font-size: 12px;
           }
         }
       }
@@ -364,11 +420,224 @@ body {
       padding: px2rem(16px, $base-font-size) 0 px2rem(32px, $base-font-size);
       color: $fontColor4;
       font-weight: 200;
+      font-size: 10px;
+    }
+  }
+}
+
+[data-dpr="2"] .detail-part {
+  &-title {
+    font-size: 32px;
+  }
+
+  &-introduce {
+    &-list {
+      li {
+        span,i {
+          font-size: 24px;
+        }
+      }
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  &-service {
+    &-list {
+      i {
+        font-size: 60px;
+      }
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &-history {
+    .placeType-info {
+      i {
+        font-size: 24px;
+      }
+    }
+
+    &-info {
+      font-size: 24px;
+    }
+  }
+
+  &-service {
+    p {
+      font-size: 26px;
+    }
+
+    p:nth-of-type(2) {
+      font-size: 20px;
+    }
+  }
+
+  .detail-price {
+    &-left {
+      &-right {
+        h4 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &-right {
+      font-size: 40px;
+
+      i {
+        font-size: 24px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+
+      em {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .detail-price-sub {
+    &-list {
+      &-item {
+        &-left {
+          font-size: 26px;
+        }
+
+        &-right {
+          font-size: 40px;
+
+          i {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &-tip {
       font-size: 20px;
     }
   }
 }
 
+[data-dpr="3"] .detail-part {
+  &-title {
+    font-size: 48px;
+  }
+
+  &-introduce {
+    &-list {
+      li {
+        span,i {
+          font-size: 36px;
+        }
+      }
+    }
+
+    p {
+      font-size: 36px;
+    }
+  }
+
+  &-service {
+    &-list {
+      i {
+        font-size: 90px;
+      }
+
+      span {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &-history {
+    .placeType-info {
+      i {
+        font-size: 36px;
+      }
+    }
+
+    &-info {
+      font-size: 36px;
+    }
+  }
+
+  &-service {
+    p {
+      font-size: 39px;
+    }
+
+    p:nth-of-type(2) {
+      font-size: 30px;
+    }
+  }
+
+  .detail-price {
+    &-left {
+      &-right {
+        h4 {
+          font-size: 48px;
+        }
+
+        p {
+          font-size: 36px;
+        }
+      }
+    }
+
+    &-right {
+      font-size: 60px;
+
+      i {
+        font-size: 36px;
+      }
+
+      span {
+        font-size: 33px;
+      }
+
+      em {
+        font-size: 48px;
+      }
+    }
+  }
+
+  .detail-price-sub {
+    &-list {
+      &-item {
+        &-left {
+          font-size: 39px;
+        }
+
+        &-right {
+          font-size: 60px;
+
+          i {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+
+    &-tip {
+      font-size: 30px;
+    }
+  }
+}
+
+// 询价按钮
 .float-btn {
   position: fixed;
   bottom: 0;
@@ -376,15 +645,43 @@ body {
   width: 100%;
   font-size: 0;
 
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: " ";
+    width: 1px;
+    height: px2rem(100px, $base-font-size);
+    background-color: $whiteColor;
+  }
+
   a {
     display: inline-block;
     width: 50%;
-    height: px2rem(80px, $base-font-size);
-    line-height: px2rem(80px, $base-font-size);
+    height: px2rem(100px, $base-font-size);
+    line-height: px2rem(100px, $base-font-size);
     background-color: $cdpColor;
     text-align: center;
     color: $whiteColor;
-    font-size: 28px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+[data-dpr="2"] .float-btn {
+  font-size: 0;
+
+  a {
+    font-size: 32px;
+  }
+}
+
+[data-dpr="3"] .float-btn {
+  font-size: 0;
+
+  a {
+    font-size: 48px;
   }
 }
 

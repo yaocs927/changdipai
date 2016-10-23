@@ -10,15 +10,17 @@
   &-area {
     flex: 1;
     color: $fontColor2;
+    font-size: 14px;
 
     i {
-      margin-left: px2rem(6px, $base-font-size);
-      font-size: 26px;
+      margin-left: px2rem(4px, $base-font-size);
+      font-size: 13px;
       color: $fontColor3;
     }
   }
 
   &-box {
+    font-size: 12px;
     flex: 4;
 
     &-btn {
@@ -27,16 +29,17 @@
       border-radius: px2rem(28px, $base-font-size);
       border: none;
       background-color: $bgColor;
-      font-size: 24px;
+      font-size: 12px;
       color: $fontColor3;
 
       i {
-        font-size: 30px;
+        font-size: 15px;
       }
     }
   }
 
   &-btn {
+    font-size: 12px;
     flex: 1;
 
     &-style {
@@ -52,8 +55,74 @@
   &-area,
   &-box,
   &-btn {
-    font-size: 24px;
     text-align: center;
     line-height: px2rem(82px, $base-font-size);
   }
 }
+
+[data-dpr="2"] .top-search {
+  &-area {
+    font-size: 28px;
+
+    i {
+      font-size: 26px;
+    }
+  }
+
+  &-box {
+    &-btn {
+      font-size: 24px;
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &-box,
+  &-btn {
+    font-size: 24px;
+  }
+}
+
+[data-dpr="3"] .top-search {
+  &-area {
+    font-size: 42px;
+
+    i {
+      font-size: 39px;
+    }
+  }
+
+  &-box {
+    &-btn {
+      font-size: 36px;
+
+      i {
+        font-size: 45px;
+      }
+    }
+  }
+
+  &-box,
+  &-btn {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

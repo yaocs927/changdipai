@@ -19,20 +19,20 @@
       width: px2rem(136px, $base-font-size);
       height: px2rem(40px, $base-font-size);
       margin-top: px2rem(20px, $base-font-size);
-      background: url(../img/index-logo.png) no-repeat center center;
+      background: url("../img/index-logo.png") no-repeat center center;
       background-size: 100%;
     }
 
     .area {
       position: relative;
       float: right;
-      font-size: 32px;
+      font-size: 16px;
       line-height: px2rem(84px, $base-font-size);
       color: $whiteColor;
 
       i {
         margin-left: px2rem(10px, $base-font-size);
-        font-size: 24px;
+        font-size: 12px;
       }
     }
   }
@@ -41,7 +41,7 @@
     width: 100%;
     margin-top: px2rem(86px, $base-font-size);
     text-align: center;
-    font-size: 60px;
+    font-size: 30px;
     color: $whiteColor;
     letter-spacing: 5px;
     text-shadow: 0 0 30px rgba(68, 75, 12, .5);
@@ -58,14 +58,63 @@
     border-radius: px2rem(34px, $base-font-size);
     text-align: center;
     line-height: px2rem(66px, $base-font-size);
-    font-size: 24px;
+    font-size: 12px;
     color: $fontColor3;
     letter-spacing: 3px;
 
     i {
-      font-size: 30px;
+      font-size: 14px;
       color: $fontColor4;
       margin-right: 6px;
+    }
+  }
+}
+
+// 首页头部字体适配
+[data-dpr="2"] .index-header {
+  .header-top {
+    .area {
+      font-size: 32px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .header-slogan {
+    font-size: 60px;
+  }
+
+  .header-search {
+    font-size: 24px;
+
+    i {
+      font-size: 28px;
+    }
+  }
+}
+
+[data-dpr="3"] .index-header {
+  .header-top {
+    .area {
+      font-size: 48px;
+
+      i {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .header-slogan {
+    font-size: 90px;
+  }
+
+  .header-search {
+    font-size: 36px;
+
+    i {
+      font-size: 42px;
     }
   }
 }
@@ -75,8 +124,8 @@
   position: relative;
   background-color: $whiteColor;
 
-  &:before,
-  &:after {
+  &:after,
+  &:before {
     position: absolute;
     z-index: 99;
     background-color: $bgColor;
@@ -121,14 +170,43 @@
       }
 
       h3 {
-        font-size: 32px;
+        font-size: 16px;
         color: $subColor;
       }
 
       p {
         margin-top: px2rem(10px, $base-font-size);
-        font-size: 24px;
+        font-size: 12px;
         color: $fontColor3;
+      }
+    }
+  }
+}
+
+// 小分类字体适配
+[data-dpr="2"] .classify {
+  &-item {
+    &-title {
+      h3 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+[data-dpr="3"] .classify {
+  &-item {
+    &-title {
+      h3 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 36px;
       }
     }
   }
@@ -143,7 +221,7 @@
     height: px2rem(92px, $base-font-size);
     padding-left: px2rem(20px, $base-font-size);
     color: $fontColor1;
-    font-size: 36px;
+    font-size: 18px;
     line-height: px2rem(92px, $base-font-size);
   }
 
@@ -172,9 +250,42 @@
         &-title {
           height: px2rem(90px, $base-font-size);
           color: $fontColor2;
-          font-size: 32px;
+          font-size: 16px;
           line-height: px2rem(80px, $base-font-size);
           margin-bottom: px2rem(10px, $base-font-size);
+        }
+      }
+    }
+  }
+}
+
+// 样式块字体适配
+[data-dpr="2"] .part {
+  &-title {
+    font-size: 36px;
+  }
+
+  .recommend-wrapper {
+    .recommend {
+      &-item {
+        &-title {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+[data-dpr="3"] .part {
+  &-title {
+    font-size: 54px;
+  }
+
+  .recommend-wrapper {
+    .recommend {
+      &-item {
+        &-title {
+          font-size: 48px;
         }
       }
     }
@@ -189,14 +300,23 @@
   text-align: center;
 
   a {
-    font-size: 36px;
+    font-size: 18px;
     color: $cdpColor;
+  }
+}
+
+[data-dpr="2"] .extra-part {
+  a {
+    font-size: 36px;
+  }
+}
+
+[data-dpr="3"] .extra-part {
+  a {
+    font-size: 54px;
   }
 }
 
 // 通用组件
 @import "component/placeItem";
 @import "component/footer";
-
-
-

@@ -14,6 +14,7 @@ body {
 }
 
 @import "component/topSearch";
+
 .filter-bar {
   display: flex;
   flex-direction: row;
@@ -33,12 +34,12 @@ body {
     text-align: center;
     line-height: px2rem(72px, $base-font-size);
     color: $fontColor2;
-    font-size: 24px;
+    font-size: 12px;
 
     i {
       margin-left: px2rem(6px, $base-font-size);
       color: $fontColor3;
-      font-size: 26px;
+      font-size: 13px;
     }
   }
 
@@ -55,6 +56,32 @@ body {
       width: 1px;
       height: px2rem(40px, $base-font-size);
       background-color: $bgColor;
+    }
+  }
+}
+
+[data-dpr="2"] .filter-bar {
+  &-area,
+  &-price,
+  &-type,
+  &-sort {
+    font-size: 24px;
+
+    i {
+      font-size: 26px;
+    }
+  }
+}
+
+[data-dpr="3"] .filter-bar {
+  &-area,
+  &-price,
+  &-type,
+  &-sort {
+    font-size: 24px;
+
+    i {
+      font-size: 26px;
     }
   }
 }

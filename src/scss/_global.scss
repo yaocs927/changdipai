@@ -18,7 +18,6 @@ $base-font-size: 72px;
 // 定义图标字体
 .cdp-iconfont {
   font-family: "cdp-iconfont" !important;
-  font-size: 20px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: .2px;
@@ -51,8 +50,20 @@ $base-font-size: 72px;
     text-align: center;
     line-height: px2rem(66px, $base-font-size);
     color: $whiteColor;
-    font-size: 50px;
+    font-size: 24px;
     font-weight: 200;
+  }
+}
+
+[data-dpr="2"] .float-box {
+  &-item {
+    font-size: 48px;
+  }
+}
+
+[data-dpr="3"] .float-box {
+  &-item {
+    font-size: 72px;
   }
 }
 

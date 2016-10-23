@@ -10,14 +10,34 @@
     padding: 0 px2rem(20px, $base-font-size);
     height: px2rem(60px, $base-font-size);
     background-color: $whiteColor;
-    border: 2px solid $cdpColor;
-    border-radius: px2rem(5px, $base-font-size);
-    font-size: 26px;
+    border: 1px solid $cdpColor;
+    border-radius: px2rem(6px, $base-font-size);
+    font-size: 13px;
     color: $cdpColor;
     line-height: px2rem(58px, $base-font-size);
   }
 
   i {
+    font-size: 15px;
+  }
+}
+
+[data-dpr="2"] .more-btn-box {
+  .moreBtn {
+    font-size: 26px;
+  }
+
+  i {
     font-size: 30px;
+  }
+}
+
+[data-dpr="3"] .more-btn-box {
+  .moreBtn {
+    font-size: 39px;
+  }
+
+  i {
+    font-size: 45px;
   }
 }
