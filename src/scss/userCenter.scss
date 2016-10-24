@@ -1,0 +1,239 @@
+@import "common";
+@import "global";
+
+// 用户信息头部
+.user-header {
+  width: 100%;
+  height: px2rem(316px, $base-font-size);
+  padding-top: px2rem(84px, $base-font-size);
+  background-color: $cdpColor;
+  text-align: center;
+
+  .user-avatar {
+    width: px2rem(174px, $base-font-size);
+    height: px2rem(174px, $base-font-size);
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    line-height: px2rem(84px, $base-font-size);
+    color: $whiteColor;
+    font-size: 20px;
+  }
+}
+
+[data-dpr="2"] .user-header {
+  p {
+    font-size: 40px;
+  }
+}
+
+[data-dpr="3"] .user-header {
+  p {
+    font-size: 60px;
+  }
+}
+
+// 用户数据
+.user-data {
+  display: flex;
+  height: px2rem(150px, $base-font-size);
+  background-color: $whiteColor;
+
+  &-order,
+  &-red,
+  &-score {
+    position: relative;
+    flex: 1;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+
+    .user-data-num {
+      margin-top: px2rem(30px, $base-font-size);
+      font-size: 21px;
+      font-weight: 700;
+      color: $cdpColor;
+
+      i {
+        font-size: 12px;
+      }
+    }
+
+    .user-data-title {
+      color: $fontColor2;
+      font-size: 14px;
+    }
+  }
+
+  &-order,
+  &-red {
+    &:after {
+      z-index: 99;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      display: block;
+      width: 1px;
+      height: px2rem(60px, $base-font-size);
+      background-color: $bgColor;
+    }
+  }
+}
+
+[data-dpr="2"] .user-data {
+  &-order,
+  &-red,
+  &-score {
+    .user-data-num {
+      font-size: 42px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+
+    .user-data-title {
+      font-size: 28px;
+    }
+  }
+}
+
+[data-dpr="3"] .user-data {
+  &-order,
+  &-red,
+  &-score {
+    .user-data-num {
+      font-size: 63px;
+
+      i {
+        font-size: 36px;
+      }
+    }
+
+    .user-data-title {
+      font-size: 42px;
+    }
+  }
+}
+
+.user-info-list {
+  background-color: $whiteColor;
+  padding: 0 px2rem(20px, $base-font-size);
+
+  li {
+    height: px2rem(90px, $base-font-size);
+    line-height: px2rem(90px, $base-font-size);
+
+    .user-info-list-icon {
+      display: inline-block;
+      width: px2rem(60px, $base-font-size);
+      font-size: 20px;
+      color: $cdpColor;
+    }
+
+    a {
+      display: inline-block;
+      width: px2rem(620px, $base-font-size);
+      border-bottom: 1px solid $bgColor;
+      font-size: 16px;
+      color: $fontColor1;
+      @include clearfix;
+
+      i {
+        float: right;
+        color: $fontColor3;
+      }
+    }
+  }
+
+  li:nth-of-type(2) {
+    a {
+      border-bottom: none;
+    }
+  }
+}
+
+[data-dpr="2"] .user-info-list {
+  li {
+    .user-info-list-icon {
+      font-size: 40px;
+    }
+
+    a {
+      font-size: 32px;
+    }
+  }
+}
+
+[data-dpr="3"] .user-info-list {
+  li {
+    .user-info-list-icon {
+      font-size: 60px;
+    }
+
+    a {
+      font-size: 48px;
+    }
+  }
+}
+
+// 额外块
+.extra-part {
+  background-color: $whiteColor;
+  height: px2rem(100px, $base-font-size);
+  line-height: px2rem(100px, $base-font-size);
+  text-align: center;
+
+  a {
+    font-size: 18px;
+    color: $cdpColor;
+  }
+}
+
+[data-dpr="2"] .extra-part {
+  a {
+    font-size: 36px;
+  }
+}
+
+[data-dpr="3"] .extra-part {
+  a {
+    font-size: 54px;
+  }
+}
+
+@import "component/footer";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

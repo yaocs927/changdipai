@@ -332,7 +332,7 @@ body {
 
 .detail-part-history-info span {
   float: right;
-  color: #a2a2a2;
+  color: #e2e1e1;
 }
 
 .detail-part-service {
@@ -419,7 +419,7 @@ body {
 .detail-part .detail-price-right em {
   margin-left: 0.33333rem;
   font-size: 16px;
-  color: #a2a2a2;
+  color: #e2e1e1;
 }
 
 .detail-part .detail-price-sub {
@@ -436,7 +436,7 @@ body {
 .detail-part .detail-price-sub-list-item {
   min-height: 1.25rem;
   padding: 0.36111rem 0;
-  border-bottom: 1px solid #a2a2a2;
+  border-bottom: 1px solid #e2e1e1;
 }
 
 .detail-part .detail-price-sub-list-item-left {
@@ -460,7 +460,7 @@ body {
 
 .detail-part .detail-price-sub-tip {
   padding: 0.22222rem 0 0.44444rem;
-  color: #a2a2a2;
+  color: #e2e1e1;
   font-weight: 200;
   font-size: 10px;
 }

@@ -1,0 +1,122 @@
+// 需求表单
+.user-form-title {
+  text-align: center;
+  margin-top: px2rem(20px, $base-font-size);
+  line-height: px2rem(94px, $base-font-size);
+  font-size: 16px;
+  color: $fontColor3;
+}
+
+[data-dpr="2"] .user-form-title {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .user-form-title {
+  font-size: 48px;
+}
+
+.user-form {
+  box-sizing: border-box;
+  width: px2rem(680px, $base-font-size);
+  margin: 0 auto;
+  border: 1px solid $fontColor4;
+  background-color: $whiteColor;
+
+  &-item {
+    &-icon,
+    &-sub {
+      display: inline-block;
+      box-sizing: border-box;
+      height: px2rem(98px, $base-font-size);
+    }
+
+    &-icon {
+      float: left;
+      width: px2rem(98px, $base-font-size);
+      line-height: px2rem(98px, $base-font-size);
+      text-align: center;
+      color: $fontColor3;
+      font-size: 20px;
+    }
+
+    &-sub {
+      float: right;
+      width: px2rem(570px, $base-font-size);
+      border-bottom: 1px solid $fontColor4;
+
+      input,
+      select {
+        border: none;
+        width: px2rem(490px, $base-font-size);
+        height: px2rem(90px, $base-font-size);
+        margin-left: px2rem(10px, $base-font-size);
+        margin-top: px2rem(4px, $base-font-size);
+        font-size: 16px;
+        color: $fontColor1;
+      }
+
+      i {
+        margin-left: px2rem(16px, $base-font-size);
+        color: $fontColor3;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-item2 {
+    .user-form-item-sub {
+      border-bottom: none;
+    }
+  }
+
+  textarea {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: px2rem(10px, $base-font-size);
+    min-height: px2rem(200px, $base-font-size);
+    font-size: 16px;
+    color: $fontColor1;
+    line-height: 1.5;
+  }
+}
+
+[data-dpr="2"] .user-form {
+  &-item {
+    &-icon {
+      font-size: 40px;
+    }
+
+    &-sub {
+      input,
+      select,
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+
+  textarea {
+    font-size: 32px;
+  }
+}
+
+[data-dpr="3"] .user-form {
+  &-item {
+    &-icon {
+      font-size: 60px;
+    }
+
+    &-sub {
+      input,
+      select,
+      i {
+        font-size: 48px;
+      }
+    }
+  }
+
+  textarea {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,69 @@
+// input 样式
+.inputBlock {
+  display: block;
+}
+
+.inputText {
+  background-color: $whiteColor;
+  border: 1px solid $fontColor4;
+  border-radius: px2rem(6px, $base-font-size);
+  color: $fontColor2;
+  font-size: 16px;
+}
+
+.inputBtn {
+  background-color: $cdpColor;
+  border: none;
+  border-radius: px2rem(6px, $base-font-size);
+  color: $whiteColor;
+  font-size: 16px;
+}
+
+[data-dpr="2"] .inputText {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .inputText {
+  font-size: 48px;
+}
+
+[data-dpr="2"] .inputBtn {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .inputBtn {
+  font-size: 48px;
+}
+
+.inputType1,
+.inputType2,
+.inputType3,
+.inputType4 {
+  box-sizing: border-box;
+  height: px2rem(80px, $base-font-size);
+  padding: px2rem(24px, $base-font-size) px2rem(20px, $base-font-size);
+  line-height: px2rem(32px, $base-font-size);
+}
+
+.inputType1 {
+  width: px2rem(680px, $base-font-size);
+}
+
+.inputType2 {
+  width: px2rem(380px, $base-font-size);
+}
+
+.inputType3 {
+  width: px2rem(276px, $base-font-size);
+}
+
+.inputType4 {
+  margin: 0 auto;
+  width: px2rem(680px, $base-font-size);
+  height: px2rem(92px, $base-font-size);
+  padding: px2rem(30px, $base-font-size) px2rem(20px, $base-font-size);
+}
+
+.user-form-submit {
+  margin: px2rem(38px, $base-font-size) 0 px2rem(48px, $base-font-size);
+}

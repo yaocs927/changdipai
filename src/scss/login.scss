@@ -1,0 +1,59 @@
+@import "common";
+@import "global";
+
+html {
+  background-color: $whiteColor;
+}
+
+body {
+  height: 100%;
+}
+
+.login-logo {
+  margin: px2rem(154px, $base-font-size) 0 px2rem(94px, $base-font-size);
+  text-align: center;
+
+  img {
+    width: px2rem(130px, $base-font-size);
+    height: auto;
+  }
+}
+
+.login-form {
+  padding: 0 px2rem(20px, $base-font-size);
+
+  &-sub {
+    margin-bottom: px2rem(20px, $base-font-size);
+    
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+  }
+}
+
+
+@import "component/input";
+@import "component/footer";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

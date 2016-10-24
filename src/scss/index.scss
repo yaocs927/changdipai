@@ -1,6 +1,9 @@
 @import "common";
 @import "global";
 
+html {
+  background-color: $bgColor;
+}
 // 首页头部
 .index-header {
   width: 100%;
