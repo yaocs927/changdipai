@@ -1,0 +1,63 @@
+@import "common";
+@import "global";
+
+@import "component/topSearch";
+
+.search-start-title {
+  padding: px2rem(20px, $base-font-size);
+  color: $fontColor3;
+}
+
+.search-start-content {
+  padding: px2rem(10px, $base-font-size) px2rem(20px, $base-font-size);
+  min-height: px2rem(80px, $base-font-size);
+  background-color: $whiteColor;
+
+  .search-start-area {
+    line-height: px2rem(80px, $base-font-size);
+    font-size: 16px;
+    color: $fontColor1;
+  }
+
+  i {
+    position: relative;
+    display: inline-block;
+    padding: px2rem(20px, $base-font-size) px2rem(40px, $base-font-size) px2rem(20px, $base-font-size) 0;
+    margin-right: px2rem(10px, $base-font-size);
+    border-radius: px2rem(30px, $base-font-size);
+    font-size: 14px;
+    color: $fontColor2;
+
+    &:after {
+      z-index: 9999;
+      position: absolute;
+      top: 50%;
+      right: px2rem(16px, $base-font-size);
+      transform: translateY(-50%);
+      content: " ";
+      width: 1px;
+      height: px2rem(30px, $base-font-size);
+      background-color: $fontColor4;
+    }
+  }
+}
+
+[data-dpr="2"] .search-start-content {
+  .search-start-area {
+    font-size: 32px;
+  }
+
+  i {
+    font-size: 28px;
+  }
+}
+
+[data-dpr="3"] .search-start-content {
+  .search-start-area {
+    font-size: 48px;
+  }
+
+  i {
+    font-size: 42px;
+  }
+}

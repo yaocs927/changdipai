@@ -233,3 +233,27 @@
 [data-dpr="3"] .user-form textarea {
   font-size: 48px;
 }
+
+.release-header {
+  width: 100%;
+  height: 4.58333rem;
+  background: #ff627a url(../img/fabu-img@3x.jpg) no-repeat center center;
+  background-size: 100%;
+}
+
+.release-header p {
+  width: 86%;
+  margin: 0 auto;
+  padding-top: 1.25rem;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+[data-dpr="2"] .release-header p {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .release-header p {
+  font-size: 42px;
+}

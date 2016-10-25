@@ -15,13 +15,18 @@
     i {
       margin-left: px2rem(4px, $base-font-size);
       font-size: 13px;
-      color: $fontColor3;
+      color: $cdpColor;
     }
   }
 
   &-box {
+    position: relative;
     font-size: 12px;
     flex: 4;
+
+    input[type="text"] {
+      text-indent: px2rem(50px, $base-font-size);
+    }
 
     &-btn {
       width: px2rem(450px, $base-font-size);
@@ -29,11 +34,19 @@
       border-radius: px2rem(28px, $base-font-size);
       border: none;
       background-color: $bgColor;
-      font-size: 12px;
-      color: $fontColor3;
+      font-size: 14px;
+      color: $fontColor1;
+    }
+
+    label {
+      position: absolute;
+      left: px2rem(30px, $base-font-size);
+      top: 50%;
+      transform: translateY(-50%);
 
       i {
         font-size: 15px;
+        color: $fontColor3;
       }
     }
   }
@@ -71,8 +84,10 @@
 
   &-box {
     &-btn {
-      font-size: 24px;
+      font-size: 28px;
+    }
 
+    label {
       i {
         font-size: 30px;
       }
@@ -96,8 +111,10 @@
 
   &-box {
     &-btn {
-      font-size: 36px;
+      font-size: 42px;
+    }
 
+    label {
       i {
         font-size: 45px;
       }

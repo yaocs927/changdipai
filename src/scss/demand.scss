@@ -1,8 +1,33 @@
 @import "common";
 @import "global";
 
-
-
 @import "component/input";
 @import "component/form";
 
+.release-header {
+  width: 100%;
+  height: px2rem(330px, $base-font-size);
+  background: $cdpColor url(../img/fabu-img@3x.jpg) no-repeat center center;
+  background-size: 100%;
+
+  p {
+    width: 86%;
+    margin: 0 auto;
+    padding-top: px2rem(90px, $base-font-size);
+    text-align: center;
+    color: $whiteColor;
+    font-size: 14px;
+  }
+}
+
+[data-dpr="2"] .release-header {
+  p {
+    font-size: 28px;
+  }
+}
+
+[data-dpr="3"] .release-header {
+  p {
+    font-size: 42px;
+  }
+}

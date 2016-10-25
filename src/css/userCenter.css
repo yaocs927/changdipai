@@ -61,6 +61,7 @@
 }
 
 .user-header {
+  position: relative;
   width: 100%;
   height: 4.38889rem;
   padding-top: 1.16667rem;
@@ -82,6 +83,14 @@
   line-height: 1.16667rem;
   color: #fff;
   font-size: 20px;
+}
+
+.user-header .user-header-out {
+  position: absolute;
+  right: 0.27778rem;
+  bottom: 0.27778rem;
+  font-size: 12px !important;
+  padding: 0.13889rem 0.27778rem;
 }
 
 [data-dpr="2"] .user-header p {
@@ -207,7 +216,7 @@
   color: #878787;
 }
 
-.user-info-list li:nth-of-type(2) a {
+.user-info-list li:nth-last-of-type(1) a {
   border-bottom: none;
 }
 
@@ -280,4 +289,73 @@
 [data-dpr="3"] .footer a,
 [data-dpr="3"] .footer span {
   font-size: 36px;
+}
+
+.inputBlock {
+  display: block;
+}
+
+.inputText {
+  background-color: #fff;
+  border: 1px solid #e2e1e1;
+  border-radius: 0.08333rem;
+  color: #464646;
+  font-size: 16px;
+}
+
+.inputBtn {
+  background-color: #ff627a;
+  border: none;
+  border-radius: 0.08333rem;
+  color: #fff;
+  font-size: 16px;
+}
+
+[data-dpr="2"] .inputText {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .inputText {
+  font-size: 48px;
+}
+
+[data-dpr="2"] .inputBtn {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .inputBtn {
+  font-size: 48px;
+}
+
+.inputType1,
+.inputType2,
+.inputType3,
+.inputType4 {
+  box-sizing: border-box;
+  height: 1.11111rem;
+  padding: 0.33333rem 0.27778rem;
+  line-height: 0.44444rem;
+}
+
+.inputType1 {
+  width: 9.44444rem;
+}
+
+.inputType2 {
+  width: 5.27778rem;
+}
+
+.inputType3 {
+  width: 3.83333rem;
+}
+
+.inputType4 {
+  margin: 0 auto;
+  width: 9.44444rem;
+  height: 1.27778rem;
+  padding: 0.41667rem 0.27778rem;
+}
+
+.user-form-submit {
+  margin: 0.52778rem 0 0.66667rem;
 }

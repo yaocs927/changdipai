@@ -2,7 +2,7 @@
 @import "global";
 
 html {
-  background-color: $whiteColor;
+  background-color: $bgColor;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 
   &-sub {
     margin-bottom: px2rem(20px, $base-font-size);
-    
+
     &-left {
       float: left;
     }
@@ -37,7 +37,14 @@ body {
 
 
 @import "component/input";
+@import "component/userInfoList";
 @import "component/footer";
+
+
+.footer {
+  background-color: $bgColor;
+}
+
 
 
 

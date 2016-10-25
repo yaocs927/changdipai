@@ -1,0 +1,60 @@
+.user-info-list {
+  background-color: $whiteColor;
+  padding: 0 px2rem(20px, $base-font-size);
+
+  li {
+    height: px2rem(90px, $base-font-size);
+    line-height: px2rem(90px, $base-font-size);
+
+    .user-info-list-icon {
+      display: inline-block;
+      width: px2rem(60px, $base-font-size);
+      font-size: 20px;
+      color: $cdpColor;
+    }
+
+    a {
+      display: inline-block;
+      width: px2rem(620px, $base-font-size);
+      border-bottom: 1px solid $bgColor;
+      font-size: 16px;
+      color: $fontColor1;
+      @include clearfix;
+
+      i {
+        float: right;
+        color: $fontColor3;
+      }
+    }
+  }
+
+  li:nth-last-of-type(1) {
+    a {
+      border-bottom: none;
+    }
+  }
+}
+
+[data-dpr="2"] .user-info-list {
+  li {
+    .user-info-list-icon {
+      font-size: 40px;
+    }
+
+    a {
+      font-size: 32px;
+    }
+  }
+}
+
+[data-dpr="3"] .user-info-list {
+  li {
+    .user-info-list-icon {
+      font-size: 60px;
+    }
+
+    a {
+      font-size: 48px;
+    }
+  }
+}

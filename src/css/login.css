@@ -61,7 +61,7 @@
 }
 
 html {
-  background-color: #fff;
+  background-color: #efefef;
 }
 
 body {
@@ -163,6 +163,65 @@ body {
   margin: 0.52778rem 0 0.66667rem;
 }
 
+.user-info-list {
+  background-color: #fff;
+  padding: 0 0.27778rem;
+}
+
+.user-info-list li {
+  height: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.user-info-list li .user-info-list-icon {
+  display: inline-block;
+  width: 0.83333rem;
+  font-size: 20px;
+  color: #ff627a;
+}
+
+.user-info-list li a {
+  display: inline-block;
+  width: 8.61111rem;
+  border-bottom: 1px solid #efefef;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-info-list li a:after {
+  clear: both;
+  content: " ";
+  display: table;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.user-info-list li a i {
+  float: right;
+  color: #878787;
+}
+
+.user-info-list li:nth-last-of-type(1) a {
+  border-bottom: none;
+}
+
+[data-dpr="2"] .user-info-list li .user-info-list-icon {
+  font-size: 40px;
+}
+
+[data-dpr="2"] .user-info-list li a {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .user-info-list li .user-info-list-icon {
+  font-size: 60px;
+}
+
+[data-dpr="3"] .user-info-list li a {
+  font-size: 48px;
+}
+
 .footer {
   background-color: #fff;
   width: 100%;
@@ -196,4 +255,8 @@ body {
 [data-dpr="3"] .footer a,
 [data-dpr="3"] .footer span {
   font-size: 36px;
+}
+
+.footer {
+  background-color: #efefef;
 }

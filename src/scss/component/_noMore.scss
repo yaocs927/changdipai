@@ -10,8 +10,10 @@
   }
 
   &-btn {
+    display: block;
+    max-width: px2rem(300px, $base-font-size);
     padding: px2rem(20px, $base-font-size) px2rem(30px, $base-font-size);
-    margin-bottom: px2rem(120px, $base-font-size);
+    margin: 0 auto px2rem(120px, $base-font-size);
     background-color: $bgColor;
     border: 1px solid $cdpColor;
     border-radius: px2rem(40px, $base-font-size);
