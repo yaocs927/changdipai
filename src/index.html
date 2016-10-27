@@ -88,6 +88,7 @@
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" href="img/touch-icon.png" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
@@ -97,9 +98,15 @@
 		<div class="index-header mb20">
 			<div class="header-top">
 				<span class="logo"></span>
-				<span class="area">上海<i class="cdp-iconfont">&#xe613;</i></span>
+				<span class="area" id="selectArea"><span>上海</span><i class="cdp-iconfont">&#xe613;</i></span>
+				<ul class="area-list" id="areaList">
+					<li v-for="i in areas">{{ i }}</li>
+				</ul>
 			</div>
 			<p class="header-slogan">遇见你的专属场地</p>
+			<a href="searchStart.html" class="header-search"><i class="cdp-iconfont">&#xe628;</i>点击搜索场地</a>
+		</div>
+		<div class="float-search" id="float-search">
 			<a href="searchStart.html" class="header-search"><i class="cdp-iconfont">&#xe628;</i>点击搜索场地</a>
 		</div>
 		<!-- 首页小分类推荐 -->
@@ -134,31 +141,26 @@
 		<!-- 场地派推荐 -->
 		<div class="part mb20">
 			<h2 class="part-title">场地派推荐</h2>
-			<div class="recommend-wrapper">
-				<ul class="clearfix recommend">
-					<li class="recommend-item">
-						<a href="search.html">
-						</a>
+			<div class="recommend-wrapper swiper-container">
+				<ul class="clearfix recommend swiper-wrapper">
+					<li class="recommend-item swiper-slide">
+						<a href="search.html">1</a>
 						<div class="recommend-item-title">租个别墅开Party</div>
 					</li>
-					<li class="recommend-item">
-						<a href="javascript:;">
-						</a>
+					<li class="recommend-item swiper-slide">
+						<a href="javascript:;">2</a>
 						<div class="recommend-item-title">租个别墅开Party</div>
 					</li>
-					<li class="recommend-item">
-						<a href="javascript:;">
-						</a>
+					<li class="recommend-item swiper-slide">
+						<a href="javascript:;">3</a>
 						<div class="recommend-item-title">租个别墅开Party</div>
 					</li>
-					<li class="recommend-item">
-						<a href="javascript:;">
-						</a>
+					<li class="recommend-item swiper-slide">
+						<a href="javascript:;">4</a>
 						<div class="recommend-item-title">租个别墅开Party</div>
 					</li>
-					<li class="recommend-item">
-						<a href="javascript:;">
-						</a>
+					<li class="recommend-item swiper-slide">
+						<a href="javascript:;">5</a>
 						<div class="recommend-item-title">租个别墅开Party</div>
 					</li>
 				</ul>
@@ -218,8 +220,19 @@
 	</div>
 
 	<script src="js/lib/vue.js"></script>
+	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/lib/swiper.jquery.min.js"></script>
 	<script src="js/index.js"></script>
 
+	<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    // loop: true,
+		slidesPerView: 'auto',
+    paginationClickable: true,
+    spaceBetween: 14
+  })
+
+  </script>
 </body>
 
 </html>

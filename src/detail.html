@@ -88,19 +88,31 @@
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" href="img/touch-icon.png" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/detail.css" />
 </head>
 
 <body>
   <dic id="cdp-detail" class="main">
     <div class="detail-header">
-			<div class="detail-header-img">
-        <ul class="detail-header-img-box clearfix">
-          <li><img src="" alt=""></li>
-        </ul>
-				<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
-				<span class="placeType-info"><i>10 / 25</i></span>
-				<span class="collection cdp-iconfont">&#xe625;</span>
+			<div class="detail-header-img swiper-container img-wrapper">
+				<div class="swiper-wrapper img-wrapper-box">
+	        <div class="swiper-slide img-wrapper-box-list swiper-lazy">Slide 1
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+	        <div class="swiper-slide img-wrapper-box-list swiper-lazy">Slide 2
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+					<div class="swiper-slide img-wrapper-box-list swiper-lazy">Slide 3
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+					<div class="swiper-slide img-wrapper-box-list swiper-lazy">Slide 3
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+	    	</div>
+				<!-- <span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span> -->
+				<div class="placeType-info swiper-pagination"></div>
+				<div class="collection cdp-iconfont">&#xe625;</div>
 			</div>
 			<div class="detail-header-info">
 				<h2 class="clearfix detail-header-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</h2>
@@ -108,12 +120,14 @@
 				<p class="detail-header-info-detail">庞各庄镇龙景湾二区富力丹麦小镇110栋</p>
 			</div>
 		</div>
+		<!-- 地图 -->
     <div class="detail-map mb20">
       <div class="detail-map-box"></div>
       <div class="more-btn-box">
         <button type="button" name="button" class="moreBtn"><i class="cdp-iconfont">&#xe607;</i> 查看更大地图</button>
       </div>
     </div>
+		<!-- 场地价格列表 -->
     <div class="detail-part">
       <div class="detail-price clearfix">
         <div class="detail-price-left clearfix">
@@ -143,6 +157,7 @@
         <div class="detail-price-sub-tip">以上价格均为参考价</div>
       </div>
     </div>
+		<!-- 场地介绍 -->
     <div class="detail-part">
       <div class="detail-part-title">场地介绍</div>
       <div class="detail-part-introduce">
@@ -157,10 +172,11 @@
         <button type="button" name="button" class="moreBtn"><i class="cdp-iconfont">&#xe607;</i> 查看更多内容</button>
       </div>
     </div>
+		<!-- 设施服务 -->
     <div class="detail-part">
       <div class="detail-part-title">设施服务</div>
       <div class="detail-part-facilities">
-        <ul class="detail-part-service-list clearfix">
+        <ul class="detail-part-facilities-list clearfix">
           <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
           <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
           <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
@@ -171,19 +187,28 @@
         <button type="button" name="button" class="moreBtn"><i class="cdp-iconfont">&#xe607;</i> 查看更多内容</button>
       </div>
     </div>
+		<!-- 历史活动 -->
     <div class="detail-part">
       <div class="detail-part-title">历史活动</div>
       <div class="detail-part-history">
-        <ul class="detail-part-history-img clearfix">
-          <li></li>
-        </ul>
-        <span class="placeType-info"><i>10 / 25</i></span>
+				<div class="detail-part-history-img swiper-container img-wrapper">
+					<div class="swiper-wrapper img-wrapper-box">
+						<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+						<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+						<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+						<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+						<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+						<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+					</div>
+					<div class="placeType-info swiper-pagination"></div>
+				</div>
         <div class="detail-part-history-info">某婚礼<span>2015年10月21日</span></div>
       </div>
       <div class="more-btn-box">
         <button type="button" name="button" class="moreBtn"><i class="cdp-iconfont">&#xe607;</i> 查看更多内容</button>
       </div>
     </div>
+		<!-- 场地客服 -->
     <div class="detail-part">
       <div class="detail-part-title">场地客服</div>
       <div class="detail-part-service">
@@ -206,6 +231,20 @@
 			<a href="index.html" class="float-box-item cdp-iconfont">&#xe629;</a>
 		</div>
   </div>
+
+	<script src="js/lib/vue.js"></script>
+	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/lib/swiper.jquery.min.js"></script>
+
+	<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction',
+    preloadImages: false,
+    lazyLoading: true
+  })
+
+  </script>
 </body>
 
 </html>

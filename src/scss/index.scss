@@ -12,6 +12,7 @@ html {
   background-size: 100%;
 
   .header-top {
+    position: relative;
     box-sizing: border-box;
     padding: 0 px2rem(20px, $base-font-size);
     height: px2rem(100px, $base-font-size);
@@ -36,6 +37,21 @@ html {
       i {
         margin-left: px2rem(10px, $base-font-size);
         font-size: 12px;
+      }
+    }
+
+    .area-list {
+      z-index: 9999;
+      display: none;
+      position: absolute;
+      top: px2rem(20px, $base-font-size);
+      right: px2rem(20px, $base-font-size);
+      background-color: $whiteColor;
+
+      li {
+        padding: px2rem(30px, $base-font-size);
+        font-size: 14px;
+        border-bottom: 1px solid $fontColor4;
       }
     }
   }
@@ -113,6 +129,60 @@ html {
     font-size: 90px;
   }
 
+  .header-search {
+    font-size: 36px;
+
+    i {
+      font-size: 42px;
+    }
+  }
+}
+
+// 浮动搜索框
+.float-search {
+  z-index: 99999;
+  position: fixed;
+  top: -(px2rem(100px, $base-font-size));
+  left: 0;
+  width: 100%;
+  height: px2rem(100px, $base-font-size);
+  background-color: $cdpColorSub;
+  transition: all .2s linear;
+
+  .header-search {
+    display: block;
+    box-sizing: border-box;
+    margin: px2rem(15px, $base-font-size) auto 0;
+    width: px2rem(680px, $base-font-size);
+    height: px2rem(70px, $base-font-size);
+    border: 2px solid $cdpColor;
+    background-color: $whiteColor;
+    border-radius: px2rem(34px, $base-font-size);
+    text-align: center;
+    line-height: px2rem(66px, $base-font-size);
+    font-size: 12px;
+    color: $fontColor3;
+    letter-spacing: 3px;
+
+    i {
+      font-size: 14px;
+      color: $fontColor3;
+      margin-right: 6px;
+    }
+  }
+}
+
+[data-dpr="2"] .float-search {
+  .header-search {
+    font-size: 24px;
+
+    i {
+      font-size: 28px;
+    }
+  }
+}
+
+[data-dpr="3"] .float-search {
   .header-search {
     font-size: 36px;
 
@@ -230,18 +300,17 @@ html {
 
   // 场地派推荐
   .recommend-wrapper {
+    box-sizing: border-box;
     width: 100%;
+    padding: 0 px2rem(20px, $base-font-size);
     position: relative;
     overflow: hidden;
     background-color: $whiteColor;
 
     .recommend {
-      width: 600%;
-      margin-left: px2rem(20px, $base-font-size);
-
       &-item {
-        float: left;
-        margin-right: px2rem(20px, $base-font-size);
+        width: px2rem(600px, $base-font-size);
+        background-color: $whiteColor;
 
         a {
           display: block;

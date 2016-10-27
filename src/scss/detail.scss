@@ -1,7 +1,6 @@
 @import "common";
 @import "global";
 
-
 body {
   padding-bottom: px2rem(80px, $base-font-size);
 }
@@ -13,67 +12,7 @@ body {
 
   // 详情头部--场地图片
   &-img {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
     height: px2rem(600px, $base-font-size);
-
-    &-box {
-      position: absolute;
-      width: 600%;
-      height: px2rem(600px, $base-font-size);
-
-      li {
-        float: left;
-        width: px2rem(720px, $base-font-size);
-        height: px2rem(600px, $base-font-size);
-        background: $cdpColor url(../img/detail-img-1@3x.jpg) no-repeat center center;
-      }
-    }
-
-    .corner-info,
-    .placeType-info,
-    .collection {
-      position: absolute;
-      display: block;
-    }
-
-    .corner-info {
-      top: 0;
-      left: 0;
-      width: px2rem(94px, $base-font-size);
-      height: px2rem(94px, $base-font-size);
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .placeType-info {
-      bottom: px2rem(20px, $base-font-size);
-      left: px2rem(20px, $base-font-size);
-
-      i {
-        display: inline-block;
-        margin-right: px2rem(12px, $base-font-size);
-        padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
-        background-color: rgba(0, 0, 0, .5);
-        border-radius: px2rem(4px, $base-font-size);
-        font-size: 12px;
-        color: $whiteColor;
-      }
-    }
-
-    .collection {
-      right: px2rem(20px, $base-font-size);
-      bottom: px2rem(20px, $base-font-size);
-      width: px2rem(80px, $base-font-size);
-      height: px2rem(60px, $base-font-size);
-      padding-top: px2rem(20px, $base-font-size);
-      text-align: right;
-      font-size: 25px;
-      color: $whiteColor;
-    }
   }
 
   // 详情头部--场地信息
@@ -106,18 +45,6 @@ body {
 }
 
 [data-dpr="2"] .detail-header {
-  &-img {
-    .placeType-info {
-      i {
-        font-size: 24px;
-      }
-    }
-
-    .collection {
-      font-size: 50px;
-    }
-  }
-
   &-info {
     .detail-header-info-title {
       font-size: 21px;
@@ -134,18 +61,6 @@ body {
 }
 
 [data-dpr="3"] .detail-header {
-  &-img {
-    .placeType-info {
-      i {
-        font-size: 36px;
-      }
-    }
-
-    .collection {
-      font-size: 75px;
-    }
-  }
-
   &-info {
     .detail-header-info-title {
       font-size: 63px;
@@ -178,7 +93,7 @@ body {
   &-title {
     text-align: center;
     line-height: px2rem(110px, $base-font-size);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: $fontColor1;
   }
@@ -202,22 +117,23 @@ body {
         }
 
         span,i {
-          font-size: 12px;
+          font-size: 16px;
           color: $fontColor2;
-          line-height: px2rem(56px, $base-font-size);
+          line-height: px2rem(80px, $base-font-size);
         }
       }
     }
 
     p {
-      font-size: 12px;
-      color: $fontColor2;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $fontColor1;
       text-align: justify;
     }
   }
 
   // 设施服务
-  &-service {
+  &-facilities {
     padding: px2rem(10px, $base-font-size) px2rem(20px, $base-font-size);
 
     &-list {
@@ -238,7 +154,8 @@ body {
         }
 
         span {
-          font-size: 12px;
+          font-size: 14px;
+          color: $fontColor2;
           line-height: px2rem(40px, $base-font-size);
         }
       }
@@ -251,44 +168,19 @@ body {
     overflow: hidden;
 
     &-img {
-      width: 500%;
       height: px2rem(388px, $base-font-size);
-
-      li {
-        float: left;
-        width: 10rem;
-        height: px2rem(388px, $base-font-size);
-        background-color: $cdpColor;
-      }
-    }
-
-    .placeType-info {
-      position: absolute;
-      display: block;
-      left: px2rem(20px, $base-font-size);
-      top: px2rem(318px, $base-font-size);
-
-      i {
-        display: inline-block;
-        margin-right: px2rem(12px, $base-font-size);
-        padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
-        background-color: rgba(0, 0, 0, .5);
-        border-radius: px2rem(4px, $base-font-size);
-        font-size: 12px;
-        color: $whiteColor;
-      }
     }
 
     &-info {
       margin-top: px2rem(16px, $base-font-size);
       padding: 0 px2rem(20px, $base-font-size);
       line-height: px2rem(60px, $base-font-size);
-      font-size: 12px;
+      font-size: 14px;
       color: $fontColor2;
 
       span {
         float: right;
-        color: $fontColor4;
+        color: $fontColor3;
       }
     }
   }
@@ -375,7 +267,7 @@ body {
       em {
         margin-left: px2rem(24px, $base-font-size);
         font-size: 16px;
-        color: $fontColor4;
+        color: $fontColor3;
       }
     }
   }
@@ -426,48 +318,47 @@ body {
 }
 
 [data-dpr="2"] .detail-part {
+  // 样式块标题
   &-title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
+  // 场地介绍
   &-introduce {
     &-list {
       li {
         span,i {
-          font-size: 24px;
+          font-size: 32px;
         }
       }
     }
 
     p {
-      font-size: 24px;
+      font-size: 32px;
     }
   }
 
-  &-service {
+  // 设施服务
+  &-facilities {
     &-list {
       i {
         font-size: 60px;
       }
 
       span {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
   }
 
+  // 历史活动
   &-history {
-    .placeType-info {
-      i {
-        font-size: 24px;
-      }
-    }
-
     &-info {
-      font-size: 24px;
+      font-size: 28px;
     }
   }
 
+  // 客服
   &-service {
     p {
       font-size: 26px;
@@ -478,6 +369,7 @@ body {
     }
   }
 
+  // 详情主价格
   .detail-price {
     &-left {
       &-right {
@@ -508,6 +400,7 @@ body {
     }
   }
 
+  // 详情价格列表
   .detail-price-sub {
     &-list {
       &-item {
@@ -532,48 +425,47 @@ body {
 }
 
 [data-dpr="3"] .detail-part {
+  // 样式块标题
   &-title {
-    font-size: 48px;
+    font-size: 60px;
   }
 
+  // 场地介绍
   &-introduce {
     &-list {
       li {
         span,i {
-          font-size: 36px;
+          font-size: 48px;
         }
       }
     }
 
     p {
-      font-size: 36px;
+      font-size: 48px;
     }
   }
 
-  &-service {
+  // 设施服务
+  &-facilities {
     &-list {
       i {
         font-size: 90px;
       }
 
       span {
-        font-size: 36px;
+        font-size: 42px;
       }
     }
   }
 
+  // 历史活动
   &-history {
-    .placeType-info {
-      i {
-        font-size: 36px;
-      }
-    }
-
     &-info {
-      font-size: 36px;
+      font-size: 42px;
     }
   }
 
+  // 客服
   &-service {
     p {
       font-size: 39px;
@@ -584,6 +476,7 @@ body {
     }
   }
 
+  // 详情主价格
   .detail-price {
     &-left {
       &-right {
@@ -614,6 +507,7 @@ body {
     }
   }
 
+  // 详情价格列表
   .detail-price-sub {
     &-list {
       &-item {
@@ -685,6 +579,5 @@ body {
   }
 }
 
-
-
+@import "component/imgBox";
 @import "component/moreBtn";

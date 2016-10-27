@@ -1,0 +1,111 @@
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: $bgColor;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: px2rem(30px, $base-font-size);
+    transform: translateY(-50%);
+    content: "第一张啦";
+    width: px2rem(12px, $base-font-size);
+    font-size: 14px;
+    line-height: 1.2;
+    color: $fontColor3;
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: px2rem(30px, $base-font-size);
+    transform: translateY(-50%);
+    content: "最后一张啦";
+    width: px2rem(12px, $base-font-size);
+    font-size: 14px;
+    line-height: 1.2;
+    color: $fontColor3;
+  }
+
+  .img-wrapper-box {
+    height: 100%;
+
+    .img-wrapper-box-list {
+      width: px2rem(720px, $base-font-size);
+      height: 100%;
+      background: $cdpColor url(../img/detail-img-1@3x.jpg) no-repeat center center;
+      background-size: 100%;
+    }
+  }
+
+  .corner-info,
+  .placeType-info,
+  .collection {
+    position: absolute;
+    display: inline-block;
+    z-index: 999;
+  }
+
+  .corner-info {
+    top: 0;
+    left: 0;
+    width: px2rem(94px, $base-font-size);
+    height: px2rem(94px, $base-font-size);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .placeType-info {
+    bottom: px2rem(20px, $base-font-size);
+    left: px2rem(20px, $base-font-size);
+    padding: px2rem(10px, $base-font-size) px2rem(12px, $base-font-size);
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: px2rem(4px, $base-font-size);
+    font-size: 12px;
+    color: $whiteColor;
+  }
+
+  .collection {
+    right: px2rem(20px, $base-font-size);
+    bottom: px2rem(20px, $base-font-size);
+    width: px2rem(80px, $base-font-size);
+    height: px2rem(60px, $base-font-size);
+    padding-top: px2rem(20px, $base-font-size);
+    text-align: right;
+    font-size: 25px;
+    color: $whiteColor;
+  }
+}
+
+[data-dpr="2"] .img-wrapper {
+  &:before,
+  &:after {
+    font-size: 28px;
+  }
+
+  .placeType-info {
+    font-size: 24px;
+  }
+
+  .collection {
+    font-size: 50px;
+  }
+}
+
+[data-dpr="3"] .img-wrapper {
+  &:before,
+  &:after {
+    font-size: 28px;
+  }
+  
+  .placeType-info {
+    font-size: 36px;
+  }
+
+  .collection {
+    font-size: 75px;
+  }
+}

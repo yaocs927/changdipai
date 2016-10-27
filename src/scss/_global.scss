@@ -37,6 +37,7 @@ $base-font-size: 72px;
 // 浮动导航
 .float-box {
   position: fixed;
+  z-index: 999999;
   left: px2rem(20px, $base-font-size);
   bottom: px2rem(100px, $base-font-size);
 
@@ -52,6 +53,13 @@ $base-font-size: 72px;
     color: $whiteColor;
     font-size: 24px;
     font-weight: 200;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $whiteColor;
+    }
   }
 }
 

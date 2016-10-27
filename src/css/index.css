@@ -27,6 +27,7 @@
 
 .float-box {
   position: fixed;
+  z-index: 999999;
   left: 0.27778rem;
   bottom: 1.38889rem;
 }
@@ -43,6 +44,10 @@
   color: #fff;
   font-size: 24px;
   font-weight: 200;
+}
+
+.float-box-item:link, .float-box-item:visited, .float-box-item:hover, .float-box-item:active {
+  color: #fff;
 }
 
 [data-dpr="2"] .float-box-item {
@@ -72,6 +77,7 @@ html {
 }
 
 .index-header .header-top {
+  position: relative;
   box-sizing: border-box;
   padding: 0 0.27778rem;
   height: 1.38889rem;
@@ -99,6 +105,21 @@ html {
 .index-header .header-top .area i {
   margin-left: 0.13889rem;
   font-size: 12px;
+}
+
+.index-header .header-top .area-list {
+  z-index: 9999;
+  display: none;
+  position: absolute;
+  top: 0.27778rem;
+  right: 0.27778rem;
+  background-color: #fff;
+}
+
+.index-header .header-top .area-list li {
+  padding: 0.41667rem;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e1e1;
 }
 
 .index-header .header-slogan {
@@ -170,6 +191,56 @@ html {
 }
 
 [data-dpr="3"] .index-header .header-search i {
+  font-size: 42px;
+}
+
+.float-search {
+  z-index: 99999;
+  position: fixed;
+  top: -1.38889rem;
+  left: 0;
+  width: 100%;
+  height: 1.38889rem;
+  background-color: rgba(255, 98, 122, 0.6);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.float-search .header-search {
+  display: block;
+  box-sizing: border-box;
+  margin: 0.20833rem auto 0;
+  width: 9.44444rem;
+  height: 0.97222rem;
+  border: 2px solid #ff627a;
+  background-color: #fff;
+  border-radius: 0.47222rem;
+  text-align: center;
+  line-height: 0.91667rem;
+  font-size: 12px;
+  color: #878787;
+  letter-spacing: 3px;
+}
+
+.float-search .header-search i {
+  font-size: 14px;
+  color: #878787;
+  margin-right: 6px;
+}
+
+[data-dpr="2"] .float-search .header-search {
+  font-size: 24px;
+}
+
+[data-dpr="2"] .float-search .header-search i {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .float-search .header-search {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .float-search .header-search i {
   font-size: 42px;
 }
 
@@ -269,20 +340,17 @@ html {
 }
 
 .part .recommend-wrapper {
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 0.27778rem;
   position: relative;
   overflow: hidden;
   background-color: #fff;
 }
 
-.part .recommend-wrapper .recommend {
-  width: 600%;
-  margin-left: 0.27778rem;
-}
-
 .part .recommend-wrapper .recommend-item {
-  float: left;
-  margin-right: 0.27778rem;
+  width: 8.33333rem;
+  background-color: #fff;
 }
 
 .part .recommend-wrapper .recommend-item a {

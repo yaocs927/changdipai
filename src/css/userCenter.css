@@ -27,6 +27,7 @@
 
 .float-box {
   position: fixed;
+  z-index: 999999;
   left: 0.27778rem;
   bottom: 1.38889rem;
 }
@@ -43,6 +44,10 @@
   color: #fff;
   font-size: 24px;
   font-weight: 200;
+}
+
+.float-box-item:link, .float-box-item:visited, .float-box-item:hover, .float-box-item:active {
+  color: #fff;
 }
 
 [data-dpr="2"] .float-box-item {

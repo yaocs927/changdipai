@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "cdp-iconfont";
   src: url("//at.alicdn.com/t/font_1476950934_0212882.eot");
@@ -27,6 +28,7 @@
 
 .float-box {
   position: fixed;
+  z-index: 999999;
   left: 0.27778rem;
   bottom: 1.38889rem;
 }
@@ -43,6 +45,10 @@
   color: #fff;
   font-size: 24px;
   font-weight: 200;
+}
+
+.float-box-item:link, .float-box-item:visited, .float-box-item:hover, .float-box-item:active {
+  color: #fff;
 }
 
 [data-dpr="2"] .float-box-item {
@@ -71,67 +77,7 @@ body {
 }
 
 .detail-header-img {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
   height: 8.33333rem;
-}
-
-.detail-header-img-box {
-  position: absolute;
-  width: 600%;
-  height: 8.33333rem;
-}
-
-.detail-header-img-box li {
-  float: left;
-  width: 10rem;
-  height: 8.33333rem;
-  background: #ff627a url(../img/detail-img-1@3x.jpg) no-repeat center center;
-}
-
-.detail-header-img .corner-info,
-.detail-header-img .placeType-info,
-.detail-header-img .collection {
-  position: absolute;
-  display: block;
-}
-
-.detail-header-img .corner-info {
-  top: 0;
-  left: 0;
-  width: 1.30556rem;
-  height: 1.30556rem;
-}
-
-.detail-header-img .corner-info img {
-  width: 100%;
-}
-
-.detail-header-img .placeType-info {
-  bottom: 0.27778rem;
-  left: 0.27778rem;
-}
-
-.detail-header-img .placeType-info i {
-  display: inline-block;
-  margin-right: 0.16667rem;
-  padding: 0.13889rem 0.16667rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0.05556rem;
-  font-size: 12px;
-  color: #fff;
-}
-
-.detail-header-img .collection {
-  right: 0.27778rem;
-  bottom: 0.27778rem;
-  width: 1.11111rem;
-  height: 0.83333rem;
-  padding-top: 0.27778rem;
-  text-align: right;
-  font-size: 25px;
-  color: #fff;
 }
 
 .detail-header-info {
@@ -163,14 +109,6 @@ body {
   font-size: 17px;
 }
 
-[data-dpr="2"] .detail-header-img .placeType-info i {
-  font-size: 24px;
-}
-
-[data-dpr="2"] .detail-header-img .collection {
-  font-size: 50px;
-}
-
 [data-dpr="2"] .detail-header-info .detail-header-info-title {
   font-size: 21px;
 }
@@ -181,14 +119,6 @@ body {
 
 [data-dpr="2"] .detail-header-info .detail-header-info-detail i {
   font-size: 34px;
-}
-
-[data-dpr="3"] .detail-header-img .placeType-info i {
-  font-size: 36px;
-}
-
-[data-dpr="3"] .detail-header-img .collection {
-  font-size: 75px;
 }
 
 [data-dpr="3"] .detail-header-info .detail-header-info-title {
@@ -216,7 +146,7 @@ body {
 .detail-part-title {
   text-align: center;
   line-height: 1.52778rem;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: #333;
 }
@@ -251,40 +181,42 @@ body {
 }
 
 .detail-part-introduce-list li span, .detail-part-introduce-list li i {
-  font-size: 12px;
+  font-size: 16px;
   color: #464646;
-  line-height: 0.77778rem;
+  line-height: 1.11111rem;
 }
 
 .detail-part-introduce p {
-  font-size: 12px;
-  color: #464646;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
   text-align: justify;
 }
 
-.detail-part-service {
+.detail-part-facilities {
   padding: 0.13889rem 0.27778rem;
 }
 
-.detail-part-service-list li {
+.detail-part-facilities-list li {
   float: left;
   width: 25%;
   height: 2.22222rem;
   color: #878787;
 }
 
-.detail-part-service-list li i, .detail-part-service-list li span {
+.detail-part-facilities-list li i, .detail-part-facilities-list li span {
   display: block;
   text-align: center;
 }
 
-.detail-part-service-list li i {
+.detail-part-facilities-list li i {
   font-size: 30px;
   line-height: 1.66667rem;
 }
 
-.detail-part-service-list li span {
-  font-size: 12px;
+.detail-part-facilities-list li span {
+  font-size: 14px;
+  color: #464646;
   line-height: 0.55556rem;
 }
 
@@ -294,45 +226,20 @@ body {
 }
 
 .detail-part-history-img {
-  width: 500%;
   height: 5.38889rem;
-}
-
-.detail-part-history-img li {
-  float: left;
-  width: 10rem;
-  height: 5.38889rem;
-  background-color: #ff627a;
-}
-
-.detail-part-history .placeType-info {
-  position: absolute;
-  display: block;
-  left: 0.27778rem;
-  top: 4.41667rem;
-}
-
-.detail-part-history .placeType-info i {
-  display: inline-block;
-  margin-right: 0.16667rem;
-  padding: 0.13889rem 0.16667rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0.05556rem;
-  font-size: 12px;
-  color: #fff;
 }
 
 .detail-part-history-info {
   margin-top: 0.22222rem;
   padding: 0 0.27778rem;
   line-height: 0.83333rem;
-  font-size: 12px;
+  font-size: 14px;
   color: #464646;
 }
 
 .detail-part-history-info span {
   float: right;
-  color: #e2e1e1;
+  color: #878787;
 }
 
 .detail-part-service {
@@ -419,7 +326,7 @@ body {
 .detail-part .detail-price-right em {
   margin-left: 0.33333rem;
   font-size: 16px;
-  color: #e2e1e1;
+  color: #878787;
 }
 
 .detail-part .detail-price-sub {
@@ -466,31 +373,27 @@ body {
 }
 
 [data-dpr="2"] .detail-part-title {
-  font-size: 32px;
+  font-size: 40px;
 }
 
 [data-dpr="2"] .detail-part-introduce-list li span, [data-dpr="2"] .detail-part-introduce-list li i {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 [data-dpr="2"] .detail-part-introduce p {
-  font-size: 24px;
+  font-size: 32px;
 }
 
-[data-dpr="2"] .detail-part-service-list i {
+[data-dpr="2"] .detail-part-facilities-list i {
   font-size: 60px;
 }
 
-[data-dpr="2"] .detail-part-service-list span {
-  font-size: 24px;
-}
-
-[data-dpr="2"] .detail-part-history .placeType-info i {
-  font-size: 24px;
+[data-dpr="2"] .detail-part-facilities-list span {
+  font-size: 28px;
 }
 
 [data-dpr="2"] .detail-part-history-info {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 [data-dpr="2"] .detail-part-service p {
@@ -542,31 +445,27 @@ body {
 }
 
 [data-dpr="3"] .detail-part-title {
-  font-size: 48px;
+  font-size: 60px;
 }
 
 [data-dpr="3"] .detail-part-introduce-list li span, [data-dpr="3"] .detail-part-introduce-list li i {
-  font-size: 36px;
+  font-size: 48px;
 }
 
 [data-dpr="3"] .detail-part-introduce p {
-  font-size: 36px;
+  font-size: 48px;
 }
 
-[data-dpr="3"] .detail-part-service-list i {
+[data-dpr="3"] .detail-part-facilities-list i {
   font-size: 90px;
 }
 
-[data-dpr="3"] .detail-part-service-list span {
-  font-size: 36px;
-}
-
-[data-dpr="3"] .detail-part-history .placeType-info i {
-  font-size: 36px;
+[data-dpr="3"] .detail-part-facilities-list span {
+  font-size: 42px;
 }
 
 [data-dpr="3"] .detail-part-history-info {
-  font-size: 36px;
+  font-size: 42px;
 }
 
 [data-dpr="3"] .detail-part-service p {
@@ -663,6 +562,114 @@ body {
 
 [data-dpr="3"] .float-btn a {
   font-size: 48px;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #efefef;
+}
+
+.img-wrapper:before {
+  position: absolute;
+  top: 50%;
+  left: 0.41667rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "第一张啦";
+  width: 0.16667rem;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #878787;
+}
+
+.img-wrapper:after {
+  position: absolute;
+  top: 50%;
+  right: 0.41667rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "最后一张啦";
+  width: 0.16667rem;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #878787;
+}
+
+.img-wrapper .img-wrapper-box {
+  height: 100%;
+}
+
+.img-wrapper .img-wrapper-box .img-wrapper-box-list {
+  width: 10rem;
+  height: 100%;
+  background: #ff627a url(../img/detail-img-1@3x.jpg) no-repeat center center;
+  background-size: 100%;
+}
+
+.img-wrapper .corner-info,
+.img-wrapper .placeType-info,
+.img-wrapper .collection {
+  position: absolute;
+  display: inline-block;
+  z-index: 999;
+}
+
+.img-wrapper .corner-info {
+  top: 0;
+  left: 0;
+  width: 1.30556rem;
+  height: 1.30556rem;
+}
+
+.img-wrapper .corner-info img {
+  width: 100%;
+}
+
+.img-wrapper .placeType-info {
+  bottom: 0.27778rem;
+  left: 0.27778rem;
+  padding: 0.13889rem 0.16667rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.05556rem;
+  font-size: 12px;
+  color: #fff;
+}
+
+.img-wrapper .collection {
+  right: 0.27778rem;
+  bottom: 0.27778rem;
+  width: 1.11111rem;
+  height: 0.83333rem;
+  padding-top: 0.27778rem;
+  text-align: right;
+  font-size: 25px;
+  color: #fff;
+}
+
+[data-dpr="2"] .img-wrapper:before, [data-dpr="2"] .img-wrapper:after {
+  font-size: 28px;
+}
+
+[data-dpr="2"] .img-wrapper .placeType-info {
+  font-size: 24px;
+}
+
+[data-dpr="2"] .img-wrapper .collection {
+  font-size: 50px;
+}
+
+[data-dpr="3"] .img-wrapper:before, [data-dpr="3"] .img-wrapper:after {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .img-wrapper .placeType-info {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .img-wrapper .collection {
+  font-size: 75px;
 }
 
 .more-btn-box {
