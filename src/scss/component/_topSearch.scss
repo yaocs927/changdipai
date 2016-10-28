@@ -8,6 +8,7 @@
   background-color: $whiteColor;
 
   &-area {
+    position: relative;
     flex: 1;
     color: $fontColor2;
     font-size: 14px;
@@ -17,11 +18,21 @@
       font-size: 13px;
       color: $cdpColor;
     }
+
+    span {
+      z-index: 999;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: px2rem(82px, $base-font-size);
+    }
   }
 
   &-box {
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
+    color: $fontColor1;
     flex: 4;
 
     input[type="text"] {
@@ -52,6 +63,7 @@
   }
 
   &-btn {
+    position: relative;
     font-size: 12px;
     flex: 1;
 
@@ -62,6 +74,27 @@
       background-color: $cdpColor;
       line-height: px2rem(58px, $base-font-size);
       color: $whiteColor;
+    }
+
+    &-menu {
+      z-index: 999;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      height: px2rem(82px, $base-font-size);
+      padding-top: px2rem(12px, $base-font-size);
+      text-align: center;
+
+      i {
+        display: block;
+        width: px2rem(40px, $base-font-size);
+        height: 2px;
+        background-color: $fontColor2;
+        margin: px2rem(10px, $base-font-size) auto;
+      }
     }
   }
 
@@ -83,6 +116,8 @@
   }
 
   &-box {
+    font-size: 28px;
+
     &-btn {
       font-size: 28px;
     }
@@ -94,7 +129,6 @@
     }
   }
 
-  &-box,
   &-btn {
     font-size: 24px;
   }
@@ -110,6 +144,8 @@
   }
 
   &-box {
+    font-size: 42px;
+
     &-btn {
       font-size: 42px;
     }
@@ -127,9 +163,43 @@
   }
 }
 
+.top-search-list {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: px2rem(82px, $base-font-size);
+  background-color: $bgColor;
+  border: 1px solid $fontColor4;
+  border-top: none;
 
+  li {
+    padding: px2rem(10px, $base-font-size) px2rem(30px, $base-font-size);
+    border-top: 1px solid $fontColor4;
 
+    a {
+      font-size: 26px;
+      color: $fontColor2;
+    }
+  }
+}
 
+[data-dpr="2"] .top-search-list {
+  li {
+    a {
+      font-size: 52px;
+    }
+  }
+}
+
+[data-dpr="3"] .top-search-list {
+  li {
+    a {
+      font-size: 78px;
+    }
+  }
+}
 
 
 

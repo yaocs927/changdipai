@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "cdp-iconfont";
-  src: url("//at.alicdn.com/t/font_1476950934_0212882.eot");
-  src: url("//at.alicdn.com/t/font_1476950934_0212882.woff") format("woff"), url("//at.alicdn.com/t/font_1476950934_0212882.ttf") format("truetype"), url("//at.alicdn.com/t/font_1476950934_0212882.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.eot");
+  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.woff") format("woff"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.svg#iconfont") format("svg");
 }
 
 .cdp-iconfont {
@@ -24,6 +24,14 @@
 
 .mb20 {
   margin-bottom: 0.27778rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .float-box {
@@ -187,8 +195,9 @@ body {
 }
 
 .detail-part-introduce p {
+  padding-top: 0.22222rem;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #333;
   text-align: justify;
 }
@@ -367,7 +376,7 @@ body {
 
 .detail-part .detail-price-sub-tip {
   padding: 0.22222rem 0 0.44444rem;
-  color: #e2e1e1;
+  color: #878787;
   font-weight: 200;
   font-size: 10px;
 }
@@ -680,6 +689,7 @@ body {
 }
 
 .more-btn-box .moreBtn {
+  display: inline-block;
   min-width: 3.47222rem;
   padding: 0 0.27778rem;
   height: 0.83333rem;

@@ -92,11 +92,16 @@
 </head>
 
 <body>
-	<div id="cdp-search" class="main">
+	<div id="cdp" class="main">
     <div class="search-frame">
       <!-- 搜索条 -->
       <div class="top-search">
-        <a href="javascript:;" class="top-search-area">上海 <i class="cdp-iconfont">&#xe613;</i></a>
+        <div href="javascript:;" class="top-search-area">
+					<span class="top-search-menu top-search-area-name"><em>上海</em> <i class="cdp-iconfont">&#xe613;</i></span>
+					<ul class="top-search-list hide top-search-area-name-list">
+						<li v-for="i in areas">{{ i }}</li>
+					</ul>
+				</div>
         <a href="searchStart.html" class="top-search-box">
           <button type="button" name="button" class="top-search-box-btn"><i class="cdp-iconfont">&#xe628;</i> 搜索场地</button>
         </a>
@@ -161,7 +166,9 @@
 	</div>
 
 	<script src="js/lib/vue.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/global.js"></script>
+	<script src="js/vue-global.js"></script>
 
 </body>
 

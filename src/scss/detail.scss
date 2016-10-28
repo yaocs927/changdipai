@@ -125,8 +125,9 @@ body {
     }
 
     p {
+      padding-top: px2rem(16px, $base-font-size);
       font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.8;
       color: $fontColor1;
       text-align: justify;
     }
@@ -310,7 +311,7 @@ body {
 
     &-tip {
       padding: px2rem(16px, $base-font-size) 0 px2rem(32px, $base-font-size);
-      color: $fontColor4;
+      color: $fontColor3;
       font-weight: 200;
       font-size: 10px;
     }

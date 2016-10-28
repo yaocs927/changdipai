@@ -88,12 +88,12 @@
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" href="img/touch-icon.png" />
-	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/swiper.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/detail.css" />
 </head>
 
 <body>
-  <dic id="cdp-detail" class="main">
+  <dic id="cdp" class="main">
     <div class="detail-header">
 			<div class="detail-header-img swiper-container img-wrapper">
 				<div class="swiper-wrapper img-wrapper-box">
@@ -177,10 +177,9 @@
       <div class="detail-part-title">设施服务</div>
       <div class="detail-part-facilities">
         <ul class="detail-part-facilities-list clearfix">
-          <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
-          <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
-          <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
-          <li><i class="cdp-iconfont">&#xe60f;</i><span>投影仪</span></li>
+					<li v-for="icon in icons">
+						<i class="cdp-iconfont">{{ icon.view }}</i><span>{{ icon.name }}</span>
+					</li>
         </ul>
       </div>
       <div class="more-btn-box">
@@ -235,6 +234,8 @@
 	<script src="js/lib/vue.js"></script>
 	<script src="js/lib/zepto.min.js"></script>
 	<script src="js/lib/swiper.jquery.min.js"></script>
+	<script src="js/vue-global.js"></script>
+
 
 	<script>
   var mySwiper = new Swiper ('.swiper-container', {
@@ -243,7 +244,6 @@
     preloadImages: false,
     lazyLoading: true
   })
-
   </script>
 </body>
 

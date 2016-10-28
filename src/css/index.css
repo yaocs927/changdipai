@@ -1,7 +1,7 @@
 @font-face {
   font-family: "cdp-iconfont";
-  src: url("//at.alicdn.com/t/font_1476950934_0212882.eot");
-  src: url("//at.alicdn.com/t/font_1476950934_0212882.woff") format("woff"), url("//at.alicdn.com/t/font_1476950934_0212882.ttf") format("truetype"), url("//at.alicdn.com/t/font_1476950934_0212882.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.eot");
+  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.woff") format("woff"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.svg#iconfont") format("svg");
 }
 
 .cdp-iconfont {
@@ -23,6 +23,14 @@
 
 .mb20 {
   margin-bottom: 0.27778rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .float-box {
@@ -109,7 +117,6 @@ html {
 
 .index-header .header-top .area-list {
   z-index: 9999;
-  display: none;
   position: absolute;
   top: 0.27778rem;
   right: 0.27778rem;
@@ -162,6 +169,10 @@ html {
   font-size: 24px;
 }
 
+[data-dpr="2"] .index-header .header-top .area-list li {
+  font-size: 28px;
+}
+
 [data-dpr="2"] .index-header .header-slogan {
   font-size: 60px;
 }
@@ -180,6 +191,10 @@ html {
 
 [data-dpr="3"] .index-header .header-top .area i {
   font-size: 36px;
+}
+
+[data-dpr="3"] .index-header .header-top .area-list li {
+  font-size: 42px;
 }
 
 [data-dpr="3"] .index-header .header-slogan {
@@ -415,6 +430,7 @@ html {
   position: relative;
   height: 6.52778rem;
   background: #ff627a url(../img/place-img-1@3x.jpg) no-repeat center center;
+  background-size: 100%;
 }
 
 .place-item-img .corner-info,

@@ -6,6 +6,7 @@
   text-align: center;
 
   .moreBtn {
+    display: inline-block;
     min-width: px2rem(250px, $base-font-size);
     padding: 0 px2rem(20px, $base-font-size);
     height: px2rem(60px, $base-font-size);

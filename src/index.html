@@ -88,18 +88,18 @@
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" href="img/touch-icon.png" />
-	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/swiper.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
 <body>
-	<div id="cdp-index" class="main">
+	<div id="cdp" class="main">
 		<!-- 首页头部 -->
 		<div class="index-header mb20">
 			<div class="header-top">
 				<span class="logo"></span>
 				<span class="area" id="selectArea"><span>上海</span><i class="cdp-iconfont">&#xe613;</i></span>
-				<ul class="area-list" id="areaList">
+				<ul class="area-list hide" id="areaList">
 					<li v-for="i in areas">{{ i }}</li>
 				</ul>
 			</div>
@@ -223,6 +223,7 @@
 	<script src="js/lib/zepto.min.js"></script>
 	<script src="js/lib/swiper.jquery.min.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/vue-global.js"></script>
 
 	<script>
   var mySwiper = new Swiper ('.swiper-container', {

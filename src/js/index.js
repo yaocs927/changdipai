@@ -1,4 +1,5 @@
 $(function () {
+  // 滚动显示 浮动搜索条
   $(window).scroll(function () {
     var scrollHeight = $(this).scrollTop();
     if (scrollHeight > 270) {
@@ -12,20 +13,17 @@ $(function () {
     }
   });
 
-  $('#selectArea').on('touchstart', function (e) {
-    $('#areaList').show();
-    e.stopPropagation();
+  // 显示地区选择菜单
+  $('#selectArea').on('click', function () {
+    if ($('#areaList').hasClass('hide')) {
+      $('#areaList').removeClass('hide').addClass('show');
+    }
   });
-  $('#areaList li').on('touchstart', function (e) {
+
+  // 选择地区
+  $('#areaList li').on('click', function () {
     $('#selectArea span').text($(this).text());
-    $('#areaList').hide();
-    e.stopPropagation();
+    $('#areaList').removeClass('show').addClass('hide');
   });
 });
 
-new Vue({
-  el: '#cdp-index',
-  data: {
-    areas: ['上海', '北京', '南京', '苏州']
-  }
-});
