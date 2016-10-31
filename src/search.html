@@ -113,9 +113,129 @@
       <div class="filter-bar">
         <div class="filter-bar-area">区域<i class="cdp-iconfont">&#xe613;</i></div>
         <div class="filter-bar-price">价格<i class="cdp-iconfont">&#xe613;</i></div>
-        <div class="filter-bar-type">功能<i class="cdp-iconfont">&#xe613;</i></div>
+        <div class="filter-bar-screen">功能<i class="cdp-iconfont">&#xe613;</i></div>
         <div class="filter-bar-sort">排序<i class="cdp-iconfont">&#xe613;</i></div>
       </div>
+			<!-- 过滤条件-区域 -->
+			<div class="filter-list filter-list-area hide">
+				<div class="filter-list-type">
+					<div class="filter-list-type-left">
+						<ul>
+							<!-- <li v-for="i in areas" class="active">{{ i }} <i class="cdp-iconfont">&#xe615;</i></li> -->
+							<li class="active">区域<i class="cdp-iconfont">&#xe615;</i></li>
+							<li>区域<i class="cdp-iconfont">&#xe615;</i></li>
+							<li>区域<i class="cdp-iconfont">&#xe615;</i></li>
+							<li>区域<i class="cdp-iconfont">&#xe615;</i></li>
+							<li>区域<i class="cdp-iconfont">&#xe615;</i></li>
+						</ul>
+					</div>
+					<div class="filter-list-type-right">
+						<ul>
+							<li class="active">区域<i class="cdp-iconfont">&#xe617;</i></li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>排序</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 过滤条件-价格 -->
+			<div class="filter-list filter-list-price hide">
+				<div class="filter-list-type">
+					<div class="filter-list-type-mid">
+						<ul>
+							<!-- <li v-for="i in areas" class="active">{{ i }} <i class="cdp-iconfont">&#xe615;</i></li> -->
+							<li class="active">0 ~ 1千<i class="cdp-iconfont">&#xe617;</i></li>
+							<li>1千 ~ 2千</li>
+							<li>2千 ~ 5千</li>
+							<li>5千 ~ 1万</li>
+							<li>3万 ~ 5万</li>
+							<li>5万 ~ 不限</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 过滤条件-功能 -->
+			<div class="filter-list filter-list-screen hide">
+				<div class="filter-list-top">
+					<div class="filter-list-top-sub">
+						<h4>用途</h4>
+						<ul>
+							<li class="active">区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+						</ul>
+					</div>
+					<div class="filter-list-top-sub">
+						<h4>用途</h4>
+						<ul>
+							<li class="active">区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+						</ul>
+					</div>
+					<div class="filter-list-top-sub">
+						<h4>用途</h4>
+						<ul>
+							<li class="active">区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+						</ul>
+					</div>
+					<div class="filter-list-top-sub">
+						<h4>用途</h4>
+						<ul>
+							<li class="active">区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter-list-bottom">
+					<input type="button" value="重置" class="cancel">
+					<input type="button" value="确定" class="confirm">
+				</div>
+			</div>
+			<!-- 过滤条件-排序 -->
+			<div class="filter-list filter-list-sort hide">
+				<div class="filter-list-type">
+					<div class="filter-list-type-mid">
+						<ul>
+							<!-- <li v-for="i in areas" class="active">{{ i }} <i class="cdp-iconfont">&#xe615;</i></li> -->
+							<li class="active">区域<i class="cdp-iconfont">&#xe617;</i></li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+							<li>区域</li>
+						</ul>
+					</div>
+				</div>
+			</div>
     </div>
 		<!-- 热门场地 -->
 		<div class="part">
@@ -168,6 +288,7 @@
 	<script src="js/lib/vue.js"></script>
 	<script src="js/lib/zepto.min.js"></script>
 	<script src="js/global.js"></script>
+	<script src="js/search.js"></script>
 	<script src="js/vue-global.js"></script>
 
 </body>

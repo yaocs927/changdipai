@@ -5,6 +5,13 @@ var icon = [
   {'view': '\ue62b', 'name': '停车场'},
   {'view': '\ue62c', 'name': '电视'},
   {'view': '\ue65f', 'name': 'SPA'},
+  {'view': '\ue662', 'name': '吧台'},
+  {'view': '\ue662', 'name': '吧台'},
+  {'view': '\ue662', 'name': '吧台'},
+  {'view': '\ue662', 'name': '吧台'},
+  {'view': '\ue662', 'name': '吧台'},
+  {'view': '\ue662', 'name': '吧台'},
+  {'view': '\ue662', 'name': '吧台'},
   {'view': '\ue662', 'name': '吧台'}
 ];
 

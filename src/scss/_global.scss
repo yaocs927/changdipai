@@ -37,7 +37,7 @@ $base-font-size: 72px;
 
 // 显示隐藏
 .hide {
-  display: none;
+  display: none !important;
 }
 .show {
   display: block;

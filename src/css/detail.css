@@ -27,7 +27,7 @@
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .show {
@@ -142,8 +142,9 @@ body {
 }
 
 .detail-map-box {
+  display: block;
+  width: 100%;
   height: 6.13889rem;
-  background-color: #ff627a;
 }
 
 .detail-part {
@@ -287,7 +288,8 @@ body {
   float: left;
   width: 2.19444rem;
   height: 2.19444rem;
-  background-color: #ff627a;
+  background: #fff url("../img/detail-img-1@3x.jpg") no-repeat center center;
+  background-size: 100%;
 }
 
 .detail-part .detail-price-left-right {
@@ -526,6 +528,7 @@ body {
 }
 
 .float-btn {
+  z-index: 99999;
   position: fixed;
   bottom: 0;
   left: 0;
