@@ -169,9 +169,14 @@
       <div class="detail-part-title">设施服务</div>
       <div class="detail-part-facilities">
         <ul class="detail-part-facilities-list clearfix">
-					<li v-for="icon in icons">
-						<i class="cdp-iconfont">{{ icon.view }}</i><span>{{ icon.name }}</span>
-					</li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
         </ul>
       </div>
       <div class="more-btn-box">
@@ -226,16 +231,14 @@
 	<script src="js/lib/zepto.min.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=ba30d8eba500d01d12ceacee41345c1b"></script>
 	<script src="js/detail.js"></script>
-	<script src="js/lib/vue.js"></script>
 	<script src="js/lib/swiper.jquery.min.js"></script>
-	<script src="js/vue-global.js"></script>
 	<script>
-	$(function () {
-		var mySwiper = new Swiper ('.swiper-container', {
-			pagination : '.swiper-pagination',
-			paginationType : 'fraction'
-		})
-	})
+		$(function () {
+			var mySwiper = new Swiper ('.swiper-container', {
+				pagination : '.swiper-pagination',
+				paginationType : 'fraction'
+			})
+		});
 	</script>
 
 
