@@ -14,16 +14,16 @@ $(function () {
   });
 
   // 显示地区选择菜单
-  $('#selectArea').on('click', function () {
-    if ($('#areaList').hasClass('hide')) {
-      $('#areaList').removeClass('hide').addClass('show');
-    }
-  });
+  // $('#selectArea').on('click', function () {
+  //   if ($('#areaList').hasClass('hide')) {
+  //     $('#areaList').removeClass('hide').addClass('show');
+  //   }
+  // });
 
   // 选择地区
-  $('#areaList li').on('click', function () {
-    $('#selectArea span').text($(this).text());
-    $('#areaList').removeClass('show').addClass('hide');
-  });
+  // $('#areaList li').on('click', function () {
+  //   $('#selectArea span').text($(this).text());
+  //   $('#areaList').removeClass('show').addClass('hide');
+  // });
 });
 

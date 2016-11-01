@@ -97,9 +97,9 @@
       <!-- 搜索条 -->
       <div class="top-search">
         <div href="javascript:;" class="top-search-area">
-					<span class="top-search-menu top-search-area-name"><em>上海</em> <i class="cdp-iconfont">&#xe613;</i></span>
-					<ul class="top-search-list hide top-search-area-name-list">
-						<li v-for="i in areas">{{ i }}</li>
+					<span class="top-search-menu top-search-area-name" @click="show"><em>{{ curOption }}</em> <i class="cdp-iconfont">&#xe613;</i></span>
+					<ul class="top-search-list top-search-area-name-list" v-if="no">
+						<li v-for="i in areas" @click="selectOption">{{ i }}</li>
 					</ul>
 				</div>
         <a href="searchStart.html" class="top-search-box">
@@ -287,7 +287,7 @@
 
 	<script src="js/lib/vue.js"></script>
 	<script src="js/lib/zepto.min.js"></script>
-	<script src="js/global.js"></script>
+	<!-- <script src="js/global.js"></script> -->
 	<script src="js/search.js"></script>
 	<script src="js/vue-global.js"></script>
 
