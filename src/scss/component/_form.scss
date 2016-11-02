@@ -40,12 +40,22 @@
     }
 
     &-sub {
+      position: relative;
       float: right;
       width: px2rem(570px, $base-font-size);
       border-bottom: 1px solid $fontColor4;
 
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        line-height: px2rem(90px, $base-font-size);
+      }
+
       input,
-      select {
+      select,
+      label {
         border: none;
         width: px2rem(490px, $base-font-size);
         height: px2rem(90px, $base-font-size);

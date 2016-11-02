@@ -1,18 +1,19 @@
 $(function () {
+  // 过滤条件框显示/隐藏
   filterShow('area');
   filterShow('price');
   filterShow('screen');
   filterShow('sort');
 
-
+  // 过滤-选择区域、价格、排序条件
   $('.filter-list-type-left').find('ul li').on('click', function () {
     var self = $(this);
     self.addClass('active');
     self.siblings('li').removeClass('active');
   });
-
-  selectFilter('right');
-  selectFilter('mid');
+  selectFilter('area');
+  selectFilter('price');
+  selectFilter('sort');
 
   // 过滤-功能过滤
   $('.filter-list-top-sub li').on('click', function () {
@@ -26,13 +27,18 @@ $(function () {
   $('#reset').on('click', function () {
     $('.filter-list-top-sub li').removeClass('active');
   });
-
+  // 过滤-确定选择功能功能过滤
   $('#confirm').on('click', function () {
     $('.filter-list-screen').addClass('hide').removeClass('show');
     $('.filter-bar-screen').removeClass('active');
     $('.filter-bar-screen').find('i').text('\ue613');
   });
 });
+
+
+/**
+*函数部分
+*/
 
 // 过滤条件框显示/隐藏
 function filterShow(type) {
@@ -53,13 +59,29 @@ function filterShow(type) {
   });
 }
 
+// 过滤条件选择
+// function selectFilter(type) {
+//   $('.filter-list-type-'+ type).find('ul li').on('click', function () {
+//     var self = $(this);
+//     self.addClass('active');
+//     self.find('i').addClass('show').removeClass('hide');
+//     self.siblings('li').removeClass('active');
+//     self.siblings('li').find('i').removeClass('show').addClass('hide');
+//     self.parents('.filter-list').addClass('hide').removeClass('show');
+//   });
+// }
+
+// 过滤条件选择
 function selectFilter(type) {
-  $('.filter-list-type-'+ type).find('ul li').on('click', function () {
+  $('.filter-list-'+ type +'-option').find('ul li').on('click', function () {
     var self = $(this);
     self.addClass('active');
     self.find('i').addClass('show').removeClass('hide');
     self.siblings('li').removeClass('active');
     self.siblings('li').find('i').removeClass('show').addClass('hide');
+    self.parents('.filter-list').addClass('hide').removeClass('show');
+    $('.filter-bar-'+ type).removeClass('active');
+    $('.filter-bar-'+ type).find('i').text('\ue613');
   });
 }
 

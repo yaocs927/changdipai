@@ -1,7 +1,7 @@
 @font-face {
   font-family: "cdp-iconfont";
-  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.eot");
-  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.woff") format("woff"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.eot");
+  src: url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.woff") format("woff"), url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.ttf") format("truetype"), url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.svg#iconfont") format("svg");
 }
 
 .cdp-iconfont {
@@ -304,7 +304,7 @@
   position: absolute;
   right: 0.27778rem;
   bottom: 0.27778rem;
-  font-size: 12px !important;
+  font-size: 12px;
   padding: 0.13889rem 0.27778rem;
 }
 
@@ -312,8 +312,16 @@
   font-size: 40px;
 }
 
+[data-dpr="2"] .user-header .user-header-out {
+  font-size: 24px;
+}
+
 [data-dpr="3"] .user-header p {
   font-size: 60px;
+}
+
+[data-dpr="3"] .user-header .user-header-out {
+  font-size: 36px;
 }
 
 .user-data {

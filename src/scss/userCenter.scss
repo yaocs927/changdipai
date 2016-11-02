@@ -30,7 +30,7 @@
     position: absolute;
     right: px2rem(20px, $base-font-size);
     bottom: px2rem(20px, $base-font-size);
-    font-size: 12px !important;
+    font-size: 12px;
     padding: px2rem(10px, $base-font-size) px2rem(20px, $base-font-size)
   }
 }
@@ -39,11 +39,19 @@
   p {
     font-size: 40px;
   }
+
+  .user-header-out {
+    font-size: 24px;
+  }
 }
 
 [data-dpr="3"] .user-header {
   p {
     font-size: 60px;
+  }
+
+  .user-header-out {
+    font-size: 36px;
   }
 }
 

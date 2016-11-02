@@ -1,7 +1,7 @@
 @font-face {
   font-family: "cdp-iconfont";
-  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.eot");
-  src: url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.woff") format("woff"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_o1pgno26dprs5rk9.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.eot");
+  src: url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.woff") format("woff"), url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.ttf") format("truetype"), url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.svg#iconfont") format("svg");
 }
 
 .cdp-iconfont {
@@ -384,13 +384,23 @@
 }
 
 .user-form-item-sub {
+  position: relative;
   float: right;
   width: 7.91667rem;
   border-bottom: 1px solid #e2e1e1;
 }
 
+.user-form-item-sub label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  line-height: 1.25rem;
+}
+
 .user-form-item-sub input,
-.user-form-item-sub select {
+.user-form-item-sub select,
+.user-form-item-sub label {
   border: none;
   width: 6.80556rem;
   height: 1.25rem;
