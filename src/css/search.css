@@ -402,6 +402,7 @@ body {
   -webkit-flex: 2.5;
       -ms-flex: 2.5;
           flex: 2.5;
+  position: relative;
 }
 
 .filter-list-type-mid {
@@ -444,6 +445,12 @@ body {
 
 .filter-list-type-left ul li.active i, .filter-list-type-right ul li.active i, .filter-list-type-mid ul li.active i {
   color: #ff627a;
+}
+
+.filter-list-type-right ul {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .filter-list-type-mid ul li {

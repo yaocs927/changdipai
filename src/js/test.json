@@ -1,0 +1,26 @@
+{
+  "status":200,
+  "info":"执行成功",
+  "data":{
+    "category":[
+      {"id":"3","name":"WIFI","view":"","rank":"1","pid":"0","tag":"amenity"},
+      {"id":"4","name":"泳池","view":"","rank":"2","pid":"0","tag":"amenity"},
+      {"id":"5","name":"不可吸烟","view":"","rank":"3","pid":"0","tag":"amenity"},
+      {"id":"6","name":"茶歇","view":"","rank":"4","pid":"0","tag":"amenity"},
+      {"id":"13","name":"徐家汇","view":"","rank":"1","pid":"1","tag":"circle"},
+      {"id":"14","name":"某商圈","view":"","rank":"2","pid":"2","tag":"circle"},
+      {"id":"9","name":"纽约","view":"","rank":"1","pid":"0","tag":"city"},
+      {"id":"1","name":"上海","view":"","rank":"2","pid":"0","tag":"city"},
+      {"id":"2","name":"北京","view":"","rank":"3","pid":"0","tag":"city"},
+      {"id":"7","name":"南京","view":"","rank":"4","pid":"0","tag":"city"},
+      {"id":"8","name":"杭州","view":"","rank":"5","pid":"0","tag":"city"},
+      {"id":"16","name":"1号线a站","view":"","rank":"1","pid":"1","tag":"metro"},
+      {"id":"15","name":"1号线","view":"","rank":"1","pid":"1","tag":"metro"},
+      {"id":"17","name":"1号线b站","view":"","rank":"2","pid":"1","tag":"metro"},
+      {"id":"18","name":"1号线c站","view":"","rank":"3","pid":"1","tag":"metro"},
+      {"id":"11","name":"东城区","view":"","rank":"1","pid":"2","tag":"region"},
+      {"id":"10","name":"浦东新区","view":"","rank":"1","pid":"1","tag":"region"},
+      {"id":"12","name":"松江区","view":"","rank":"2","pid":"1","tag":"region"}
+    ]
+  }
+}

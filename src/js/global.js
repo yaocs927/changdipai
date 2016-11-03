@@ -13,9 +13,4 @@ $(function () {
     }
   });
 
-  // 顶部菜单/搜索条  点击选择地区
-  $('.top-search-area-name-list li').on('click', function () {
-    $('.top-search-area-name em').text($(this).text());
-    $('.top-search-list').addClass('hide').removeClass('show');
-  });
 });
