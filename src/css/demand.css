@@ -437,6 +437,7 @@
 
 [data-dpr="2"] .user-form-item-sub input,
 [data-dpr="2"] .user-form-item-sub select,
+[data-dpr="2"] .user-form-item-sub label,
 [data-dpr="2"] .user-form-item-sub i {
   font-size: 32px;
 }
@@ -451,6 +452,7 @@
 
 [data-dpr="3"] .user-form-item-sub input,
 [data-dpr="3"] .user-form-item-sub select,
+[data-dpr="3"] .user-form-item-sub label,
 [data-dpr="3"] .user-form-item-sub i {
   font-size: 48px;
 }

@@ -126,6 +126,8 @@ body {
       overflow-y: scroll;
 
       ul {
+        width: 100%;
+
         li {
           padding: 0 px2rem(20px, $base-font-size);
           height: px2rem(100px, $base-font-size);

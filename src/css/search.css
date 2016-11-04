@@ -416,6 +416,10 @@ body {
   overflow-y: scroll;
 }
 
+.filter-list-type-left ul, .filter-list-type-right ul, .filter-list-type-mid ul {
+  width: 100%;
+}
+
 .filter-list-type-left ul li, .filter-list-type-right ul li, .filter-list-type-mid ul li {
   padding: 0 0.27778rem;
   height: 1.38889rem;
