@@ -1,19 +1,20 @@
 // 主页数据获取 JS文件
 var curCityId = "";
 $(function () {
-  // 获取城市
+  // 获取城市列表
   getCategory('city', 'areaList');
 
-  // 保存城市 ID
+
+
+  // 获取选中城市 ID
   $('#areaList').on('click', 'li', function () {
     curCityId = $(this).attr('data-curId');
-    console.log(curCityId);
   });
 
 
   // 点击开始搜索
   $('.searchStart').on('click', function () {
-    window.location.href = 'searchStart.html?name=city&id=' + curCityId;
+    window.location.href = 'searchStart.html?and=' + curCityId;
   });
 });
 
@@ -33,6 +34,13 @@ function getCategory(tagName, id) {
       $.each(citys, function (i, cur) {
         $('#' + id).append('<li data-curId="' + cur.id + '">' + cur.name + '</li>');
       });
+
+      // 显示默认城市
+      var defaultCityName = $('#areaList li').eq(0).text();
+      console.log(defaultCityName);
+      curCityId = $('#areaList li').eq(0).attr('data-curId');
+      $('#selectArea span').text(defaultCityName);
+      $('#selectArea span').attr('data-curId', curCityId);
     }
   });
 }

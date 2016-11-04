@@ -1,5 +1,5 @@
 $(function () {
-  // 滚动显示 浮动搜索条
+  // 页面滚动显示浮动搜索条
   $(window).scroll(function () {
     var scrollHeight = $(this).scrollTop();
     if (scrollHeight > 270) {

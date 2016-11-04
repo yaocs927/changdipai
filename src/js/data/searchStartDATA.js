@@ -1,9 +1,13 @@
 $(function () {
+  // 获取城市并选中当前城市
+  getCategory('city', 'getCity');
+  var curHref = location.href;
+  
   // 点击开始搜索
-  $('.searchStart').on('click', function () {
-    window.location.href = 'searchStart.html?id=' + curCityId;
-  });
-  getUrlData();
+  // $('.searchStart').on('click', function () {
+  //   window.location.href = 'searchStart.html?id=' + curCityId;
+  // });
+  // getUrlData();
 });
 
 // 获取地址栏参数
@@ -22,4 +26,29 @@ function getUrlData() {
       console.log(value);
     }
   }
+}
+
+// 获取类目
+function getCategory(tagName, id) {
+  $.ajax({
+    type: 'GET',
+    url: 'http://m.changdipai.com/changdipai/category/search?tag=' + tagName,
+    dataType: 'JSONP',
+    jsonp: 'callback',
+    success: function (getData) {
+      var data = JSON.parse(getData);
+      var citys = data.data.category;
+      $('#' + id).empty();
+      $.each(citys, function (i, cur) {
+        $('#' + id).append('<i data-curId="' + cur.id + '">' + cur.name + '</i>');
+      });
+
+      // 显示默认城市
+      // var defaultCityName = $('#areaList li').eq(0).text();
+      // console.log(defaultCityName);
+      // curCityId = $('#areaList li').eq(0).attr('data-curId');
+      // $('#selectArea span').text(defaultCityName);
+      // $('#selectArea span').attr('data-curId', curCityId);
+    }
+  });
 }
