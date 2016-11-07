@@ -1,6 +1,5 @@
 $(function () {
 
-
   // 过滤条件框显示/隐藏
   filterShow('area');
   filterShow('price');

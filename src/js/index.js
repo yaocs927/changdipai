@@ -48,9 +48,9 @@ $(function () {
 
   // 选择地区
   $('#areaList').on('click', 'li', function () {
-    var curId = $(this).attr('data-curId');
+    var curId = $(this).attr('data-curid');
     $('#selectArea span').text($(this).text());
-    $('#selectArea span').attr('data-curId', curId);
+    $('#selectArea span').attr('data-curid', curId);
     $('#areaList').removeClass('show').addClass('hide');
   });
 });

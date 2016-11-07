@@ -99,7 +99,7 @@
 			<div class="header-top">
 				<span class="logo"></span>
 				<!-- <div class="hide" id="container1"></div> -->
-				<span class="area" id="selectArea"><span>上海</span><i class="cdp-iconfont">&#xe613;</i></span>
+				<span class="area" id="selectArea"><span></span><i class="cdp-iconfont">&#xe613;</i></span>
 				<ul class="area-list hide" id="areaList"></ul>
 			</div>
 			<p class="header-slogan">遇见你的专属场地</p>
@@ -167,8 +167,8 @@
 		</div>
 		<!-- 热门场地 -->
 		<div class="part">
-			<h2 class="part-title">热门场地</h2>
-			<a href="detail.html" class="place-item">
+			<h2 class="part-title" id="hostPlace">热门场地</h2>
+			<!-- <a href="detail.html" class="place-item">
 				<div class="place-item-img">
 					<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
 					<span class="placeType-info"><i>团建活动</i><i>同学聚会</i><i>Party</i></span>
@@ -178,33 +178,11 @@
 					<h3 class="clearfix"><span class="place-item-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</span><span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span></h3>
 					<p class="place-item-info-detail"><i>700平米</i><i>60人</i><i>浦东新区</i><i>祝村</i><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
 				</div>
-			</a>
-			<a href="javascript:;" class="place-item">
-				<div class="place-item-img">
-					<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
-					<span class="placeType-info"><i>团建活动</i><i>同学聚会</i><i>Party</i></span>
-					<span class="collection cdp-iconfont">&#xe625;</span>
-				</div>
-				<div class="place-item-info">
-					<h3 class="clearfix"><span class="place-item-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</span><span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span></h3>
-					<p class="place-item-info-detail"><i>700平米</i><i>60人</i><i>浦东新区</i><i>祝村</i><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
-				</div>
-			</a>
-			<a href="javascript:;" class="place-item">
-				<div class="place-item-img">
-					<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>
-					<span class="placeType-info"><i>团建活动</i><i>同学聚会</i><i>Party</i></span>
-					<span class="collection cdp-iconfont">&#xe625;</span>
-				</div>
-				<div class="place-item-info">
-					<h3 class="clearfix"><span class="place-item-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</span><span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span></h3>
-					<p class="place-item-info-detail"><i>700平米</i><i>60人</i><i>浦东新区</i><i>祝村</i><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
-				</div>
-			</a>
+			</a> -->
 		</div>
 		<!-- 底部点击搜索 -->
-		<div class="part extra-part mb20">
-			<a href="searchStart.html">没有符合的?点击搜索更多场地&nbsp;>></a>
+		<div class="part extra-part mb20 searchStart">
+			<a href="javascript:;">没有符合的?点击搜索更多场地&nbsp;>></a>
 		</div>
 		<!-- 页脚 -->
 		<div class="footer clearfix">
@@ -219,6 +197,7 @@
 	</div>
 
 	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/lib/zepto.cookie.min.js"></script>
 	<script src="js/lib/swiper.jquery.min.js"></script>
 	<script src="js/index.js"></script>
 	<script>

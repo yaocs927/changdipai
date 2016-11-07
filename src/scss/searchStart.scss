@@ -40,6 +40,11 @@
       background-color: $fontColor4;
     }
   }
+
+  i.active {
+    color: $cdpColor;
+    font-weight: 700;
+  }
 }
 
 [data-dpr="2"] .search-start-content {

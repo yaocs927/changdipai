@@ -315,6 +315,11 @@
   background-color: #e2e1e1;
 }
 
+.search-start-content i.active {
+  color: #ff627a;
+  font-weight: 700;
+}
+
 [data-dpr="2"] .search-start-content .search-start-area {
   font-size: 32px;
 }
