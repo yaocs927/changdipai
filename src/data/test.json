@@ -1,42 +1,47 @@
 {
   "status": 200,
   "info": "成功",
-  "data": [{
-    "id": "1",
-    "name": "上海测试场地",
-    "status": "1",
-    "datetime": "2016-11-04 10:27:04",
-    "area": "100",
-    "weight": "100",
-    "address": "上海测试场地地址",
-    "keyword": "派对轰趴",
-    "event": [{
-      "id": "19",
-      "name": "团队拓展",
-      "rank": "0"
-    }, {
-      "id": "20",
-      "name": "轰趴",
-      "rank": "0"
-    }],
-    "amenity": [{
-      "id": "3",
-      "name": "WIFI",
-      "rank": "1"
-    }, {
-      "id": "4",
-      "name": "泳池",
-      "rank": "2"
-    }],
-    "region": {
-      "id": "10",
-      "name": "浦东新区",
-      "rank": "1"
-    },
-    "circle": {
-      "id": "13",
-      "name": "徐家汇",
-      "rank": "1"
-    }
-  }]
+  "data": {
+    "service": [{
+      "id": "1",
+      "name": "上海测试场地",
+      "status": "1",
+      "datetime": "2016-11-04 10:27:04",
+      "area": "100",
+      "weight": "20000",
+      "address": "上海测试场地地址",
+      "keyword": "派对轰趴",
+      "cover": "resource\/changdipai\/image\/cszp2.jpg",
+      "number": "50",
+      "price": "9000",
+      "event": [{
+        "id": "19",
+        "name": "团队拓展",
+        "rank": "1"
+      }, {
+        "id": "20",
+        "name": "轰趴",
+        "rank": "2"
+      }],
+      "amenity": [{
+        "id": "3",
+        "name": "WIFI",
+        "rank": "1"
+      }, {
+        "id": "4",
+        "name": "泳池",
+        "rank": "2"
+      }],
+      "region": {
+        "id": "10",
+        "name": "浦东新区",
+        "rank": "1"
+      },
+      "circle": {
+        "id": "13",
+        "name": "徐家汇",
+        "rank": "1"
+      }
+    }]
+  }
 }

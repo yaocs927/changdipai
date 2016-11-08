@@ -9,11 +9,8 @@ $(function () {
   $('#areaList').on('click', 'li', function () {
     curCityId = $(this).attr('data-curid');
     // 切换城市重新获取首页热门场馆
-    $('#hostPlace').siblings().remove();  // 清空原有的推荐列表
     search(curCityId);
   });
-
-
 
   // 点击开始搜索
   $('.searchStart').on('click', function () {
@@ -21,6 +18,7 @@ $(function () {
     $.fn.cookie('curCityId', curCityId);
     window.location.href = 'searchStart.html?and=' + curCityId;
   });
+
 
 
 });
@@ -65,12 +63,13 @@ function search(and, kw) {
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
+      $('#hostPlace').siblings().remove(); // 清空原有的推荐列表
       var data = JSON.parse(getData);
-      var placeItem = data.data;
-      var amenity = data.data.amenity;
-      $.each(data.data, function (i, cur) {
+      var placeItem = data.data.service;
+      $.each(placeItem, function (i, cur) {
         var id = cur.id,
           title = cur.name,
+          price = cur.price,
           address = cur.address;
         $('#hostPlace').after('<a href="detail.html" class="place-item" data-placeid="' + id + '" id="place-item-' + id + '">' +
           '<div class="place-item-img">' +
@@ -81,7 +80,7 @@ function search(and, kw) {
           '<div class="place-item-info">' +
           '<h3 class="clearfix">' +
           '<span class="place-item-info-title">' + title + '</span>' +
-          '<span class="place-item-info-price"><i>￥</i>2000<i>/天</i></span>' +
+          '<span class="place-item-info-price"><i>￥</i>' + price + '<i>/天</i></span>' +
           '</h3>' +
           '<p class="place-item-info-detail">' + address + '</p>' +
           '</div></a>');

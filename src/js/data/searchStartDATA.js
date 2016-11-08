@@ -20,7 +20,7 @@ $(function () {
   $('#getCity').on('click', 'i', function () {
     $(this).addClass('active').siblings().removeClass('active');
     curCityId = $(this).attr('data-curid');
-    // 更新 cookie 数据
+    // 更新 cookie 城市数据
     $.fn.cookie('curCityId', curCityId);
     andArr = [];    // 清除原城市 id 数据
     andArr.push(curCityId);
@@ -44,7 +44,8 @@ $(function () {
   $('.searchStart').on('click', function () {
     console.log(andStr);
     // search(andStr);
-    window.location.href = 'search.html?and=' + andStr;
+    kw = $('#top-search-text').val();
+    window.location.href = 'search.html?and=' + andStr + '&kw=' + kw;
   });
 });
 
