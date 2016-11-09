@@ -73,6 +73,41 @@
   overflow-x: hidden;
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup .tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 70%;
+  border-radius: 0.13889rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.55556rem 0.27778rem;
+  background-color: #fff;
+  color: #878787;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+[data-dpr="2"] .popup .tip {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .popup .tip {
+  font-size: 48px;
+}
+
 html {
   background-color: #efefef;
 }

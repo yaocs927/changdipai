@@ -92,10 +92,11 @@
 </head>
 
 <body>
-  <div id="cdp-login" class="main">
+	<div id="cdp-login" class="main">
+		<!-- 顶部 bar -->
 		<div class="top-search">
-      <a href="javascript:;" class="top-search-area" id="goBack"><i class="cdp-iconfont">&#xe614;</i> 返回</a>
-      <a href="javascript:;" class="top-search-box">
+			<a href="javascript:;" class="top-search-area" id="goBack"><i class="cdp-iconfont">&#xe614;</i> 返回</a>
+			<a href="javascript:;" class="top-search-box">
         用户注册
       </a>
 			<div class="top-search-btn">
@@ -104,25 +105,33 @@
 					<li><a href="userCenter.html" class="cdp-iconfont">&#xe600;</a></li>
 					<li><a href="index.html" class="cdp-iconfont">&#xe629;</a></li>
 				</ul>
-      </div>
-    </div>
-    <div class="login-logo"><img src="img/logo.png" alt="场地派-遇见您的专属场地" /></div>
-    <form class="login-form">
-      <input type="text" class="inputText inputBlock inputType1 login-form-sub" name="userPhoneNum" placeholder="请输入手机号" />
-      <div class="login-form-sub clearfix">
-        <input type="text" class="inputText inputType2 login-form-sub-left" name="validateNum" placeholder="验证码" />
-        <input type="button" class="inputBtn inputType3 login-form-sub-right" name="sendValidateNum" value="发送验证码" />
-      </div>
-      <input type="button" class="inputBtn inputBlock inputType4 login-form-sub" name="loginBtn" value="登 录" />
-    </form>
-    <div class="footer clearfix">
+			</div>
+		</div>
+		<div class="login-logo"><img src="img/logo.png" alt="场地派-遇见您的专属场地" /></div>
+		<!-- 登录表单 -->
+		<form class="login-form" id="loginForm">
+			<input type="text" class="inputText inputBlock inputType1 login-form-sub" name="uid" placeholder="请输入手机号" id="userPhone" />
+			<div class="login-form-sub clearfix">
+				<input type="text" class="inputText inputType2 login-form-sub-left" name="mac" placeholder="验证码" id="vaildateNum" />
+				<input type="button" class="inputBtn inputType3 login-form-sub-right" value="发送验证码" id="sendVaildateNum" />
+			</div>
+		</form>
+		<input type="button" class="inputBtn inputBlock inputType4 login-form-sub" name="loginBtn" value="登 录" id="loginBtn" />
+		<!-- 页脚 -->
+		<div class="footer clearfix">
 			<span>Copyright&nbsp;©&nbsp;2016 场地派</span>
 			<a href="tel:10086">联系我们</a>
 		</div>
-  </div>
+		<!-- 信息提示 弹出层 -->
+		<div id="popup" class="popup hide">
+			<div id="tip" class="tip"></div>
+		</div>
+	</div>
 
 	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/lib/zepto.cookie.min.js"></script>
 	<script src="js/global.js"></script>
+	<script src="js/data/loginDATA.js"></script>
 </body>
 
 </html>

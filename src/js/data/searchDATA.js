@@ -91,6 +91,7 @@ $(function () {
     andCityAreaStr = andCityAreaArr.join(',');
     console.log('当前搜索条件：' + andCityAreaStr);
     search(andCityAreaStr);
+    // window.location.href = 'search.html?and=' + andCityAreaStr + '&kw=';
   });
 
 
@@ -123,10 +124,11 @@ $(function () {
   });
 
   $('#confirm').on('click', function () { // 确定功能 过滤
-    andCityAreaFunctionArr = filterFunctionId.concat(filterCityId, filterAreaId);
-    var andCityAreaFunctionStr = andCityAreaFunctionArr.join(',');
-    console.log('当前搜索条件：' + andCityAreaFunctionStr);
-    search(andCityAreaFunctionStr);
+    andCityAreaArr = filterFunctionId.concat(filterCityId, filterAreaId);
+    var andCityAreaStr = andCityAreaArr.join(',');
+    console.log('当前搜索条件：' + andCityAreaStr);
+    search(andCityAreaStr);
+    // window.location.href = 'search.html?and=' + andCityAreaStr + '&kw=';
   });
 
 
@@ -294,17 +296,3 @@ function search(and, kw) {
   });
 }
 
-// 数组去重
-function unique() {
-  var n = {},
-    r = []; //n为hash表，r为临时数组
-  for (var i = 0; i < this.length; i++) //遍历当前数组
-  {
-    if (!n[this[i]]) //如果hash表中没有当前项
-    {
-      n[this[i]] = true; //存入hash表
-      r.push(this[i]); //把当前数组的当前项push到临时数组里面
-    }
-  }
-  return r;
-}

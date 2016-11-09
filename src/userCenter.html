@@ -93,42 +93,47 @@
 
 <body>
   <div id="cdp" class="main">
+		<!-- 顶部 bar -->
 		<div class="top-search">
       <a href="javascript:;" class="top-search-area" id="goBack"><i class="cdp-iconfont">&#xe614;</i> 返回</a>
       <a href="javascript:;" class="top-search-box">
         用户中心
       </a>
 			<div class="top-search-btn">
-				<span class="top-search-btn-menu top-search-menu"><i></i><i></i><i></i></span>
+				<span class="top-search-btn-menu top-search-btn-menu1"><a href="index.html" class="cdp-iconfont">&#xe629;</a></span>
 				<ul class="top-search-list hide">
-					<li><a href="userCenter.html" class="cdp-iconfont">&#xe600;</a></li>
+					<!-- <li><a href="javascript:;" class="cdp-iconfont userBnt">&#xe600;</a></li> -->
 					<li><a href="index.html" class="cdp-iconfont">&#xe629;</a></li>
 				</ul>
       </div>
     </div>
+		<!-- 页面头部 -->
     <div class="user-header">
-      <div class="user-avatar"><img src="img/user-avatar.png" alt="用户头像"></div>
-      <p class="user-name">hello</p>
-			<input type="button" class="inputText user-header-out" value="退出">
+      <div class="user-avatar linkLogin"><img src="img/user-avatar.png" alt="用户头像"></div>
+      <p class="user-name linkLogin" id="userName">点击登陆</p>
+			<input type="button" class="inputText user-header-out hide" value="退出" id="logoutBtn">
     </div>
+		<!-- 用户订单/红包/积分信息 -->
     <div class="user-data mb20">
-      <div class="user-data-order user-data-btn">
-        <span class="user-data-num">10 <i>个</i></span>
+      <div class="user-data-order user-data-btn linkLogin">
+        <span class="user-data-num">** <i>个</i></span>
         <span class="user-data-title">订单</span>
       </div>
-      <div class="user-data-red user-data-btn">
-        <span class="user-data-num">20 <i>个</i></span>
+      <div class="user-data-red user-data-btn projectBuilding">
+        <span class="user-data-num">** <i>个</i></span>
         <span class="user-data-title">红包</span>
       </div>
-      <div class="user-data-score user-data-btn">
-        <span class="user-data-num">1000 <i>分</i></span>
+      <div class="user-data-score user-data-btn projectBuilding">
+        <span class="user-data-num">** <i>分</i></span>
         <span class="user-data-title">积分</span>
       </div>
     </div>
+		<!-- 关于我们 -->
     <ul class="user-info-list mb20">
       <li><i class="cdp-iconfont user-info-list-icon">&#xe627;</i><a href="about.html">关于我们<i class="cdp-iconfont">&#xe615;</i></a></li>
-      <li><i class="cdp-iconfont user-info-list-icon">&#xe625;</i><a href="javascript:;">我的收藏<i class="cdp-iconfont">&#xe615;</i></a></li>
+      <li><i class="cdp-iconfont user-info-list-icon">&#xe625;</i><a href="javascript:;" class="linkLogin">我的收藏<i class="cdp-iconfont">&#xe615;</i></a></li>
     </ul>
+		<!-- 有场地出租 -->
     <div class="part extra-part mb20">
       <a href="release.html"><i class="cdp-iconfont">&#xe608;</i> 我有场地出租</a>
     </div>
@@ -137,10 +142,16 @@
 			<span>Copyright&nbsp;©&nbsp;2016 场地派</span>
 			<a href="tel:10086">联系我们</a>
 		</div>
+		<!-- 提示信息弹出层 -->
+		<div id="popup" class="popup hide">
+			<div id="tip" class="tip"></div>
+		</div>
   </div>
 
 	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/lib/zepto.cookie.min.js"></script>
 	<script src="js/global.js"></script>
+	<script src="js/data/userCenterDATA.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,19 @@
 $(function () {
+
+  /**
+   *
+   * 全局  js交互
+   */
+
+  // 信息弹出层样式
+  var screenW = $(window).width();
+  var screenH = $(window).height();
+
+  $('#popup').css({
+    'width': screenW + 'px',
+    'height': screenH + 'px'
+  });
+
   // 返回上一页
   $('#goBack').on('click', function () {
     history.back(-1);
@@ -13,4 +28,56 @@ $(function () {
     }
   });
 
+
+
+  // 登录状态页面跳转
+  // $('.userBtn').on('click', function () {
+  //   var loginStatus = $.fn.cookie('loginStatus');
+  //     if (loginStatus) {
+  //       window.location.href = 'userCenter.html';
+  //     } else {
+  //       window.location.href = 'login.html';
+  //     }
+  // });
+  $('.linkLogin').on('click', function () {
+    var loginStatus = $.fn.cookie('loginStatus');
+    if (!loginStatus) {
+      window.location.href = 'login.html';
+    }
+  });
+
+
 });
+
+
+/**
+ *
+ * 函数部分
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

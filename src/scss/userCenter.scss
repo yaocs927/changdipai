@@ -1,6 +1,7 @@
 @import "common";
 @import "global";
-@import "component/topSearch";
+@import "component/topBar";
+
 // 用户信息头部
 .user-header {
   position: relative;
@@ -23,7 +24,7 @@
   p {
     line-height: px2rem(84px, $base-font-size);
     color: $whiteColor;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .user-header-out {
@@ -37,11 +38,11 @@
 
 [data-dpr="2"] .user-header {
   p {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .user-header-out {
-    font-size: 24px;
+    font-size: 48px;
   }
 }
 
