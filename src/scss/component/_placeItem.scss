@@ -9,8 +9,9 @@
   &-img {
     position: relative;
     height: px2rem(470px, $base-font-size);
-    background: url(../img/place-img-1@3x.jpg) no-repeat center center;
-    background-size: 100%;
+    background-color: $fontColor4;
+    // background: $fontColor4 url(../img/place-img-1@3x.jpg) no-repeat center center;
+    background-size: cover;
 
     .corner-info,
     .placeType-info,

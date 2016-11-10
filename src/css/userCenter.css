@@ -358,7 +358,7 @@
   position: absolute;
   right: 0.27778rem;
   bottom: 0.27778rem;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0.13889rem 0.27778rem;
 }
 
@@ -367,7 +367,7 @@
 }
 
 [data-dpr="2"] .user-header .user-header-out {
-  font-size: 48px;
+  font-size: 28px;
 }
 
 [data-dpr="3"] .user-header p {
@@ -375,7 +375,7 @@
 }
 
 [data-dpr="3"] .user-header .user-header-out {
-  font-size: 36px;
+  font-size: 42px;
 }
 
 .user-data {

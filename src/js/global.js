@@ -41,7 +41,8 @@ $(function () {
   // });
   $('.linkLogin').on('click', function () {
     var loginStatus = $.fn.cookie('loginStatus');
-    if (!loginStatus) {
+    if (loginStatus !== '1') {
+      console.log(loginStatus);
       window.location.href = 'login.html';
     }
   });

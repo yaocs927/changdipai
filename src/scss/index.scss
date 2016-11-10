@@ -328,6 +328,7 @@ html {
           width: px2rem(600px, $base-font-size);
           height: px2rem(378px, $base-font-size);
           background-color: $cdpColor;
+          background-size: cover;
         }
 
         &-title {

@@ -408,6 +408,7 @@ html {
   width: 8.33333rem;
   height: 5.25rem;
   background-color: #ff627a;
+  background-size: cover;
 }
 
 .part .recommend-wrapper .recommend-item-title {
@@ -464,8 +465,8 @@ html {
 .place-item-img {
   position: relative;
   height: 6.52778rem;
-  background: url(../img/place-img-1@3x.jpg) no-repeat center center;
-  background-size: 100%;
+  background-color: #e2e1e1;
+  background-size: cover;
 }
 
 .place-item-img .corner-info,

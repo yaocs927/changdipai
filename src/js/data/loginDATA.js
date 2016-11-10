@@ -70,11 +70,12 @@ function login(userInfo) {
       console.log(getData);
       var data = JSON.parse(getData);
       tokenNum = data.data.token;
-      var userId = data.data.id;
+      var userId = data.data.user.id;
+      console.log(userId);
       // 存储 服务器 返回 新token
       $.fn.cookie('tokenNum', tokenNum);
       $.fn.cookie('userId', userId);
-      $.fn.cookie('loginStatus', true);
+      $.fn.cookie('loginStatus', '1');
       window.location.href = 'userCenter.html';
     }
   });
@@ -113,10 +114,10 @@ function checkPhone(numData) {
 
 // 检测验证码
 function checkVaildateNum(numData) {
-  var reg = /^[0-9]{4}$/;
+  var reg = /^[0-9]{4,6}$/;
   if (!reg.test(numData)) {
     $('#popup').removeClass('hide').addClass('show');
-    $('#tip').text('请填写正确的4位验证码！');
+    $('#tip').text('请填写正确的6位验证码！');
     setTimeout(function() {
       $('#popup').removeClass('show').addClass('hide');
     }, 1000);

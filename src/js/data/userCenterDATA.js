@@ -7,12 +7,12 @@ $(function () {
 
   // 登录状态 页面跳转
   var loginStatus = $.fn.cookie('loginStatus');
-  if (loginStatus) {
-    // 读取 token, 用户 id
+  console.log(loginStatus);
+  if (loginStatus === '1') {
     var tokenNum = $.fn.cookie('tokenNum');
     var userId = $.fn.cookie('userId');
     console.log($.fn.cookie('tokenNum'));
-    // getUserInfo(userId, tokenNum);
+    getUserInfo(userId, tokenNum);
     $('#logoutBtn').removeClass('hide').addClass('active');
   } else {
     console.log('未登录');
@@ -33,9 +33,9 @@ $(function () {
 
   // 退出登录
   $('#logoutBtn').on('click', function () {
-    // $.fn.cookie('tokenNum', { expires: -1 });
-    // $.fn.cookie('userId', { expires: -1 });
-    // $.fn.cookie('loginStatus', false);
+    $.fn.cookie('tokenNum', null, { expires: -1 });
+    $.fn.cookie('userId', null, { expires: -1 });
+    $.fn.cookie('loginStatus', '-1');
     $('#popup').removeClass('hide').addClass('show');
     $('#tip').text('已成功退出！');
     setTimeout(function() {
@@ -65,7 +65,8 @@ function getUserInfo(userId, tokenNum) {
     jsonp: 'callback',
     success: function (getData) {
       var data = JSON.parse(getData);
-
+      $('#userName').text(data.data.name);
+      console.log(data);
     }
   });
 }
