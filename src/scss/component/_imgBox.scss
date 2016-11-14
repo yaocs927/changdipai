@@ -34,8 +34,7 @@
     .img-wrapper-box-list {
       width: px2rem(720px, $base-font-size);
       height: 100%;
-      background: $cdpColor url(../img/detail-img-1@3x.jpg) no-repeat center center;
-      background-size: 100%;
+      background-size: cover;
     }
   }
 
@@ -100,7 +99,7 @@
   &:after {
     font-size: 28px;
   }
-  
+
   .placeType-info {
     font-size: 36px;
   }

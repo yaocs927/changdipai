@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>场地派-遇见您的专属场地</title>
+	<title>场地派-遇见你的专属场地</title>
 	<script type="text/javascript">
 		! function() {
 			var e =
@@ -98,21 +98,18 @@
     <div class="detail-header">
 			<!-- 场地相册 -->
 			<div class="detail-header-img swiper-container img-wrapper">
-				<div class="swiper-wrapper img-wrapper-box">
-	        <div class="swiper-slide img-wrapper-box-list">Slide 1</div>
-	        <div class="swiper-slide img-wrapper-box-list">Slide 2</div>
-					<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
-					<div class="swiper-slide img-wrapper-box-list">Slide 3</div>
+				<div class="swiper-wrapper img-wrapper-box" id="placePhotoList">
+	        <!-- <div class="swiper-slide img-wrapper-box-list">Slide 1</div> -->
 	    	</div>
 				<!-- <span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span> -->
 				<div class="placeType-info swiper-pagination"></div>
-				<div class="collection cdp-iconfont">&#xe625;</div>
+				<!-- <div class="collection cdp-iconfont">&#xe625;</div> -->
 			</div>
 			<!-- 场地名 -->
-			<div class="detail-header-info" data-jd="121.380343" data-wd="31.137456" data-name="独栋豪华花园别墅" id="placeName">
-				<h2 class="clearfix detail-header-info-title">独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送</h2>
-        <p class="detail-header-info-detail"><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p>
-				<p class="detail-header-info-detail">庞各庄镇龙景湾二区富力丹麦小镇110栋</p>
+			<div class="detail-header-info" data-jd="121.380343" data-wd="31.137456" data-name="独栋豪华花园别墅" id="placeInfo">
+				<h2 class="clearfix detail-header-info-title" id="placeName"></h2>
+        <!-- <p class="detail-header-info-detail"><i>KTV</i><i>电脑房</i><i>烧烤</i><i>游泳池</i></p> -->
+				<p class="detail-header-info-detail" id="placeAddress"></p>
 			</div>
 		</div>
 		<!-- 地图 -->
@@ -127,27 +124,20 @@
       <div class="detail-price clearfix">
         <div class="detail-price-left clearfix">
           <div class="detail-price-left-left"></div>
-          <div class="detail-price-left-right">
+          <div class="detail-price-left-right" id="placeMainPrice">
             <h4>独栋别墅</h4>
-            <p><i>600平米</i><i>游泳池</i><i>可烧烤</i></p>
+            <p><i id="placeSize">600</i><i>平米</i></p>
           </div>
         </div>
-        <div class="detail-price-right"><i>￥</i>2000<i>/天</i><span>起</span><em class="cdp-iconfont open">&#xe613;</em></div>
+        <!-- <div class="detail-price-right"><i>￥</i>2000<i>/天</i><span>起</span><em class="cdp-iconfont open">&#xe613;</em></div> -->
+				<div class="detail-price-right"><i>点击查看价格</i><em class="cdp-iconfont open">&#xe613;</em></div>
       </div>
       <div class="detail-price-sub hide">
-        <div class="detail-price-sub-list">
-          <div class="detail-price-sub-list-item clearfix">
+        <div class="detail-price-sub-list" id="placePriceList">
+          <!-- <div class="detail-price-sub-list-item clearfix">
             <p class="detail-price-sub-list-item-left">不含接送,周一至周四和周日14:00到11:00(次日)</p>
             <div class="detail-price-sub-list-item-right"><i>￥</i>2000<i>/天</i></div>
-          </div>
-          <div class="detail-price-sub-list-item clearfix">
-            <p class="detail-price-sub-list-item-left">不含接送,周一至周四和周日14:00到11:00(次日)</p>
-            <div class="detail-price-sub-list-item-right"><i>￥</i>2000<i>/天</i></div>
-          </div>
-          <div class="detail-price-sub-list-item clearfix">
-            <p class="detail-price-sub-list-item-left">不含接送,周一至周四和周日14:00到11:00(次日)</p>
-            <div class="detail-price-sub-list-item-right"><i>￥</i>2000<i>/天</i></div>
-          </div>
+          </div> -->
         </div>
         <div class="detail-price-sub-tip">以上价格均为参考价</div>
       </div>
@@ -156,12 +146,12 @@
     <div class="detail-part">
       <div class="detail-part-title">场地介绍</div>
       <div class="detail-part-introduce">
-        <ul class="detail-part-introduce-list">
+        <!-- <ul class="detail-part-introduce-list">
           <li><span>开业时间</span><i>2010年5月</i></li>
           <li><span>开业时间</span><i>2010年5月</i></li>
           <li><span>开业时间</span><i>2010年5月</i></li>
-        </ul>
-        <p class="placeIntroduce">场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间</p>
+        </ul> -->
+        <p class="placeIntroduce" id="placeIntroduce"></p>
       </div>
       <div class="more-btn-box">
         <button type="button" name="button" class="moreBtn" id="moreIntroduce"><i class="cdp-iconfont">&#xe60d;</i> 查看更多介绍</button>
@@ -171,19 +161,8 @@
     <div class="detail-part">
       <div class="detail-part-title">设施服务</div>
       <div class="detail-part-facilities">
-        <ul class="detail-part-facilities-list clearfix">
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
-					<li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li>
+        <ul class="detail-part-facilities-list clearfix" id="placeAmenity">
+					<!-- <li><i class="cdp-iconfont">&#xe607;</i><span>此车</span></li> -->
         </ul>
       </div>
       <div class="more-btn-box">
@@ -236,19 +215,11 @@
   </div>
 
 	<script src="js/lib/zepto.min.js"></script>
+	<script src="js/lib/zepto.cookie.min.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=ba30d8eba500d01d12ceacee41345c1b"></script>
 	<script src="js/lib/swiper.jquery.min.js"></script>
 	<script src="js/detail.js"></script>
-	<script>
-		// 图片滑动初始化
-		$(function () {
-			var mySwiper = new Swiper ('.swiper-container', {
-				pagination : '.swiper-pagination',
-				paginationType : 'fraction'
-			})
-		});
-	</script>
-	<script src="js/detailDATA.js"></script>
+	<script src="js/data/detailDATA.js"></script>
 </body>
 
 </html>

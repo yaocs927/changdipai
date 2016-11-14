@@ -1,14 +1,15 @@
+/*
+====================
+全局  js交互
+====================
+*/
+
 $(function () {
 
-  /**
-   *
-   * 全局  js交互
-   */
-
-  // 信息弹出层样式
   var screenW = $(window).width();
   var screenH = $(window).height();
 
+  // 设置提示信息弹出层 宽高
   $('#popup').css({
     'width': screenW + 'px',
     'height': screenH + 'px'
@@ -51,10 +52,7 @@ $(function () {
 });
 
 
-/**
- *
- * 函数部分
- */
+
 
 
 

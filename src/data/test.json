@@ -1,8 +1,222 @@
 {
-  "status": "200",
-  "info": "发送成功",
+  "status": 200,
+  "info": "成功",
   "data": {
-    "token": "t4Dsq+xFJJb6J6oESDDmuw==",
-    "message": ["20161109150138", "0", "1001109150138523600", ""]
+    "service": {
+      "id-ID": 1,
+      "name": "NNNN独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送",
+      "datetime": "2016-01-01 00:00:00",
+      "address": "N北京庞各庄镇龙景湾二区富力丹麦小镇110栋",
+      "area": 2000,
+      "status": 1,
+      "weight": 20000,
+      "host": {
+        "id": 1,
+        "name": "N场主名"
+      },
+      "album": {
+        "id": 1,
+        "name": "测试场地相册",
+        "brief": "相册的名称、简介等都可以自定义",
+        "datetime": "2016-10-10 12:12",
+        "photo": [{
+          "id": 888,
+          "name": "封面，第一张默认为封面，想要修改封面，只要修改排序即可",
+          "url": "../img/index-big-banner.jpg",
+          "rank": "1",
+          "datetime": "2016-10-10 12:12"
+        }, {
+          "id": 889,
+          "name": "大厅",
+          "url": "../img/index-big-banner.jpg",
+          "rank": "2",
+          "datetime": "2016-10-10 12:12"
+        }, {
+          "id": 904,
+          "name": "厨房",
+          "url": "../img/index-big-banner.jpg",
+          "rank": "3",
+          "datetime": "2016-10-10 12:12"
+        }]
+      },
+      "city": [{
+        "id": 1,
+        "name": "上海",
+        "tagname": "city",
+        "pid": 0,
+        "rid": 0,
+        "rank": 1,
+        "view": "shanghai.png，本字段可由系统管理员任意设置，保证显示一致即可"
+      }],
+      "event": [{
+        "id": 1001,
+        "name": "派对",
+        "tagname": "event",
+        "pid": 0,
+        "rid": 0,
+        "rank": 3,
+        "view": "随机名字.png"
+      }, {
+        "id": 1002,
+        "name": "朋友聚会",
+        "tagname": "event",
+        "pid": 0,
+        "rid": 0,
+        "rank": 5,
+        "view": ""
+      }, {
+        "id": 1003,
+        "name": "团队建设",
+        "tagname": "event",
+        "pid": 0,
+        "rid": 0,
+        "rank": 5,
+        "view": ""
+      }, {
+        "id": 1004,
+        "name": "Party",
+        "tagname": "event",
+        "pid": 0,
+        "rid": 0,
+        "rank": 5,
+        "view": ""
+      }],
+      "amenity": [{
+        "id": 10001,
+        "name": "WIFI",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10002,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10003,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10004,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10005,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10006,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10007,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10008,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }, {
+        "id": 10009,
+        "name": "投影仪",
+        "tagname": "amenity",
+        "pid": 0,
+        "rid": 0,
+        "rank": 4,
+        "view": "&#xe643;"
+      }],
+      "brief": [{
+        "id": 1,
+        "name": "关于这里",
+        "content": "NNNN场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间",
+        "view": "#FABCDE"
+      }],
+      "offer": [{
+        "id": 2223,
+        "name": "周日午夜场，至少提前七天预定，至少提前七天预定，至少提前七天预定",
+        "brief": "至少提前七天预定，50人以内，禁止带宠物",
+        "time": "22:30:00",
+        "length": 8,
+        "number": 50,
+        "rank": 1,
+        "price": 8000,
+        "unit": "场",
+        "view": "￥"
+      }, {
+        "id": 2224,
+        "name": "周一到周四，至少提前七天预定",
+        "brief": "至少提前七天预定，50人以内，禁止带宠物",
+        "time": "22:30:00",
+        "length": 8,
+        "number": 50,
+        "rank": 1,
+        "price": 8000,
+        "unit": "场",
+        "view": "￥"
+      }],
+      "event": [{
+        "id": 1,
+        "name": "测试活动，可能一个也没有",
+        "datatime": "2016-11-12 08:00",
+        "length": 7,
+        "number": 12,
+        "price": 50000,
+        "brief": "测试活动简介，包含需要餐饮，需要住宿等信息",
+        "album": {
+          "id": 2337,
+          "name": "测试活动纪念相册",
+          "brief": "测试活动简介",
+          "datetime": "2016-10-10 12:12",
+          "photo": [{
+            "id": 1,
+            "name": "封面，第一场就是封面，想要修改封面，只要修改排序即可",
+            "url": "/changdipai/upload/changdipai/随机名字.jpg",
+            "rank": "1",
+            "datetime": "2016-10-10 12:12"
+          }, {
+            "id": 2,
+            "name": "聚餐",
+            "url": "/changdipai/upload/changdipai/随机名字.jpg",
+            "rank": "2",
+            "datetime": "2016-10-10 12:12"
+          }, {
+            "id": 3,
+            "name": "到场嘉宾",
+            "url": "/changdipai/upload/changdipai/随机名字.jpg",
+            "rank": "3",
+            "datetime": "2016-10-10 12:12"
+          }]
+        }
+      }]
+    }
   }
 }

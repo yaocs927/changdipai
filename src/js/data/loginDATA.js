@@ -1,11 +1,11 @@
-/**
- *
- * 用户登入，注册    js数据传输
- */
+/*
+====================
+用户登入，注册 JS数据获取
+====================
+*/
 
-// 验证令牌存储
-var tokenNum = null;
-var loginStatus = null;
+var tokenNum = null; // 验证令牌存储
+var loginStatus = null; // 登录状态值存储
 
 $(function () {
 
@@ -31,13 +31,13 @@ $(function () {
     if (!userPhoneNum) {
       $('#popup').removeClass('hide').addClass('show');
       $('#tip').text('请填写手机号！');
-      setTimeout(function() {
+      setTimeout(function () {
         $('#popup').removeClass('show').addClass('hide');
       }, 1000);
     } else if (!vaildateNum) {
       $('#popup').removeClass('hide').addClass('show');
       $('#tip').text('请填写验证码！');
-      setTimeout(function() {
+      setTimeout(function () {
         $('#popup').removeClass('show').addClass('hide');
       }, 1000);
     } else {
@@ -53,10 +53,11 @@ $(function () {
 });
 
 
-/**
- *
- * 函数部分
- */
+/*
+====================
+函数部分
+====================
+*/
 
 // 登录/注册 函数
 function login(userInfo) {
@@ -106,7 +107,7 @@ function checkPhone(numData) {
   if (!reg.test(numData)) {
     $('#popup').removeClass('hide').addClass('show');
     $('#tip').text('请填写正确的11位手机号！');
-    setTimeout(function() {
+    setTimeout(function () {
       $('#popup').removeClass('show').addClass('hide');
     }, 1000);
   }
@@ -118,35 +119,8 @@ function checkVaildateNum(numData) {
   if (!reg.test(numData)) {
     $('#popup').removeClass('hide').addClass('show');
     $('#tip').text('请填写正确的6位验证码！');
-    setTimeout(function() {
+    setTimeout(function () {
       $('#popup').removeClass('show').addClass('hide');
     }, 1000);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

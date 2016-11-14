@@ -1,12 +1,13 @@
-/**
- *
- * 搜索结果页 JS交互
- */
+/*
+====================
+搜索结果页  js交互
+====================
+*/
 
 $(function () {
   // 设置过滤条件下拉列表高度
-  var H = $(window).height();
-  $('.filter-list').css('height', (H - 80) + 'px');
+  var screenH = $(window).height();
+  $('.filter-list').css('height', (screenH - 80) + 'px');
 
   // 过滤条件下拉列表显示/隐藏
   filterShow('area');
@@ -32,6 +33,7 @@ $(function () {
   //     $(this).removeClass('active');
   //   }
   // });
+
   // 过滤-重置功能过滤
   $('#reset').on('click', function () {
     $('.filter-list-top-sub li').removeClass('active');
@@ -45,10 +47,11 @@ $(function () {
 });
 
 
-/**
- *
- * 方法部分
- */
+/*
+====================
+函数部分
+====================
+*/
 
 // 过滤条件框显示/隐藏
 function filterShow(type) {

@@ -32,7 +32,6 @@ body {
     .detail-header-info-detail {
       font-size: 16px;
       color: $fontColor3;
-      @include ellipsis;
 
       i {
         display: inline-block;
@@ -47,7 +46,7 @@ body {
 [data-dpr="2"] .detail-header {
   &-info {
     .detail-header-info-title {
-      font-size: 21px;
+      font-size: 42px;
     }
 
     .detail-header-info-detail {
