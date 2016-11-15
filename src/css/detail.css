@@ -145,7 +145,7 @@ body {
 .detail-header-info .detail-header-info-detail i {
   display: inline-block;
   margin: 0 0.11111rem 0.27778rem;
-  color: #ff627a;
+  color: #ff7200;
   font-size: 17px;
 }
 
@@ -293,7 +293,7 @@ body {
   width: 1.66667rem;
   height: 1.66667rem;
   border-radius: 50%;
-  background-color: #ff627a;
+  background-color: #ff7200;
 }
 
 .detail-part-service p {
@@ -353,7 +353,7 @@ body {
   float: right;
   line-height: 2.19444rem;
   font-size: 20px;
-  color: #ff627a;
+  color: #ff7200;
 }
 
 .detail-part .detail-price-right i {
@@ -401,7 +401,7 @@ body {
   float: right;
   line-height: 1.25rem;
   font-size: 20px;
-  color: #ff627a;
+  color: #ff7200;
 }
 
 .detail-part .detail-price-sub-list-item-right i {
@@ -585,7 +585,7 @@ body {
   width: 50%;
   height: 1.38889rem;
   line-height: 1.38889rem;
-  background-color: #ff627a;
+  background-color: #ff7200;
   text-align: center;
   color: #fff;
   font-size: 16px;
@@ -728,10 +728,10 @@ body {
   padding: 0 0.27778rem;
   height: 0.83333rem;
   background-color: #fff;
-  border: 1px solid #ff627a;
+  border: 1px solid #ff7200;
   border-radius: 0.08333rem;
   font-size: 13px;
-  color: #ff627a;
+  color: #ff7200;
   line-height: 0.80556rem;
 }
 

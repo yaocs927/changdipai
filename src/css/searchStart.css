@@ -139,7 +139,7 @@
 .top-search-area i {
   margin-left: 0.05556rem;
   font-size: 13px;
-  color: #ff627a;
+  color: #ff7200;
 }
 
 .top-search-area span {
@@ -201,7 +201,7 @@
   margin-top: 0.16667rem;
   height: 0.80556rem;
   border-radius: 0.38889rem 0 0 0.38889rem;
-  background-color: #ff627a;
+  background-color: #ff7200;
   line-height: 0.80556rem;
   color: #fff;
 }
@@ -370,7 +370,7 @@
 }
 
 .search-start-content i.active {
-  color: #ff627a;
+  color: #ff7200;
   font-weight: 700;
 }
 
@@ -403,10 +403,10 @@
   padding: 0 0.27778rem;
   height: 0.83333rem;
   background-color: #fff;
-  border: 1px solid #ff627a;
+  border: 1px solid #ff7200;
   border-radius: 0.08333rem;
   font-size: 13px;
-  color: #ff627a;
+  color: #ff7200;
   line-height: 0.80556rem;
 }
 

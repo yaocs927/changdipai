@@ -1,7 +1,9 @@
 // 常用颜色
 // 主色
-$cdpColor: #ff627a;
-$cdpColorSub: rgba(255, 98, 122, .6);
+// $cdpColor: #ff627a;
+$cdpColor: #ff7200;
+// $cdpColorSub: rgba(255, 98, 122, .6);
+$cdpColorSub: rgba(255, 144, 0, .6);
 // sub
 $subColor: #bf1cbd;
 // 背景色
@@ -20,7 +22,7 @@ $fontColor4: #e2e1e1;
   border-radius: $radius;
 }
 
-// 根据设计稿基数 ()淘宝 flexible) 单位转换 px >>> rem
+// 根据设计稿基数 (淘宝 flexible) 单位转换 px >>> rem
 @function px2rem($px, $base-font-size: 16px) {
    @if (unitless($px)){
     @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
