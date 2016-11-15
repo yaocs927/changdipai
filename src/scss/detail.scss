@@ -196,6 +196,7 @@ body {
       height: px2rem(120px, $base-font-size);
       border-radius: 50%;
       background-color: $cdpColor;
+      background-size: cover;
     }
 
     p {
@@ -222,8 +223,8 @@ body {
         float: left;
         width: px2rem(158px, $base-font-size);
         height: px2rem(158px, $base-font-size);
-        background: $whiteColor url('../img/detail-img-1@3x.jpg') no-repeat center center;
-        background-size: 100%;
+        background-color: $whiteColor;
+        background-size: cover;
       }
 
       &-right {

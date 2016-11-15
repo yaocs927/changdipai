@@ -4,8 +4,13 @@
 ====================
 */
 
+var curPlaceId = null;
+
 $(function () {
-  getPlace();
+  // 获取当前场地ID
+  // curPlaceId = $.fn.cookie('curPlaceId');
+  // console.log(curPlaceId);
+  getPlace('1');
 });
 
 
@@ -18,15 +23,15 @@ $(function () {
 function getPlace(id) {
   $.ajax({
     type: 'GET',
-    url: '../../data/test.json',
-    // dateType: 'JSONP',
-    // jsonp: 'callback',
+    url: 'http://m.changdipai.com/api/v2/service/get?id=' + id,
+    dateType: 'JSONP',
+    jsonp: 'callback',
     success: function (getData) {
       var data = getData;
       var placeDetail = data.data.service;
       // 场地相册
       $.each(placeDetail.album.photo, function (i, cur) {
-        $('#placePhotoList').append('<div class="swiper-slide img-wrapper-box-list" style="background-image: url(' + cur.url + '); background-repeat: no-repeat; background-position: center center;">Slide 2</div>');
+        $('#placePhotoList').append('<div class="swiper-slide img-wrapper-box-list" style="background-image: url(http://m.changdipai.com/' + cur.url + '); background-repeat: no-repeat; background-position: center center;"></div>');
       });
       var mySwiper = new Swiper ('.swiper-container', {
         pagination : '.swiper-pagination',
@@ -36,6 +41,12 @@ function getPlace(id) {
       $('#placeName').text(placeDetail.name);
       // 场地地址
       $('#placeAddress').text(placeDetail.address);
+      // 场地小图片
+      $('#placeSmallPic').css({
+        'background-image': 'url(http://m.changdipai.com/' + placeDetail.album.cover.url + ')',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center center'
+      });
       // 场地价格
       $('#placeMainPrice h4').text(placeDetail.name.substr(0,10));
       $.each(placeDetail.offer, function (i, cur) {
@@ -48,16 +59,17 @@ function getPlace(id) {
       $('#placeSize').text(placeDetail.area);
       // 场地介绍
       $('#placeIntroduce').text(placeDetail.brief[0].content);
+      $('#placeIntroduce').attr('data-content', placeDetail.brief[0].content);
       // 显示更多介绍
       var placeIntroduce = $('#placeIntroduce');
       var piText = placeIntroduce.text();
+      console.log(piText);
       if (piText.length > 100) {
-        placeIntroduce.attr('data-content', piText);
         placeIntroduce.html(piText.substring(0, 100) + '...');
         piText = placeIntroduce.text();
       }
       // 场地设施
-      $.each(placeDetail.amenity, function (i, cur) {
+      $.each(placeDetail.category.amenity, function (i, cur) {
         $('#placeAmenity').append('<li><i class="cdp-iconfont">' + cur.view + '</i><span>' + cur.name + '</span></li>');
       });
       // 显示更多设施
@@ -70,6 +82,13 @@ function getPlace(id) {
           num.eq(i).toggle();
         }
       });
+      // 场地客服
+      $('#placeServiceAvatar').css({
+        'background-image': 'url(http://m.changdipai.com/' + placeDetail.user.avatar + ')',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center center'
+      });
+      $('#placeServiceName').text(placeDetail.user.name);
     }
   });
 }

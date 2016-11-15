@@ -3,220 +3,169 @@
   "info": "成功",
   "data": {
     "service": {
-      "id-ID": 1,
-      "name": "NNNN独栋豪华花园别墅可免费接送独栋豪华花园别墅可免费接送",
-      "datetime": "2016-01-01 00:00:00",
-      "address": "N北京庞各庄镇龙景湾二区富力丹麦小镇110栋",
-      "area": 2000,
-      "status": 1,
-      "weight": 20000,
-      "host": {
-        "id": 1,
-        "name": "N场主名"
+      "album_id": "1",
+      "photo_id": "0",
+      "id": "1",
+      "name": "上海测试场地",
+      "status": "1",
+      "datetime": "2016-11-04 10:27:04",
+      "area": "100",
+      "weight": "20000",
+      "address": "上海测试场地地址",
+      "keyword": "派对轰趴",
+      "user": {
+        "id": "1",
+        "name": "测试用户",
+        "phone": "15821956832",
+        "avatar": "resource\/changdipai\/image\/cszp1.jpg",
+        "brief": "a",
+        "status": "1"
       },
-      "album": {
-        "id": 1,
-        "name": "测试场地相册",
-        "brief": "相册的名称、简介等都可以自定义",
-        "datetime": "2016-10-10 12:12",
-        "photo": [{
-          "id": 888,
-          "name": "封面，第一张默认为封面，想要修改封面，只要修改排序即可",
-          "url": "../img/index-big-banner.jpg",
-          "rank": "1",
-          "datetime": "2016-10-10 12:12"
-        }, {
-          "id": 889,
-          "name": "大厅",
-          "url": "../img/index-big-banner.jpg",
-          "rank": "2",
-          "datetime": "2016-10-10 12:12"
-        }, {
-          "id": 904,
-          "name": "厨房",
-          "url": "../img/index-big-banner.jpg",
-          "rank": "3",
-          "datetime": "2016-10-10 12:12"
-        }]
-      },
-      "city": [{
-        "id": 1,
-        "name": "上海",
-        "tagname": "city",
-        "pid": 0,
-        "rid": 0,
-        "rank": 1,
-        "view": "shanghai.png，本字段可由系统管理员任意设置，保证显示一致即可"
-      }],
-      "event": [{
-        "id": 1001,
-        "name": "派对",
-        "tagname": "event",
-        "pid": 0,
-        "rid": 0,
-        "rank": 3,
-        "view": "随机名字.png"
+      "offer": [{
+        "id": "2",
+        "name": "周末夜场",
+        "brief": "",
+        "time": "22:00:00",
+        "length": "10",
+        "number": "30",
+        "rank": "1",
+        "price": "9000",
+        "unit": "CNY",
+        "view": "",
+        "service": "1"
       }, {
-        "id": 1002,
-        "name": "朋友聚会",
-        "tagname": "event",
-        "pid": 0,
-        "rid": 0,
-        "rank": 5,
-        "view": ""
-      }, {
-        "id": 1003,
-        "name": "团队建设",
-        "tagname": "event",
-        "pid": 0,
-        "rid": 0,
-        "rank": 5,
-        "view": ""
-      }, {
-        "id": 1004,
-        "name": "Party",
-        "tagname": "event",
-        "pid": 0,
-        "rid": 0,
-        "rank": 5,
-        "view": ""
-      }],
-      "amenity": [{
-        "id": 10001,
-        "name": "WIFI",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10002,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10003,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10004,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10005,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10006,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10007,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10008,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
-      }, {
-        "id": 10009,
-        "name": "投影仪",
-        "tagname": "amenity",
-        "pid": 0,
-        "rid": 0,
-        "rank": 4,
-        "view": "&#xe643;"
+        "id": "1",
+        "name": "白天场",
+        "brief": "白天场简介",
+        "time": "10:00:00",
+        "length": "10",
+        "number": "50",
+        "rank": "2",
+        "price": "5000",
+        "unit": "CNY",
+        "view": "",
+        "service": "1"
       }],
       "brief": [{
-        "id": 1,
-        "name": "关于这里",
-        "content": "NNNN场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介绍场地介开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间开业时间",
-        "view": "#FABCDE"
-      }],
-      "offer": [{
-        "id": 2223,
-        "name": "周日午夜场，至少提前七天预定，至少提前七天预定，至少提前七天预定",
-        "brief": "至少提前七天预定，50人以内，禁止带宠物",
-        "time": "22:30:00",
-        "length": 8,
-        "number": 50,
-        "rank": 1,
-        "price": 8000,
-        "unit": "场",
-        "view": "￥"
+        "id": "1",
+        "name": "场地详情",
+        "content": "—Aloha 私人派对空间位于北京朝阳区金盏乡东窑艺术区。我们专注于做私人派对，有一个面积600平米的独栋别墅及400多平米的院子。私人派对空间位于北京朝阳区金盏乡东窑艺术区。我们专注于做私人派对，有一个面积600平米的独栋别墅及400多平米的院子。私人派对空间位于北京朝阳区金盏乡东窑艺术区。我们专注于做私人派对，有一个面积600平米的独栋别墅及400多平米的院子。私人派对空间位于北京朝阳区金盏乡东窑艺术区。我们专注于做私人派对，有一个面积600平米的独栋别墅及400多平米的院子。私人派对空间位于北京朝阳区金盏乡东窑艺术区。我们专注于做私人派对，有一个面积600平米的独栋别墅及400多平米的院子。",
+        "view": "xiangqing",
+        "rank": "1",
+        "service": "1"
       }, {
-        "id": 2224,
-        "name": "周一到周四，至少提前七天预定",
-        "brief": "至少提前七天预定，50人以内，禁止带宠物",
-        "time": "22:30:00",
-        "length": 8,
-        "number": 50,
-        "rank": 1,
-        "price": 8000,
-        "unit": "场",
-        "view": "￥"
+        "id": "2",
+        "name": "温馨提示",
+        "content": "需提前两天预约。周一至周四10人起订，周五至周日15人起订。",
+        "view": "tishi",
+        "rank": "2",
+        "service": "1"
       }],
-      "event": [{
-        "id": 1,
-        "name": "测试活动，可能一个也没有",
-        "datatime": "2016-11-12 08:00",
-        "length": 7,
-        "number": 12,
-        "price": 50000,
-        "brief": "测试活动简介，包含需要餐饮，需要住宿等信息",
-        "album": {
-          "id": 2337,
-          "name": "测试活动纪念相册",
-          "brief": "测试活动简介",
-          "datetime": "2016-10-10 12:12",
-          "photo": [{
-            "id": 1,
-            "name": "封面，第一场就是封面，想要修改封面，只要修改排序即可",
-            "url": "/changdipai/upload/changdipai/随机名字.jpg",
-            "rank": "1",
-            "datetime": "2016-10-10 12:12"
-          }, {
-            "id": 2,
-            "name": "聚餐",
-            "url": "/changdipai/upload/changdipai/随机名字.jpg",
-            "rank": "2",
-            "datetime": "2016-10-10 12:12"
-          }, {
-            "id": 3,
-            "name": "到场嘉宾",
-            "url": "/changdipai/upload/changdipai/随机名字.jpg",
-            "rank": "3",
-            "datetime": "2016-10-10 12:12"
-          }]
-        }
-      }]
+      "category": {
+        "amenity": [{
+          "id": "3",
+          "name": "WIFI",
+          "view": "&*#",
+          "rank": "1",
+          "pid": "0",
+          "tag": "amenity"
+        }, {
+          "id": "4",
+          "name": "泳池",
+          "view": "",
+          "rank": "2",
+          "pid": "0",
+          "tag": "amenity"
+        }],
+        "circle": [{
+          "id": "13",
+          "name": "徐家汇",
+          "view": "",
+          "rank": "1",
+          "pid": "1",
+          "tag": "circle"
+        }],
+        "city": [{
+          "id": "1",
+          "name": "上海",
+          "view": "",
+          "rank": "1",
+          "pid": "0",
+          "tag": "city"
+        }],
+        "event": [{
+          "id": "19",
+          "name": "团队拓展",
+          "view": "",
+          "rank": "1",
+          "pid": "0",
+          "tag": "event"
+        }, {
+          "id": "20",
+          "name": "轰趴",
+          "view": "",
+          "rank": "2",
+          "pid": "0",
+          "tag": "event"
+        }],
+        "handpick": [{
+          "id": "21",
+          "name": "办年会，选最好的场地给你",
+          "view": "resource\/changdipai\/image\/cszp1.jpg",
+          "rank": "1",
+          "pid": "0",
+          "tag": "handpick"
+        }, {
+          "id": "22",
+          "name": "轰趴派对，顶级别墅尊享",
+          "view": "resource\/changdipai\/image\/cszp2.jpg",
+          "rank": "2",
+          "pid": "0",
+          "tag": "handpick"
+        }],
+        "region": [{
+          "id": "10",
+          "name": "浦东新区",
+          "view": "",
+          "rank": "1",
+          "pid": "1",
+          "tag": "region"
+        }]
+      },
+      "album": {
+        "id": "1",
+        "name": "测试相册1",
+        "brief": "",
+        "datetime": "2016-01-01 00:00:00",
+        "weight": "0",
+        "status": "1",
+        "cover": {
+          "id": "1",
+          "name": "测试照片1",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "2",
+          "url": "resource\/changdipai\/image\/cszp1.jpg",
+          "status": "1",
+          "album": "1"
+        },
+        "photo": [{
+          "id": "2",
+          "name": "测试照片2",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "1",
+          "url": "resource\/changdipai\/image\/cszp2.jpg",
+          "status": "1",
+          "album": "1"
+        }, {
+          "id": "1",
+          "name": "测试照片1",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "2",
+          "url": "resource\/changdipai\/image\/cszp1.jpg",
+          "status": "1",
+          "album": "1"
+        }]
+      }
     }
   }
 }

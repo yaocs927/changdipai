@@ -294,6 +294,7 @@ body {
   height: 1.66667rem;
   border-radius: 50%;
   background-color: #ff7200;
+  background-size: cover;
 }
 
 .detail-part-service p {
@@ -320,8 +321,8 @@ body {
   float: left;
   width: 2.19444rem;
   height: 2.19444rem;
-  background: #fff url("../img/detail-img-1@3x.jpg") no-repeat center center;
-  background-size: 100%;
+  background-color: #fff;
+  background-size: cover;
 }
 
 .detail-part .detail-price-left-right {
