@@ -1,0 +1,90 @@
+{
+  "status": 200,
+  "info": "成功",
+  "data": {
+    "service": {
+      "id": "1",
+      "name": "上海测试场地",
+      "status": "1",
+      "datetime": "2016-11-04 10:27:04",
+      "area": "100",
+      "weight": "20000",
+      "address": "上海测试场地地址",
+      "keyword": "派对轰趴",
+      "cover": "resource\/changdipai\/image\/cszp1.jpg",
+      "number": "30",
+      "price": "9000",
+      "category": {
+        "amenity": [{
+          "id": "3",
+          "name": "WIFI",
+          "view": "&#xe643;",
+          "rank": "1",
+          "pid": "0",
+          "tag": "amenity"
+        }, {
+          "id": "4",
+          "name": "泳池",
+          "view": "&#xe643;",
+          "rank": "2",
+          "pid": "0",
+          "tag": "amenity"
+        }],
+        "circle": [{
+          "id": "13",
+          "name": "徐家汇",
+          "view": "",
+          "rank": "1",
+          "pid": "1",
+          "tag": "circle"
+        }],
+        "city": [{
+          "id": "1",
+          "name": "上海",
+          "view": "",
+          "rank": "1",
+          "pid": "0",
+          "tag": "city"
+        }],
+        "event": [{
+          "id": "19",
+          "name": "团队拓展",
+          "view": "",
+          "rank": "1",
+          "pid": "0",
+          "tag": "event"
+        }, {
+          "id": "20",
+          "name": "轰趴",
+          "view": "",
+          "rank": "2",
+          "pid": "0",
+          "tag": "event"
+        }],
+        "handpick": [{
+          "id": "21",
+          "name": "办年会，选最好的场地给你",
+          "view": "resource\/changdipai\/image\/cszp1.jpg",
+          "rank": "1",
+          "pid": "0",
+          "tag": "handpick"
+        }, {
+          "id": "22",
+          "name": "轰趴派对，顶级别墅尊享",
+          "view": "resource\/changdipai\/image\/cszp2.jpg",
+          "rank": "2",
+          "pid": "0",
+          "tag": "handpick"
+        }],
+        "region": [{
+          "id": "10",
+          "name": "浦东新区",
+          "view": "",
+          "rank": "1",
+          "pid": "1",
+          "tag": "region"
+        }]
+      }
+    }
+  }
+}

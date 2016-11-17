@@ -65,7 +65,7 @@ $(function () {
 function getCategory(tagName, id) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/category/search?tag=' + tagName,
+    url: 'http://m.changdipai.com/api/v2/category/search?tag=' + tagName,
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {

@@ -60,7 +60,7 @@ $(function () {
 function getUserInfo(userId, tokenNum) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/user/get',
+    url: 'http://m.changdipai.com/api/v2/user/get',
     data: {
       'id': userId,
       'token': tokenNum

@@ -63,7 +63,7 @@ $(function () {
 function login(userInfo) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/user/login',
+    url: 'http://m.changdipai.com/api/v2/user/login',
     data: userInfo + '&token=' + tokenNum,
     dataType: 'JSONP',
     jsonp: 'callback',
@@ -73,7 +73,7 @@ function login(userInfo) {
       tokenNum = data.data.token;
       var userId = data.data.user.id;
       console.log(userId);
-      // 存储 服务器 返回 新token
+      // 存储 服务器返回新token
       $.fn.cookie('tokenNum', tokenNum);
       $.fn.cookie('userId', userId);
       $.fn.cookie('loginStatus', '1');
@@ -86,7 +86,7 @@ function login(userInfo) {
 function vaildateNum(uid) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/user/mac',
+    url: 'http://m.changdipai.com/api/v2/user/mac',
     data: {
       'uid': uid
     },

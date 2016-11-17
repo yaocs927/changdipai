@@ -54,7 +54,7 @@ $(function () {
 function getCategory(tagName, id) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/category/search?tag=' + tagName,
+    url: 'http://m.changdipai.com/api/v2/category/search?tag=' + tagName,
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
@@ -80,7 +80,7 @@ function getCategory(tagName, id) {
 function getHandPick(tagName, id) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/category/search?tag=' + tagName,
+    url: 'http://m.changdipai.com/api/v2/category/search?tag=' + tagName,
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
@@ -102,42 +102,69 @@ function getHandPick(tagName, id) {
   });
 }
 
-// 获取热门场地
+// 搜索场地 获取 场地 ID
 function search(and, kw) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/changdipai/service/search?and=' + and + '&kw=' + kw,
+    url: 'http://m.changdipai.com/api/v2/service/search?and=' + and + '&kw=' + kw,
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
-      $('#hostPlace').siblings().remove(); // 清空热门列表
+      $('#hostPlaceList').empty(); // 清空热门列表
       var data = JSON.parse(getData);
-      var placeItem = data.data.service;
-      $.each(placeItem, function (i, cur) {
-        var id = cur.id,
-          title = cur.name,
-          price = cur.price,
-          cover = cur.cover,
-          address = cur.address;
-        $('#hostPlace').after('<a href="javascript:;" class="place-item" data-placeid="' + id + '" id="place-item-' + id + '">' +
-          '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + cover + '); background-repeat: no-repeat; background-position: center center;">' +
-          // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
-          '<span class="placeType-info"></span>' +
-          '<span class="collection cdp-iconfont">&#xe625;</span>' +
-          '</div>' +
-          '<div class="place-item-info">' +
-          '<h3 class="clearfix">' +
-          '<span class="place-item-info-title">' + title + '</span>' +
-          '<span class="place-item-info-price"><i>￥</i>' + price + '<i>/天</i></span>' +
-          '</h3>' +
-          '<p class="place-item-info-detail">' + address + '</p>' +
-          '</div></a>');
-
-        var amenity = cur.amenity.slice(0, 3);
-        $.each(amenity, function (i, cur) {
-          $('#place-item-' + id).find('span.placeType-info').append('<i>' + cur.name + '</i>');
-        });
+      var placeIdList = data.data.service; // 场地 ID 列表
+      $.each(placeIdList, function (i, cur) {
+        getPlaceItemInfo(cur.id);
       });
     }
   });
 }
+
+// 获取场地列表信息
+function getPlaceItemInfo(id) {
+  $.ajax({
+    type: 'GET',
+    url: 'http://m.changdipai.com/api/v2/service/preview?id=' + id,
+    dataType: 'JSONP',
+    jsonp: 'callback',
+    success: function (getData) {
+      var data = JSON.parse(getData);
+      var placeItemInfo = data.data.service;
+      $('#hostPlaceList').append('<a href="detail.html" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
+        '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + placeItemInfo.cover + '); background-repeat: no-repeat; background-position: center center;">' +
+        // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
+        '<span class="placeType-info"></span>' +
+        '<span class="collection cdp-iconfont">&#xe625;</span>' +
+        '</div>' +
+        '<div class="place-item-info">' +
+        '<h3 class="clearfix">' +
+        '<span class="place-item-info-title">' + placeItemInfo.name + '</span>' +
+        '<span class="place-item-info-price"><i>￥</i>' + placeItemInfo.price + '<i>/天</i></span>' +
+        '</h3>' +
+        '<p class="place-item-info-detail">' + placeItemInfo.address + '</p>' +
+        '</div></a>');
+
+      var amenity = placeItemInfo.category.amenity;
+      if (amenity === undefined) {
+        // console.log('暂无标签');
+      } else {
+        $.each(amenity.slice(0, 3), function (i, cur) {
+          $('#place-item-' + id).find('span.placeType-info').append('<i>' + cur.name + '</i>');
+        });
+      }
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
