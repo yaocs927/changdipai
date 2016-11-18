@@ -113,9 +113,14 @@ function search(and, kw) {
       $('#hostPlaceList').empty(); // 清空热门列表
       var data = JSON.parse(getData);
       var placeIdList = data.data.service; // 场地 ID 列表
-      $.each(placeIdList, function (i, cur) {
+      console.log(placeIdList);
+      // $.each(placeIdList, function (i, cur) {
+      //   getPlaceItemInfo(cur.id);
+      // });
+      for (var i = 0; i < placeIdList.slice(0, 10).length; i++) {
+        var cur = placeIdList[i];
         getPlaceItemInfo(cur.id);
-      });
+      }
     }
   });
 }
@@ -134,7 +139,7 @@ function getPlaceItemInfo(id) {
         '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + placeItemInfo.cover + '); background-repeat: no-repeat; background-position: center center;">' +
         // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
         '<span class="placeType-info"></span>' +
-        '<span class="collection cdp-iconfont">&#xe625;</span>' +
+        // '<span class="collection cdp-iconfont">&#xe625;</span>' +
         '</div>' +
         '<div class="place-item-info">' +
         '<h3 class="clearfix">' +

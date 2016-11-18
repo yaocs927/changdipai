@@ -244,18 +244,46 @@ function search(and, or, kw) {
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
-      // window.location.href = 'search.html?and=' + curAndData + '&kw=' + keyWord;
       $('#searchResult').empty();
       var data = JSON.parse(getData);
       var placeIdList = data.data.service; // 场地 ID 列表
+      console.log(placeIdList);
       if (placeIdList.length === 0) {
         $('#searchResult').append('<div class="no-more">' +
           '<div class="no-more-info">抱歉，没有符合条件的场馆<br />建议您修改条件或点击下方按钮进行咨询</div>' +
           '<a href="demand.html" class="no-more-btn">为我定制</a>' +
           '</div>');
       } else {
-        $.each(placeIdList, function (i, cur) {
+        var start = 0;
+        var end = 5;
+        var num = 5;
+        for (var i = 0; i < placeIdList.slice(start, end).length; i++) {
+          var cur = placeIdList[i];
+          console.log('1搜： ' + cur.id);
           getPlaceItemInfo(cur.id);
+        }
+        start = end;
+        end = end + num;
+        $(window).scroll(function(){
+          var scrollH = $(window).scrollTop();
+          var documentH = $(document).height();
+          var windowH = $(window).height();
+          if (scrollH / (documentH - windowH) > 0.95 ) {
+            var newArr = placeIdList.slice(start, end);
+            for (var j = 0; j < newArr.length; j++) {
+              var cur1 = newArr[j];
+              console.log('2搜： ' + cur1.id);
+              getPlaceItemInfo(cur1.id);
+            }
+            start = end;
+            end = end + num;
+            // if (start >= placeIdList.length) {
+              // $('#searchResult').append('<div class="no-more">' +
+              //   '<div class="no-more-info">无更多符合条件的场地<br />没有满意的？点击下方按钮进行咨询</div>' +
+              //   '<a href="demand.html" class="no-more-btn">为我定制</a>' +
+              //   '</div>');
+            // }
+          }
         });
       }
     }
