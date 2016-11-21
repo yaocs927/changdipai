@@ -68,11 +68,9 @@ function login(userInfo) {
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
-      console.log(getData);
       var data = JSON.parse(getData);
       tokenNum = data.data.token;
       var userId = data.data.user.id;
-      console.log(userId);
       // 存储 服务器返回新token
       $.fn.cookie('tokenNum', tokenNum);
       $.fn.cookie('userId', userId);

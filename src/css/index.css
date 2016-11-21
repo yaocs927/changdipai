@@ -1,7 +1,7 @@
 @font-face {
   font-family: "cdp-iconfont";
-  src: url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.eot");
-  src: url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.woff") format("woff"), url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.ttf") format("truetype"), url("//at.alicdn.com/t/font_ifnmwuqfqidon7b9.svg#iconfont") format("svg");
+  src: url("../css/font/iconfont.eot");
+  src: url("../css/font/iconfont.woff") format("woff"), url("../css/font/iconfont.ttf") format("truetype"), url("../css/font/iconfont.svg#iconfont") format("svg");
 }
 
 .cdp-iconfont {

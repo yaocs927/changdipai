@@ -102,7 +102,7 @@ $(function () {
     $.fn.cookie('curAndData', andCityAreaStr); // 更新当前 and 搜索条件至  cookie
     curOrData = $.fn.cookie('curOrData') === null ? '' : $.fn.cookie('curOrData');
     search(andCityAreaStr, curOrData, keyWord);
-    // window.location.href = 'search.html?and=' + andCityAreaStr + '&kw=';
+    // window.location.href = 'search.html?and=' + andCityAreaStr + '&wd=';
   });
 
 
@@ -237,17 +237,16 @@ function getFunction(tagName, id) {
 }
 
 // 搜索/过滤
-function search(and, or, kw) {
+function search(and, or, wd) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/api/v2/service/search?and=' + and + '&or=' + or + '&kw=' + kw,
+    url: 'http://m.changdipai.com/api/v2/service/search?and=' + and + '&or=' + or + '&wd=' + wd,
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
       $('#searchResult').empty();
       var data = JSON.parse(getData);
       var placeIdList = data.data.service; // 场地 ID 列表
-      console.log(placeIdList);
       if (placeIdList.length === 0) {
         $('#searchResult').append('<div class="no-more">' +
           '<div class="no-more-info">抱歉，没有符合条件的场馆<br />建议您修改条件或点击下方按钮进行咨询</div>' +
@@ -259,7 +258,6 @@ function search(and, or, kw) {
         var num = 5;
         for (var i = 0; i < placeIdList.slice(start, end).length; i++) {
           var cur = placeIdList[i];
-          console.log('1搜： ' + cur.id);
           getPlaceItemInfo(cur.id);
         }
         start = end;
@@ -272,7 +270,6 @@ function search(and, or, kw) {
             var newArr = placeIdList.slice(start, end);
             for (var j = 0; j < newArr.length; j++) {
               var cur1 = newArr[j];
-              console.log('2搜： ' + cur1.id);
               getPlaceItemInfo(cur1.id);
             }
             start = end;
@@ -300,11 +297,11 @@ function getPlaceItemInfo(id) {
     success: function (getData) {
       var data = JSON.parse(getData);
       var placeItemInfo = data.data.service;
-      $('#searchResult').append('<a href="javascript:;" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
+      $('#searchResult').append('<a href="detail.html" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
         '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + placeItemInfo.cover + '); background-repeat: no-repeat; background-position: center center;">' +
         // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
         '<span class="placeType-info"></span>' +
-        '<span class="collection cdp-iconfont">&#xe625;</span>' +
+        // '<span class="collection cdp-iconfont">&#xe625;</span>' +
         '</div>' +
         '<div class="place-item-info">' +
         '<h3 class="clearfix">' +

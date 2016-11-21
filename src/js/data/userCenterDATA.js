@@ -8,15 +8,13 @@ $(function () {
 
   // 登录状态 页面跳转
   var loginStatus = $.fn.cookie('loginStatus');
-  console.log(loginStatus);
   if (loginStatus === '1') {
     var tokenNum = $.fn.cookie('tokenNum');
     var userId = $.fn.cookie('userId');
-    console.log($.fn.cookie('tokenNum'));
     getUserInfo(userId, tokenNum);
     $('#logoutBtn').removeClass('hide').addClass('active');
   } else {
-    console.log('未登录');
+    // console.log('未登录');
   }
 
   // getUserInfo(userId, tokenNum);
@@ -70,7 +68,6 @@ function getUserInfo(userId, tokenNum) {
     success: function (getData) {
       var data = JSON.parse(getData);
       $('#userName').text(data.data.name);
-      console.log(data);
     }
   });
 }

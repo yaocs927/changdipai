@@ -6,6 +6,7 @@
 
 var curCityId = null, //全局变量 当前城市 id
   curPlaceId = null, //全局变量 当前场地 id
+  keyword = '',
   curAndData = null; //全局变量 当前 and 搜索条件
 
 $(function () {
@@ -17,7 +18,7 @@ $(function () {
   $('#areaList').on('click', 'li', function () {
     curCityId = $(this).attr('data-curid');
     $.fn.cookie('curCityId', curCityId); // 存储当前城市 id 至 cookie
-    search(curCityId); // 切换城市重新获取首页热门场馆
+    search(curCityId, keyword); // 切换城市重新获取首页热门场馆
   });
 
   // 推荐
@@ -36,7 +37,6 @@ $(function () {
   // 查看场地详情
   $('#hostPlaceList').on('click', 'a', function () {
     curPlaceId = $(this).attr('data-placeid');
-    console.log(placeId);
     $.fn.cookie('curPlaceId', curPlaceId); // 存储当前场地 id 至 cookie
     window.location.href = 'detail.html';
   });
@@ -71,7 +71,7 @@ function getCategory(tagName, id) {
       $.fn.cookie('curCityId', curCityId);
       $('#selectArea span').text(defaultCityName);
       $('#selectArea span').attr('data-curid', curCityId);
-      search(curCityId); // 获取默认热门场馆
+      search(curCityId, keyword); // 获取默认热门场馆
     }
   });
 }
@@ -103,17 +103,16 @@ function getHandPick(tagName, id) {
 }
 
 // 搜索场地 获取 场地 ID
-function search(and, kw) {
+function search(and, wd) {
   $.ajax({
     type: 'GET',
-    url: 'http://m.changdipai.com/api/v2/service/search?and=' + and + '&kw=' + kw,
+    url: 'http://m.changdipai.com/api/v2/service/search?and=' + and + '&wd=' + wd,
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
-      $('#hostPlaceList').empty(); // 清空热门列表
+      $('#hostPlaceListss').empty(); // 清空热门列表
       var data = JSON.parse(getData);
       var placeIdList = data.data.service; // 场地 ID 列表
-      console.log(placeIdList);
       // $.each(placeIdList, function (i, cur) {
       //   getPlaceItemInfo(cur.id);
       // });
@@ -135,7 +134,7 @@ function getPlaceItemInfo(id) {
     success: function (getData) {
       var data = JSON.parse(getData);
       var placeItemInfo = data.data.service;
-      $('#hostPlaceList').append('<a href="detail.html" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
+      $('#hostPlaceListss').append('<a href="detail.html" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
         '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + placeItemInfo.cover + '); background-repeat: no-repeat; background-position: center center;">' +
         // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
         '<span class="placeType-info"></span>' +

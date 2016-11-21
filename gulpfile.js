@@ -8,10 +8,12 @@ var gSourcemaps = require('gulp-sourcemaps');
 var gScss = require('gulp-sass');
 var gAutoprefixer = require('gulp-autoprefixer');
 // 打包相关 依赖
-var gFilter = require('gulp-filter');
-var gUglify = require('gulp-uglify');
-var gMinifyCss = require('gulp-minify-css');
-var gUseref = require('gulp-useref');
+var rev = require('gulp-rev');
+var revReplace = require('gulp-rev-replace');
+var useref = require('gulp-useref');
+var filter = require('gulp-filter');
+var uglify = require('gulp-uglify');
+var csso = require('gulp-csso');
 
 // 文件路径 储存
 var filesPath = {
@@ -23,7 +25,8 @@ var filesPath = {
     'src/img/*.png',
     'src/img/*.gif',
     'src/img/*.jpg'
-  ]
+  ],
+  dist: 'dist/'
 };
 
 // 设置 browserSync 根目录
@@ -62,3 +65,36 @@ gulp.task('watch', ['browserSync', 'startScss'], function() {
   gulp.watch(filesPath.html + '*.html', browserSync.reload);
   gulp.watch(filesPath.html + '**/*.js', browserSync.reload);
 });
+
+gulp.task("pack", function() {
+  var jsFilter = filter("**/*.js", { restore: true });
+  var cssFilter = filter("**/*.css", { restore: true });
+  var indexHtmlFilter = filter(['**/*', '!**/index.html'], { restore: true });
+
+  return gulp.src("src/*.html")
+    .pipe(useref())      // Concatenate with gulp-useref
+    .pipe(jsFilter)
+    .pipe(uglify())             // Minify any javascript sources
+    .pipe(jsFilter.restore)
+    .pipe(cssFilter)
+    .pipe(csso())               // Minify any CSS sources
+    .pipe(cssFilter.restore)
+    .pipe(indexHtmlFilter)
+    .pipe(rev())                // Rename the concatenated files (but not index.html)
+    .pipe(indexHtmlFilter.restore)
+    .pipe(revReplace())         // Substitute in new filenames
+    .pipe(gulp.dest('dist'));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,9 +8,9 @@ var curPlaceId = null;
 
 $(function () {
   // 获取当前场地ID
-  // curPlaceId = $.fn.cookie('curPlaceId');
+  curPlaceId = $.fn.cookie('curPlaceId');
   // console.log(curPlaceId);
-  getPlace('1');
+  getPlace(curPlaceId);
 });
 
 
@@ -29,13 +29,20 @@ function getPlace(id) {
     success: function (getData) {
       var data = getData;
       var placeDetail = data.data.service;
+      var citycode = [{
+        'cityName': '上海',
+        'cityCode': '021'
+      }, {
+        'cityName': '北京',
+        'cityCode': '010'
+      }];
       // 场地相册
       $.each(placeDetail.album.photo, function (i, cur) {
         $('#placePhotoList').append('<div class="swiper-slide img-wrapper-box-list" style="background-image: url(http://m.changdipai.com/' + cur.url + '); background-repeat: no-repeat; background-position: center center;"></div>');
       });
-      var mySwiper = new Swiper ('.swiper-container', {
-        pagination : '.swiper-pagination',
-        paginationType : 'fraction'
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction'
       });
       // 场地名
       $('#placeName').text(placeDetail.name);
@@ -48,12 +55,12 @@ function getPlace(id) {
         'background-position': 'center center'
       });
       // 场地价格
-      $('#placeMainPrice h4').text(placeDetail.name.substr(0,10));
+      $('#placeMainPrice h4').text(placeDetail.name.substr(0, 10));
       $.each(placeDetail.offer, function (i, cur) {
         $('#placePriceList').append('<div class="detail-price-sub-list-item clearfix">' +
-        '<p class="detail-price-sub-list-item-left">' + cur.name + '</p>' +
-        '<div class="detail-price-sub-list-item-right"><i>￥</i>' + cur.price + '<i>/天</i></div>' +
-        '</div>');
+          '<p class="detail-price-sub-list-item-left">' + cur.name + '</p>' +
+          '<div class="detail-price-sub-list-item-right"><i>￥</i>' + cur.price + '<i>/天</i></div>' +
+          '</div>');
       });
       // 场地面积
       $('#placeSize').text(placeDetail.area);
@@ -63,7 +70,6 @@ function getPlace(id) {
       // 显示更多介绍
       var placeIntroduce = $('#placeIntroduce');
       var piText = placeIntroduce.text();
-      console.log(piText);
       if (piText.length > 100) {
         placeIntroduce.html(piText.substring(0, 100) + '...');
         piText = placeIntroduce.text();
@@ -89,12 +95,36 @@ function getPlace(id) {
         'background-position': 'center center'
       });
       $('#placeServiceName').text(placeDetail.user.name);
+      // 地图
+      var cityM = placeDetail.category.city[0].name;
+      var cityC = null;
+      $.each(citycode, function (j, curc) {
+        if (curc.cityName === cityM) {
+          cityC = curc.cityCode;
+        }
+      });
+      var map = new AMap.Map("map", {
+        resizeEnable: true,
+        zoom: 15,
+        zoomEnable: false
+      });
+      AMap.plugin('AMap.Geocoder', function () {
+        var geocoder = new AMap.Geocoder({
+          city: cityC
+        });
+        var marker = new AMap.Marker({
+          map: map,
+          bubble: true
+        });
+        geocoder.getLocation(placeDetail.address, function (status, result) {
+          if (status == 'complete' && result.geocodes.length) {
+            marker.setPosition(result.geocodes[0].location);
+            map.setCenter(marker.getPosition());
+          } else {
+            console.log('NO');
+          }
+        });
+      });
     }
   });
 }
-
-
-
-
-
-

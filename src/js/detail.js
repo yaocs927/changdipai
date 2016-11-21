@@ -5,33 +5,17 @@
 */
 
 $(function () {
-  // 详情--地图
-  var point = [];
-  var point1 = $('#placeInfo').attr('data-jd');
-  var point2 = $('#placeInfo').attr('data-wd');
-  point.push(point1);
-  point.push(point2);
-  var name = $('#placeInfo').attr('data-name');
-  var map = new AMap.Map('map', {
-    zoomEnable:false,
-    level: 15,
-    center: point
-  });
-  // 标记点
-  var marker = new AMap.Marker({
-    map: map,
-    position: point
-  });
-  marker.setMap(map);
 
   // 点击显示大地图
-  $('.bigMap').on('click', function (e) {
-    marker.markOnAMAP({
-      name: name,
-      position: marker.getPosition()
-    });
-  });
+  // $('.bigMap').on('click', function (e) {
+  //   marker.markOnAMAP({
+  //     name: name,
+  //     position: marker.getPosition()
+  //   });
+  // });
+  //
 
+  // 显示价格列表
   $('.detail-price').on('click', function () {
     if ($('.detail-price-sub').hasClass('hide')) {
       $('.detail-price-sub').addClass('show').removeClass('hide');
@@ -71,11 +55,3 @@ $(function () {
   });
 
 });
-
-
-
-
-
-
-
-

@@ -3,17 +3,42 @@
   "info": "成功",
   "data": {
     "service": {
-      "id": "1",
-      "name": "上海测试场地",
+      "id": "2",
+      "name": "希音山房",
       "status": "1",
-      "datetime": "2016-11-04 10:27:04",
-      "area": "100",
-      "weight": "20000",
-      "address": "上海测试场地地址",
-      "keyword": "派对轰趴",
-      "cover": "resource\/changdipai\/image\/cszp1.jpg",
-      "number": "30",
-      "price": "9000",
+      "datetime": "2016-11-04 11:04:39",
+      "area": "3000",
+      "weight": "0",
+      "address": "上海佘山镇环山路328号佘山森林公园",
+      "keyword": "朋友聚会",
+      "album": {
+        "id": "2",
+        "name": "相册2（测试）",
+        "brief": "简介",
+        "datetime": "2016-11-17 14:54:48",
+        "weight": "0",
+        "status": "1",
+        "cover": {
+          "id": "2",
+          "name": "测试照片2",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "1",
+          "url": "resource\/changdipai\/img\/cszp2.jpg",
+          "status": "1",
+          "album": "1"
+        },
+        "photo": []
+      },
+      "user": {
+        "id": "2",
+        "name": "场地派开发团队",
+        "phone": "15851060178",
+        "brief": "新用户自我介绍为空",
+        "status": "1",
+        "album": "11"
+      },
+      "offer": [],
+      "brief": [],
       "category": {
         "amenity": [{
           "id": "3",
@@ -30,14 +55,6 @@
           "pid": "0",
           "tag": "amenity"
         }],
-        "circle": [{
-          "id": "13",
-          "name": "徐家汇",
-          "view": "",
-          "rank": "1",
-          "pid": "1",
-          "tag": "circle"
-        }],
         "city": [{
           "id": "1",
           "name": "上海",
@@ -46,21 +63,6 @@
           "pid": "0",
           "tag": "city"
         }],
-        "event": [{
-          "id": "19",
-          "name": "团队拓展",
-          "view": "",
-          "rank": "1",
-          "pid": "0",
-          "tag": "event"
-        }, {
-          "id": "20",
-          "name": "轰趴",
-          "view": "",
-          "rank": "2",
-          "pid": "0",
-          "tag": "event"
-        }],
         "handpick": [{
           "id": "21",
           "name": "办年会，选最好的场地给你",
@@ -68,21 +70,6 @@
           "rank": "1",
           "pid": "0",
           "tag": "handpick"
-        }, {
-          "id": "22",
-          "name": "轰趴派对，顶级别墅尊享",
-          "view": "resource\/changdipai\/image\/cszp2.jpg",
-          "rank": "2",
-          "pid": "0",
-          "tag": "handpick"
-        }],
-        "region": [{
-          "id": "10",
-          "name": "浦东新区",
-          "view": "",
-          "rank": "1",
-          "pid": "1",
-          "tag": "region"
         }]
       }
     }
