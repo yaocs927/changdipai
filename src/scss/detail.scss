@@ -292,10 +292,16 @@ body {
 
         &-left {
           float: left;
-          width: px2rem(274px, $base-font-size);
+          width: px2rem(400px, $base-font-size);
           line-height: px2rem(42px, $base-font-size);
-          font-size: 13px;
-          color: $fontColor2;
+          font-size: 16px;
+          color: $fontColor1;
+
+          i {
+            display: block;
+            font-size: 12px;
+            color: $fontColor2;
+          }
         }
 
         &-right {
@@ -408,7 +414,11 @@ body {
     &-list {
       &-item {
         &-left {
-          font-size: 26px;
+          font-size: 28px;
+
+          i {
+            font-size: 24px;
+          }
         }
 
         &-right {
@@ -515,7 +525,11 @@ body {
     &-list {
       &-item {
         &-left {
-          font-size: 39px;
+          font-size: 42px;
+
+          i {
+            font-size: 36px;
+          }
         }
 
         &-right {
@@ -540,8 +554,8 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+  display: flex;
   width: 100%;
-  font-size: 0;
 
   &:after {
     position: absolute;
@@ -549,14 +563,14 @@ body {
     left: 50%;
     transform: translateX(-50%);
     content: " ";
-    width: 1px;
+    // width: 1px;
     height: px2rem(100px, $base-font-size);
     background-color: $whiteColor;
   }
 
   a {
+    flex: 1;
     display: inline-block;
-    width: 50%;
     height: px2rem(100px, $base-font-size);
     line-height: px2rem(100px, $base-font-size);
     background-color: $cdpColor;
@@ -568,16 +582,12 @@ body {
 }
 
 [data-dpr="2"] .float-btn {
-  font-size: 0;
-
   a {
     font-size: 32px;
   }
 }
 
 [data-dpr="3"] .float-btn {
-  font-size: 0;
-
   a {
     font-size: 48px;
   }

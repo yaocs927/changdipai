@@ -3,55 +3,113 @@
   "info": "成功",
   "data": {
     "service": {
-      "id": "2",
-      "name": "希音山房",
+      "id": "4",
+      "name": "上海意大利中心云圈金融会所",
       "status": "1",
-      "datetime": "2016-11-04 11:04:39",
-      "area": "3000",
+      "datetime": "2016-11-17 15:04:12",
+      "area": "1000",
       "weight": "0",
-      "address": "上海佘山镇环山路328号佘山森林公园",
-      "keyword": "朋友聚会",
+      "address": "上海浦东新区意大利中心",
+      "keyword": "轰趴会议开会",
       "album": {
-        "id": "2",
-        "name": "相册2（测试）",
-        "brief": "简介",
-        "datetime": "2016-11-17 14:54:48",
+        "id": "4",
+        "name": "意大利相册",
+        "brief": "相册简介",
+        "datetime": "2016-01-01 00:00:00",
         "weight": "0",
         "status": "1",
         "cover": {
-          "id": "2",
-          "name": "测试照片2",
+          "id": "4",
+          "name": "4",
           "datetime": "2016-01-01 00:00:00",
-          "rank": "1",
-          "url": "resource\/changdipai\/img\/cszp2.jpg",
+          "rank": "4",
+          "url": "resource\/changdipai\/img\/album\/1\/4.jpg",
           "status": "1",
           "album": "1"
         },
-        "photo": []
+        "photo": [{
+          "id": "15",
+          "name": "1",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "1",
+          "url": "resource\/changdipai\/img\/album\/4\/1.jpg",
+          "status": "1",
+          "album": "4"
+        }, {
+          "id": "16",
+          "name": "2",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "2",
+          "url": "resource\/changdipai\/img\/album\/4\/2.jpg",
+          "status": "1",
+          "album": "4"
+        }, {
+          "id": "17",
+          "name": "3",
+          "datetime": "2016-01-01 00:00:00",
+          "rank": "3",
+          "url": "resource\/changdipai\/img\/album\/4\/3.jpg",
+          "status": "1",
+          "album": "4"
+        }]
       },
-      "user": {
+      "user": null,
+      "offer": [{
+        "offer_number_min": "100",
+        "id": "10",
+        "name": "全天",
+        "brief": "意大利中心",
+        "time": "00:00:00",
+        "length": "24",
+        "number": "200",
+        "rank": "1",
+        "price": "5000",
+        "unit": "CNY",
+        "view": "",
+        "service": "4"
+      }],
+      "brief": [{
         "id": "2",
-        "name": "场地派开发团队",
-        "phone": "15851060178",
-        "brief": "新用户自我介绍为空",
-        "status": "1",
-        "album": "11"
-      },
-      "offer": [],
-      "brief": [],
+        "name": "上海意大利中心云圈金融会所简介",
+        "content": "意大利中心（上海）金融会所，坐落于上海浦东新区意大利中心4楼，拥有一线江景，交通便利，地理位置优越。是一家最具价值和影响力的高端金融会所。 2016年起，我们已经成功承办大小活动90余场，包括英特尔，搜狐，凤凰网等等。\r\n\r\n场地优势\r\n\r\n1.一线江景\r\n意大利中心是原300多个世博馆保留下来为数不多的场馆之一，包括梅赛德斯奔驰文化中心，中国馆在内江景最好的场馆。整个意大利中心只有位于四楼的云圈联盟才拥有整面玻璃墙，有独立阳台可以欣赏最美的江景哦。\r\n\r\n2.专业的硬件设备\r\n百变云圈场地，环境高端优雅安静，是活动的最佳场地，各种活动例如：沙龙，讲座会，发布会等。场地有专业的音响，控音台，有一套云圈的专业K歌系统，专业的舞台，投影幕布，可变换的专业灯光等，打造不同的活动风格！\r\n\r\n3.私密性强\r\n在云圈，可以打造您的私人会客厅。方圆1.2公里内无居民区，您可以在不同风格的活动中尽情发挥！\r\n\r\n4.交通便利\r\n除了自身区域优越，交通也是极其方便的，地铁13号线世博大道站4号口步行5分钟即到，从万体馆开车过来最快只需6分钟就能到意大利中心楼下，到虹桥机场，浦东机场，火车站只需30分钟路程。停车也是极为方便的，车位足量且只需6元\/小时！",
+        "view": "",
+        "rank": "1",
+        "service": "4"
+      }],
       "category": {
         "amenity": [{
-          "id": "3",
-          "name": "WIFI",
+          "id": "56",
+          "name": "签到台",
           "view": "&#xe643;",
-          "rank": "1",
+          "rank": "10",
           "pid": "0",
           "tag": "amenity"
         }, {
-          "id": "4",
-          "name": "泳池",
+          "id": "61",
+          "name": "茶歇",
           "view": "&#xe643;",
-          "rank": "2",
+          "rank": "15",
+          "pid": "0",
+          "tag": "amenity"
+        }, {
+          "id": "74",
+          "name": "餐饮",
+          "view": "&#xe643;",
+          "rank": "26",
+          "pid": "0",
+          "tag": "amenity"
+        }, {
+          "id": "68",
+          "name": "吧台",
+          "view": "&#xe643;",
+          "rank": "28",
+          "pid": "0",
+          "tag": "amenity"
+        }, {
+          "id": "71",
+          "name": "空调",
+          "view": "&#xe643;",
+          "rank": "30",
           "pid": "0",
           "tag": "amenity"
         }],
@@ -63,13 +121,21 @@
           "pid": "0",
           "tag": "city"
         }],
-        "handpick": [{
-          "id": "21",
-          "name": "办年会，选最好的场地给你",
-          "view": "resource\/changdipai\/image\/cszp1.jpg",
+        "event": [{
+          "id": "19",
+          "name": "朋友聚会",
+          "view": "",
           "rank": "1",
           "pid": "0",
-          "tag": "handpick"
+          "tag": "event"
+        }],
+        "region": [{
+          "id": "14",
+          "name": "浦东新区",
+          "view": "",
+          "rank": "1",
+          "pid": "1",
+          "tag": "region"
         }]
       }
     }

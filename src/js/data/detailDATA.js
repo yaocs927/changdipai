@@ -58,15 +58,20 @@ function getPlace(id) {
       $('#placeMainPrice h4').text(placeDetail.name.substr(0, 10));
       $.each(placeDetail.offer, function (i, cur) {
         $('#placePriceList').append('<div class="detail-price-sub-list-item clearfix">' +
-          '<p class="detail-price-sub-list-item-left">' + cur.name + '</p>' +
+          '<p class="detail-price-sub-list-item-left">' + cur.name + '<i>' + cur.brief + '</i></p>' +
           '<div class="detail-price-sub-list-item-right"><i>￥</i>' + cur.price + '<i>/天</i></div>' +
           '</div>');
       });
       // 场地面积
       $('#placeSize').text(placeDetail.area);
       // 场地介绍
-      $('#placeIntroduce').text(placeDetail.brief[0].content);
-      $('#placeIntroduce').attr('data-content', placeDetail.brief[0].content);
+      var oldContentStr = placeDetail.brief[0].content;
+      var newContentStr;
+      if (oldContentStr.indexOf('\r') >= 0 || oldContentStr.indexOf('\n') >= 0) {
+        newContentStr = oldContentStr.replace(/\r\n/g, '<br />');
+      }
+      $('#placeIntroduce').text(newContentStr);
+      $('#placeIntroduce').attr('data-content', newContentStr);
       // 显示更多介绍
       var placeIntroduce = $('#placeIntroduce');
       var piText = placeIntroduce.text();

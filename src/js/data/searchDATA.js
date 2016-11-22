@@ -3,41 +3,33 @@
 搜索结果页 JS数据获取
 ====================
 */
-
-var curCityId = null, //全局变量 当前城市 id
-  curAndData = null, //全局变量 当前 and 搜索条件
-  curOrData = null, //全局变量 当前 or 搜索条件
-  keyWord = null; //全局变量 当前关键词
-
-  var curAreaId;
+var curCityId = null, // 当前城市 id
+  curAndData = null, // 当前 and 搜索条件
+  curOrData = null, // 当前 or 搜索条件
+  curPlaceId = null, // 当前场地 id
+  keyWord = null; // 当前关键词
 
 $(function () {
-
+  var curAndDataArr = null; // 当前 and 搜索条件 数组
   // 页面载入
-  curAndData = $.fn.cookie('curAndData');
-  keyWord = $.fn.cookie('keyWord') === null ? '' : $.fn.cookie('keyWord');
+  curCityId = $.fn.cookie('curCityId'); // 获取当前城市 ID
+  curAndData = $.fn.cookie('curAndData') === null ? curCityId : $.fn.cookie('curAndData');
   curOrData = $.fn.cookie('curOrData') === null ? '' : $.fn.cookie('curOrData');
+  keyWord = $.fn.cookie('keyWord') === null ? '' : $.fn.cookie('keyWord');
+  console.log('init搜索： curAndData=' + curAndData + ' curOrData=' + curOrData + ' keyWord=' + keyWord);
   search(curAndData, curOrData, keyWord); // 初始搜索
-
+  curAndDataArr = curAndData.split(',');
 
   /*
   ====================
   城市选择相关
   ====================
   */
+  getCategory('city', 'getCity'); // 获取城市列表  并设置已选城市
 
   // 存储数据
   var andCityAreaArr = [], // 搜索条件(城市+区域)数据暂存数组
-  andCityAreaStr = null, // 搜索条件(城市+区域)数据
-  andCityAreaFunctionArr = [], // 搜索条(城市+区域+功能)件数据暂存数组
-  andCityAreaFunctionStr = null; // 搜索条件(城市+区域+功能)数据
-
-  var filterCityId = []; // 当前城市 id 暂存数组
-
-  // 读取 cookie 中城市 id
-  curCityId = $.fn.cookie('curCityId');
-  filterCityId.push(curCityId);
-  getCategory('city', 'getCity'); // 获取城市列表  并设置已选城市
+  andCityAreaStr = null; // 搜索条件(城市+区域)数据
 
   // 切换城市
   $('#getCity').on('click', 'li', function () {
@@ -45,11 +37,15 @@ $(function () {
     $('.top-search-list').addClass('hide').removeClass('show');
     curCityId = $(this).attr('data-curid');
     $.fn.cookie('curCityId', curCityId); // 存储当前城市 id 至 cookie
-    $.fn.cookie('curAndData', curCityId); // 更新当前 and 搜索条件至  cookie
-    filterCityId = [];
-    filterCityId.push(curCityId);
-    // curOrData = '';
-    search(curCityId, curOrData, keyWord); // 按城市搜索场地
+    $.fn.cookie('curOrData', null, { // 清除 or 搜索条件
+      expires: -1
+    });
+    $.fn.cookie('keyWord', null, { // 清除 关键词搜索条件
+      expires: -1
+    });
+    curAndDataArr = curCityId.split(',');
+    console.log('切换城市后： curAndData=' + curCityId + ' curOrData=' + '' + ' keyWord=' + '');
+    search(curCityId, '', ''); // 按城市搜索场地
     getAreaTypeList('region', 'getAreaTypeList-region');
     getAreaTypeList('circle', 'getAreaTypeList-circle');
   });
@@ -60,11 +56,7 @@ $(function () {
   区域过滤相关
   ====================
   */
-
-  var filterAreaId = []; // 当前区域 id 暂存数组
-
-  // 区域过滤 菜单数据
-  var menu = [{
+  var menu = [{ // 区域过滤 菜单数据
     "tag": "region",
     "name": "行政区"
   }, {
@@ -72,13 +64,11 @@ $(function () {
     "name": "商圈"
   }];
 
-  // 生成 区域过滤 菜单
-  $.each(menu, function (i, cur) {
+  $.each(menu, function (i, cur) { // 生成 区域过滤 菜单
     $('#getAreaType').append('<li data-tagName="' + cur.tag + '">' + cur.name + '<i class="cdp-iconfont">\ue615</i></li>');
   });
   $('#getAreaType li').eq(0).addClass('active');
 
-  // 区域过滤
   $('#getAreaType').on('click', 'li', function () { // 区域列表切换
     var self = $(this);
     var curTagName = self.attr('data-tagName');
@@ -87,6 +77,9 @@ $(function () {
     $('#getAreaTypeList-' + curTagName + '').addClass('show').removeClass('hide');
     $('#getAreaTypeList-' + curTagName + '').siblings().addClass('hide').removeClass('show');
   });
+
+  var filterAreaId = []; // 当前区域 id 暂存数组
+
   $('#getAreaTypeList').on('click', 'li', function () { // 选择相应区域
     filterAreaId = [];
     var selfId = $(this).attr('data-curid'); // 获取当前区域的 id
@@ -97,12 +90,12 @@ $(function () {
     }
 
     // 进行过滤
-    andCityAreaArr = filterCityId.concat(filterAreaId);
+    andCityAreaArr = curAndDataArr.concat(filterAreaId);
     andCityAreaStr = andCityAreaArr.join(',');
     $.fn.cookie('curAndData', andCityAreaStr); // 更新当前 and 搜索条件至  cookie
     curOrData = $.fn.cookie('curOrData') === null ? '' : $.fn.cookie('curOrData');
+    console.log('区域过滤后： curAndData=' + andCityAreaStr + ' curOrData=' + curOrData + ' keyWord=' + keyWord);
     search(andCityAreaStr, curOrData, keyWord);
-    // window.location.href = 'search.html?and=' + andCityAreaStr + '&wd=';
   });
 
 
@@ -111,12 +104,11 @@ $(function () {
   功能过滤相关
   ====================
   */
+  getFunction('event', 'getEvent'); // 功能过滤-用途 菜单
+  getFunction('amenity', 'getAmenity'); // 功能过滤-设施 菜单
 
   var filterAmenityId = []; // 当前设施 id 暂存数组
   var filterEventId = []; // 当前类型 id 暂存数组
-
-  getFunction('event', 'getEvent'); // 功能过滤-用途 菜单
-  getFunction('amenity', 'getAmenity'); // 功能过滤-设施 菜单
 
   // 类型过滤
   $('#getEvent').on('click', 'li', function () {
@@ -153,14 +145,23 @@ $(function () {
   });
 
   $('#confirm').on('click', function () { // 确定功能 过滤
-    andCityAreaArr = filterAmenityId.concat(filterCityId, filterAreaId);
-    var andCityAreaStr = andCityAreaArr.join(',');
-    $.fn.cookie('curAndData', andCityAreaStr); // 更新当前 and 搜索条件至  cookie
-    var orEventIdStr = filterEventId.join(',');
+    curAndData = $.fn.cookie('curAndData') === null ? curCityId : $.fn.cookie('curAndData');
+    // andCityAreaArr = filterAmenityId.concat(filterCityId, filterAreaId);
+    // var andCityAreaStr = andCityAreaArr.join(',');
+    // $.fn.cookie('curAndData', andCityAreaStr); // 更新当前 and 搜索条件至  cookie
+    var orEventIdArr = filterEventId.concat(filterAmenityId);
+    var orEventIdStr = orEventIdArr.join(',');
     $.fn.cookie('curOrData', orEventIdStr); // 更新当前 or 搜索条件至  cookie
-    search(andCityAreaStr, orEventIdStr, keyWord);
+    console.log('功能过滤后： curAndData=' + curAndData + ' curOrData=' + orEventIdStr + ' keyWord=' + keyWord);
+    search(curAndData, orEventIdStr, keyWord);
   });
 
+
+  // 存储场地 ID
+  $('#searchResult').on('click', 'a', function () {
+    curPlaceId = $(this).attr('data-placeid');
+    $.fn.cookie('curPlaceId', curPlaceId); // 存储当前场地 id 至 cookie
+  });
 });
 
 
@@ -210,7 +211,7 @@ function getAreaTypeList(tagName, id) {
       $('#' + id).find('.unlimited').siblings().remove();
       var data = JSON.parse(getData);
       var citys = data.data.category;
-      $.each(citys, function (i, cur) {
+      $.each(citys.reverse(), function (i, cur) {
         if (cur.pid === curCityId) {
           $('#' + id + ' .unlimited').after('<li data-curid="' + cur.id + '">' + cur.name + '<i class="cdp-iconfont hide">\ue617</i></li>');
         }
@@ -250,7 +251,7 @@ function search(and, or, wd) {
       if (placeIdList.length === 0) {
         $('#searchResult').append('<div class="no-more">' +
           '<div class="no-more-info">抱歉，没有符合条件的场馆<br />建议您修改条件或点击下方按钮进行咨询</div>' +
-          '<a href="demand.html" class="no-more-btn">为我定制</a>' +
+          // '<a href="demand.html" class="no-more-btn">为我定制</a>' +
           '</div>');
       } else {
         var start = 0;

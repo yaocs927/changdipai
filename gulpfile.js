@@ -69,7 +69,7 @@ gulp.task('watch', ['browserSync', 'startScss'], function() {
 gulp.task("pack", function() {
   var jsFilter = filter("**/*.js", { restore: true });
   var cssFilter = filter("**/*.css", { restore: true });
-  var indexHtmlFilter = filter(['**/*', '!**/index.html'], { restore: true });
+  var indexHtmlFilter = filter(['**/*', '!**/*.html'], { restore: true });
 
   return gulp.src("src/*.html")
     .pipe(useref())      // Concatenate with gulp-useref
