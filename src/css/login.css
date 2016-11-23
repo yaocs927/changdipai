@@ -526,6 +526,10 @@ body {
   font-size: 78px;
 }
 
+.disabled {
+  background-color: #878787;
+}
+
 .footer {
   background-color: #efefef;
 }

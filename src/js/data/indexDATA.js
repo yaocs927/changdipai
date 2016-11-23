@@ -136,7 +136,7 @@ function getPlaceItemInfo(id) {
     success: function (getData) {
       var data = JSON.parse(getData);
       var placeItemInfo = data.data.service;
-      $('#hostPlaceListss').append('<a href="detail.html" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
+      $('#hostPlaceListss').append('<a href="detail.html?id='+ placeItemInfo.id +'" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
         '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + placeItemInfo.cover + '); background-repeat: no-repeat; background-position: center center;">' +
         // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
         '<span class="placeType-info"></span>' +

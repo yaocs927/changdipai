@@ -19,7 +19,6 @@ $(function () {
 
   // 页面载入
   curCityId = $.fn.cookie('curCityId'); // 读取当前城市 id
-  // andCityIdArr.push(curCityId);
   getCategory('city', 'getCity'); // 获取城市列表并选中当前城市
   getCategory('event', 'getEvent'); // 获取快速搜索列表
   // $.fn.cookie('curAndData', curCityId); // 未重新选择城市时 当前 and (城市)搜索条件
@@ -29,9 +28,6 @@ $(function () {
     $(this).addClass('active').siblings().removeClass('active');
     curCityId = $(this).attr('data-curid');
     $.fn.cookie('curCityId', curCityId); // 更新当前城市 id 至  cookie
-    // $.fn.cookie('curAndData', curCityId); // 更新当前 and 搜索条件至  cookie
-    // andCityIdArr = []; // 清除原城市 id 数据
-    // andCityIdArr.push(curCityId);
   });
 
   // 快速搜索
@@ -42,12 +38,7 @@ $(function () {
       expires: -1
     });
     $.fn.cookie('curOrData', curFastSearchId);
-    // andOtherIdArr = [];
-    // andOtherIdArr.push(curFastSearchId);
-    // curAndArr = andOtherIdArr.concat(andCityIdArr);
-    // curAndData = curAndArr.join(',');
-    // $.fn.cookie('curAndData', curAndData); // 更新当前 and 搜索条件至  cookie
-    window.location.href = 'search.html';
+    window.location.href = 'search.html?and=' + curCityId + '&or=' + curFastSearchId + '&wd=';
   });
 
   // 点击搜索
@@ -60,7 +51,7 @@ $(function () {
     $.fn.cookie('curAndData', null, { // 当前 and 搜索条件失效
       expires: -1
     });
-    window.location.href = 'search.html';
+    window.location.href = 'search.html?and=' + curCityId + '&or=' + '&wd=' + keyWord;
   });
 
 });

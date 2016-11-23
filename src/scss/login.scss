@@ -40,6 +40,9 @@ body {
 @import "component/footer";
 @import "component/topBar";
 
+.disabled {
+  background-color: $fontColor3;
+}
 
 
 .footer {

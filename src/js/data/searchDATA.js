@@ -16,7 +16,7 @@ $(function () {
   curAndData = $.fn.cookie('curAndData') === null ? curCityId : $.fn.cookie('curAndData');
   curOrData = $.fn.cookie('curOrData') === null ? '' : $.fn.cookie('curOrData');
   keyWord = $.fn.cookie('keyWord') === null ? '' : $.fn.cookie('keyWord');
-  console.log('init搜索： curAndData=' + curAndData + ' curOrData=' + curOrData + ' keyWord=' + keyWord);
+  // console.log('init搜索： curAndData=' + curAndData + ' curOrData=' + curOrData + ' keyWord=' + keyWord);
   search(curAndData, curOrData, keyWord); // 初始搜索
   curAndDataArr = curAndData.split(',');
 
@@ -44,10 +44,14 @@ $(function () {
       expires: -1
     });
     curAndDataArr = curCityId.split(',');
-    console.log('切换城市后： curAndData=' + curCityId + ' curOrData=' + '' + ' keyWord=' + '');
+    // console.log('切换城市后： curAndData=' + curCityId + ' curOrData=' + '' + ' keyWord=' + '');
     search(curCityId, '', ''); // 按城市搜索场地
-    getAreaTypeList('region', 'getAreaTypeList-region');
-    getAreaTypeList('circle', 'getAreaTypeList-circle');
+    getAreaTypeList('region', 'getAreaTypeList-region'); // 获取行政区
+    getAreaTypeList('circle', 'getAreaTypeList-circle'); // 获取商圈
+    getFunction('event', 'getEvent'); // 功能过滤-用途 菜单
+    getFunction('amenity', 'getAmenity'); // 功能过滤-设施 菜单
+    filterAmenityId = []; // 当前设施 id 暂存数组
+    filterEventId = []; // 当前类型 id 暂存数组
   });
 
 
@@ -94,8 +98,12 @@ $(function () {
     andCityAreaStr = andCityAreaArr.join(',');
     $.fn.cookie('curAndData', andCityAreaStr); // 更新当前 and 搜索条件至  cookie
     curOrData = $.fn.cookie('curOrData') === null ? '' : $.fn.cookie('curOrData');
-    console.log('区域过滤后： curAndData=' + andCityAreaStr + ' curOrData=' + curOrData + ' keyWord=' + keyWord);
+    // console.log('区域过滤后： curAndData=' + andCityAreaStr + ' curOrData=' + curOrData + ' keyWord=' + keyWord);
     search(andCityAreaStr, curOrData, keyWord);
+    getFunction('event', 'getEvent'); // 功能过滤-用途 菜单
+    getFunction('amenity', 'getAmenity'); // 功能过滤-设施 菜单
+    filterAmenityId = []; // 当前设施 id 暂存数组
+    filterEventId = []; // 当前类型 id 暂存数组
   });
 
 
@@ -144,18 +152,27 @@ $(function () {
     }
   });
 
+  var orEventIdStr = null;
+  var andAmenityIdStr = null;
   $('#confirm').on('click', function () { // 确定功能 过滤
+    // 当前 or
+    curOrData = $.fn.cookie('curOrData') === null ? '' : $.fn.cookie('curOrData');
+    orEventIdStr = filterEventId.length === 0 ? curOrData : filterEventId.join(',');
+    // 当前 and
     curAndData = $.fn.cookie('curAndData') === null ? curCityId : $.fn.cookie('curAndData');
-    // andCityAreaArr = filterAmenityId.concat(filterCityId, filterAreaId);
-    // var andCityAreaStr = andCityAreaArr.join(',');
-    // $.fn.cookie('curAndData', andCityAreaStr); // 更新当前 and 搜索条件至  cookie
-    var orEventIdArr = filterEventId.concat(filterAmenityId);
-    var orEventIdStr = orEventIdArr.join(',');
-    $.fn.cookie('curOrData', orEventIdStr); // 更新当前 or 搜索条件至  cookie
-    console.log('功能过滤后： curAndData=' + curAndData + ' curOrData=' + orEventIdStr + ' keyWord=' + keyWord);
-    search(curAndData, orEventIdStr, keyWord);
+    andAmenityIdStr = filterAmenityId.length === 0 ? curAndData : curAndData.split(',').concat(filterAmenityId).join(',');
+    // console.log('功能过滤后： curAndData=' + andAmenityIdStr + ' curOrData=' + orEventIdStr + ' keyWord=' + keyWord);
+    search(andAmenityIdStr, orEventIdStr, keyWord);
+    $.fn.cookie('curOrData', null, { // 当前 or 搜索条件失效
+      expires: -1
+    });
   });
 
+  // 回到搜索起始页
+  $('#startNewSearch').on('click', function () {
+    $.fn.cookie('curOrData', orEventIdStr); // 更新当前 or 搜索条件至  cookie
+    $.fn.cookie('curAndData', andAmenityIdStr); // 更新当前 and 搜索条件至  cookie
+  });
 
   // 存储场地 ID
   $('#searchResult').on('click', 'a', function () {
@@ -228,6 +245,7 @@ function getFunction(tagName, id) {
     dataType: 'JSONP',
     jsonp: 'callback',
     success: function (getData) {
+      $('#' + id).empty();
       var data = JSON.parse(getData);
       var citys = data.data.category;
       $.each(citys, function (i, cur) {
@@ -298,7 +316,7 @@ function getPlaceItemInfo(id) {
     success: function (getData) {
       var data = JSON.parse(getData);
       var placeItemInfo = data.data.service;
-      $('#searchResult').append('<a href="detail.html" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
+      $('#searchResult').append('<a href="detail.html?id='+ placeItemInfo.id +'" class="place-item" data-placeid="' + placeItemInfo.id + '" id="place-item-' + id + '">' +
         '<div class="place-item-img" style="background-image: url(http://m.changdipai.com/' + placeItemInfo.cover + '); background-repeat: no-repeat; background-position: center center;">' +
         // '<span class="corner-info"><img src="img/corner-info-1.png" alt="打折"></span>' +
         '<span class="placeType-info"></span>' +

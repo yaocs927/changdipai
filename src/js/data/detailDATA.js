@@ -8,8 +8,8 @@ var curPlaceId = null;
 
 $(function () {
   // 获取当前场地ID
-  curPlaceId = $.fn.cookie('curPlaceId');
-  // console.log(curPlaceId);
+  var curPlaceId = location.search.substring(location.search.indexOf('=') + 1);
+  // curPlaceId = $.fn.cookie('curPlaceId');
   getPlace(curPlaceId);
 });
 
@@ -94,11 +94,19 @@ function getPlace(id) {
         }
       });
       // 场地客服
-      $('#placeServiceAvatar').css({
-        'background-image': 'url(http://m.changdipai.com/' + placeDetail.user.avatar + ')',
-        'background-repeat': 'no-repeat',
-        'background-position': 'center center'
-      });
+      if (placeDetail.user.avatar === undefined || placeDetail.user.avatar === null || !placeDetail.user.avatar) {
+        $('#placeServiceAvatar').css({
+          'background-image': 'url(../../img/user-avatar1.png)',
+          'background-repeat': 'no-repeat',
+          'background-position': 'center center'
+        });
+      } else {
+        $('#placeServiceAvatar').css({
+          'background-image': 'url(http://m.changdipai.com/' + placeDetail.user.avatar + ')',
+          'background-repeat': 'no-repeat',
+          'background-position': 'center center'
+        });
+      }
       $('#placeServiceName').text(placeDetail.user.name);
       // 地图
       var cityM = placeDetail.category.city[0].name;
